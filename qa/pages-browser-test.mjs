@@ -105,6 +105,8 @@ try {
   await legacy.page.locator(`[data-clue-id="${CARDS[1]}"]`).click(); assert.equal((await imageInfo(legacy.page)).src, originalImage.src);
   check('线上读音便笺与背包显示新修复原图，隔离v1旧进度保持'); await legacy.context.close();
   const failedApplicationResponses = report.responses.filter(r => r.status >= 400 && new URL(r.url).pathname.startsWith(PREFIX));
+  const scriptsAndStyles = report.responses.filter(r => ['script', 'stylesheet'].includes(r.type) && new URL(r.url).origin === target.origin);
+  assert.ok(scriptsAndStyles.length >= 2 && scriptsAndStyles.every(r => new URL(r.url).pathname.startsWith(PREFIX)), 'Published JS/CSS must use the project subpath');
   assert.deepEqual(failedApplicationResponses, []); assert.deepEqual(report.errors, []);
   const appFailures = report.requestFailures.filter(r => new URL(r.url).pathname.startsWith(PREFIX)); assert.deepEqual(appFailures, []);
   check('线上应用资源无404或失败请求，页面脚本错误0'); report.passed = true;

@@ -1,0 +1,815 @@
+{
+  "url": "https://kur11912.github.io/old-web-outpost/",
+  "startedAt": "2026-11-10T14:34:37.425Z",
+  "checks": [
+    {
+      "name": "真实GitHub Pages首页200，8个GLB全部启动完成",
+      "details": {
+        "title": "旧网驿站 · 网络梗考古",
+        "assets": [
+          {
+            "name": "Tree_01",
+            "url": "/old-web-outpost/assets/Tree_01.glb",
+            "instances": 86
+          },
+          {
+            "name": "Rock_01",
+            "url": "/old-web-outpost/assets/Rock_01.glb",
+            "instances": 20
+          },
+          {
+            "name": "Grass_01",
+            "url": "/old-web-outpost/assets/Grass_01.glb",
+            "instances": 349
+          },
+          {
+            "name": "PathTile_01",
+            "url": "/old-web-outpost/assets/PathTile_01.glb",
+            "instances": 67
+          },
+          {
+            "name": "Outpost_01",
+            "url": "/old-web-outpost/assets/Outpost_01.glb",
+            "instances": 1
+          },
+          {
+            "name": "OldTerminal_CRT_01",
+            "url": "/old-web-outpost/assets/OldTerminal_CRT_01.glb",
+            "instances": 1
+          },
+          {
+            "name": "Archive_01",
+            "url": "/old-web-outpost/assets/Archive_01.glb",
+            "instances": 1
+          },
+          {
+            "name": "Lighthouse_01",
+            "url": "/old-web-outpost/assets/Lighthouse_01.glb",
+            "instances": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "8个GLB真实从项目子路径加载，无根目录路径错误",
+      "details": [
+        {
+          "url": "https://kur11912.github.io/old-web-outpost/assets/OldTerminal_CRT_01.glb",
+          "status": 200,
+          "type": "fetch"
+        },
+        {
+          "url": "https://kur11912.github.io/old-web-outpost/assets/Grass_01.glb",
+          "status": 200,
+          "type": "fetch"
+        },
+        {
+          "url": "https://kur11912.github.io/old-web-outpost/assets/Tree_01.glb",
+          "status": 200,
+          "type": "fetch"
+        },
+        {
+          "url": "https://kur11912.github.io/old-web-outpost/assets/Lighthouse_01.glb",
+          "status": 200,
+          "type": "fetch"
+        },
+        {
+          "url": "https://kur11912.github.io/old-web-outpost/assets/PathTile_01.glb",
+          "status": 200,
+          "type": "fetch"
+        },
+        {
+          "url": "https://kur11912.github.io/old-web-outpost/assets/Archive_01.glb",
+          "status": 200,
+          "type": "fetch"
+        },
+        {
+          "url": "https://kur11912.github.io/old-web-outpost/assets/Rock_01.glb",
+          "status": 200,
+          "type": "fetch"
+        },
+        {
+          "url": "https://kur11912.github.io/old-web-outpost/assets/Outpost_01.glb",
+          "status": 200,
+          "type": "fetch"
+        }
+      ]
+    },
+    {
+      "name": "线上场景实际WASD行走和鼠标拖拽转头正常",
+      "details": {
+        "x": 1.680000000000004,
+        "z": -1.4503199999999568,
+        "yaw": -3.469446951953614e-17,
+        "pitch": 0
+      }
+    },
+    {
+      "name": "邮箱E调查、原始PNG子路径和一次领取正常",
+      "details": {
+        "src": "https://kur11912.github.io/old-web-outpost/assets/blue-mushroom-meme.png",
+        "width": 594,
+        "height": 528,
+        "objectFit": "contain"
+      }
+    },
+    {
+      "name": "线上背包回看同一完整原图，窗口保持原有交互",
+      "details": true
+    },
+    {
+      "name": "刷新恢复线上位置和领取状态，重复调查不再发卡",
+      "details": true
+    },
+    {
+      "name": "线上读音便笺与背包显示新修复原图，隔离v1旧进度保持",
+      "details": true
+    },
+    {
+      "name": "线上应用资源无404或失败请求，页面脚本错误0",
+      "details": true
+    }
+  ],
+  "responses": [
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/",
+      "status": 200,
+      "type": "document"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/index-B3tQtPEi.css",
+      "status": 200,
+      "type": "stylesheet"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/index-DD1-QOGl.js",
+      "status": 200,
+      "type": "script"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/OldTerminal_CRT_01.glb",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/Grass_01.glb",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/Tree_01.glb",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/a7950efd-8660-4089-8641-ab5f83670822",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/67e0e46b-6c8d-4fc5-9088-11f04d37e1c6",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/f4653453-4f71-4cdd-add2-7ccbf10518b6",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/a7920caa-0629-40d3-a211-c6ec9c3a39b0",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/Lighthouse_01.glb",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/bfb345cd-0fe5-43cc-8ef5-aa084156b994",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/2421d6c8-bfd4-440d-800f-8c09163ba44f",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/a98f277e-6840-4e83-ae56-f84d88158d1e",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/PathTile_01.glb",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/5f37ef33-b7ad-4d73-89bd-f5057a7d2cbc",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/e368b17f-030f-4bb8-9dea-d530a3af384e",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/c439b855-a3c0-4bea-9e3c-affb93685b40",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/d03852b8-704f-433a-80f0-d99af0db264c",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/c3658c4f-1fd0-48d9-b67f-32a6cf302e06",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/7de9a6bf-cfa1-466d-8c2d-1cbf15f583f4",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/778a87a9-0de7-4e28-89d4-d736e3e73cf8",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/fbe3502f-02d9-4e71-bc8c-6c2b941eee5f",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/58bce800-4d1b-4fcb-9567-8bc6f681459e",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/Archive_01.glb",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/Rock_01.glb",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/3d84f282-69e3-4bc8-930d-aacb31829526",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/Outpost_01.glb",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/5704ceec-bf66-4ea0-aa8b-f28c4f0c0ca3",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/d563f0dc-a056-4310-af10-96baef0f4f9b",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/c852583b-85cb-46d2-8bcc-00509a4a041a",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/4bb45588-a897-457f-bb24-5c2ac334b0e5",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/84d699a7-5b21-49f1-a575-8f21e39b075c",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/00c3dbd1-6150-4619-8e19-1de28bde7411",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/0efc24a2-33ff-4679-9e5b-34dd309bbb3d",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/15862376-4fd2-4257-b2f1-b63a5d56fb25",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/d3787249-a583-4092-a1a5-74a36e6cc4a6",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/6ac91b9f-8da8-4d51-8299-1d2a73c71bcd",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/55cc7c6a-a5f3-480f-a2d2-7c8512fa1602",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/c48aeecd-e2bd-4b57-8b4e-af2ed1707238",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/2ff34e6f-452d-43e1-b9d6-def6f81882a3",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/f08d21ca-5671-4d49-92ed-bfc01cf25697",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/ea6a2095-2f46-47f0-a99e-cb2ef15e64fd",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/beeedc3a-7b07-4691-84ee-6b6690b3eef9",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/blue-mushroom-meme.png",
+      "status": 200,
+      "type": "image"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/",
+      "status": 200,
+      "type": "document"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/index-DD1-QOGl.js",
+      "status": 200,
+      "type": "script"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/index-B3tQtPEi.css",
+      "status": 200,
+      "type": "stylesheet"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/Tree_01.glb",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/Rock_01.glb",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/Grass_01.glb",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/PathTile_01.glb",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/Outpost_01.glb",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/OldTerminal_CRT_01.glb",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/Archive_01.glb",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/Lighthouse_01.glb",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/988aa29c-9e5b-4117-9611-ae92f9a70ec1",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/499e40b2-88bb-4a7c-b9fb-5f979e42da2a",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/79538278-8684-46cd-92f2-7a01cabdd396",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/7c70afbe-3f87-4037-b4ec-cfa732ddd119",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/6db142df-5632-4479-a606-e2f62f8da48d",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/16473c2e-6672-4bb0-afff-203fe7032b71",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/529354d0-13d8-46c9-9586-a0b2202c13b0",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/28e0f116-4291-4cff-98f8-fc5f5fcc116b",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/9e2835b1-c3cc-499a-beb3-08590eddd3b8",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/bb18d6e1-2607-4d6d-af7d-d006e04a66b6",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/27d91937-8500-48bc-aa3a-c36e06029316",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/68dacde3-6f85-48bd-b799-1b46e1377018",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/eabe3a43-11b7-4d87-9bdb-a3fe2029575e",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/26cc918d-b959-481c-9808-7ececda9112f",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/88fcea93-22b6-43d8-a275-9da66661c38f",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/f033cd0f-8334-4d9a-93d3-016da063e25a",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/14c7b502-c54d-4a93-9a1b-c97ced977c00",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/72bb231c-0630-477e-b667-f6de4e192c91",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/11e0a998-b025-4210-9e6f-30b9d3e5e667",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/2c236307-fa04-44a2-b8fd-5da82c80f220",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/e35d0848-610d-4452-8b3e-255246ad2ab9",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/af61e3a7-0f44-42a8-9479-a7eefef1d724",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/452a58cf-acc8-42fa-869f-796f08719e6b",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/a5be6453-89f2-40a3-9515-33216137a8a9",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/7ed821e7-7638-42f0-9d46-b7d99ce0ecb7",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/f2d4d30f-3fb2-4a6c-b330-3dff0deb48b6",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/5a14e8ef-daf3-4e96-8c61-d1570a7ea341",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/5074e777-61a9-471a-bf7c-3dfde289f3ad",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/6222a543-b06f-4f54-8661-49f34e7f4a3b",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/5b2d9cab-7d51-44d3-b9ad-2ff6fbb6af73",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/aa6bbf80-248b-4795-b3de-952c15697916",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/f4c120e0-ca30-4369-9400-8e0dd1c153d2",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/b5bbec20-f5bc-4961-a162-75f7e5a6373b",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/blue-mushroom-meme.png",
+      "status": 200,
+      "type": "image"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/",
+      "status": 200,
+      "type": "document"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/index-B3tQtPEi.css",
+      "status": 200,
+      "type": "stylesheet"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/index-DD1-QOGl.js",
+      "status": 200,
+      "type": "script"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/Tree_01.glb",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/Rock_01.glb",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/Grass_01.glb",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/PathTile_01.glb",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/Outpost_01.glb",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/OldTerminal_CRT_01.glb",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/Archive_01.glb",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/Lighthouse_01.glb",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/873d2a81-7ef4-46ea-8699-ae3462a4729b",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/c505a96d-7738-4aff-aceb-78177f46afd2",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/497ce287-e4c8-4602-865f-559e45a9940f",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/fb5ecf07-4b8f-4e97-a6af-7fdbe30c9f1e",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/ae0dc0f9-18ec-49c6-9c81-2c96377c42ea",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/13d4323b-1c41-4e22-9252-14607ef1321a",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/87d3b29d-af35-4236-aa8f-0267e3320ae2",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/fe84ad02-640f-4955-8d9d-986e500a86f8",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/64386880-c320-4739-813b-9980424f6c95",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/e07a1903-8c2a-4b11-8535-10711d343162",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/cefcdc06-7f8e-483a-a361-0205e5884a5c",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/ee479a46-6055-4ec6-8e60-62d2587a83e5",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/f86dc42b-6f4d-4022-af79-b33dbf1f9d63",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/32aafc02-6693-4e89-8a00-2bd648d8d56c",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/8223eb97-4578-4f9e-a4f1-2779854d477b",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/2875d57a-54f2-4443-91a0-66fd1cf20793",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/2d5c53b5-7317-46c4-a80c-bbca6ffd730b",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/bb3d2d25-220f-4760-a3c1-80c4a2413b2d",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/8a422e3e-5f7d-4648-89a5-16386f0ba210",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/48517e08-8153-42d6-86c0-23fa0a574e53",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/f2db9120-f6d9-452b-ab3b-de327a2657e1",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/045c7de3-fd44-420e-b080-9dd4f9e324e4",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/f9087d54-9347-4cb9-ab91-5718e842ec5f",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/41ee313b-cf5b-4762-a8cf-b7d5c5007e24",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/22c23be4-6b15-48ad-9cd7-77cc37eabf5f",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/c37cbf54-99cb-45d7-aab9-bdd9bcb0a211",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/d69c00fe-cf3d-4be4-bc43-4f33a8184be4",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/a5d2d121-3e72-449c-89e1-784b7137e734",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/b3fc5fc9-4275-4040-8fd3-2c91c026f4df",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/278c7b42-0bbd-4961-8615-166b476fd77e",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/91856578-6d09-4806-ab2c-8e0623245c23",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/2813d185-34d9-4806-b7fe-a6d4cb522ea3",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "blob:https://kur11912.github.io/755bc000-d3ec-4369-b223-96b1bedc821a",
+      "status": 200,
+      "type": "fetch"
+    },
+    {
+      "url": "https://kur11912.github.io/old-web-outpost/assets/blue-mushroom-meme.png",
+      "status": 200,
+      "type": "image"
+    }
+  ],
+  "requestFailures": [],
+  "errors": [],
+  "imageSha256": "ffd6990d1b3b76a7bfcd45633fa94a449b704e6180a5aea9bbd98793c1ac795e",
+  "passed": true,
+  "finishedAt": "2026-11-10T14:34:50.451Z"
+}
