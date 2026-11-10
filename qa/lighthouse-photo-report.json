@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:5180/",
+  "startedAt": "2026-11-10T14:00:50.381Z",
+  "checks": [],
+  "routes": [
+    {
+      "name": "lighthouse-game-bridge-far",
+      "pose": {
+        "x": 42.5,
+        "z": -8,
+        "yaw": -0.4139989379882813,
+        "pitch": 0.14734944458007815
+      }
+    },
+    {
+      "name": "lighthouse-game-side",
+      "pose": {
+        "x": 66.86677251825203,
+        "z": -37.40878849508048,
+        "yaw": 1.2217304687500001,
+        "pitch": 0.3763947021484375
+      }
+    },
+    {
+      "name": "lighthouse-game-rear",
+      "pose": {
+        "x": 57,
+        "z": -51.5,
+        "yaw": -3.1415923461914077,
+        "pitch": 0.3763948364257811
+      }
+    }
+  ],
+  "errors": [],
+  "sidePhotoClearance": 3.333601444772017,
+  "passed": true,
+  "finishedAt": "2026-11-10T14:00:57.482Z"
+}

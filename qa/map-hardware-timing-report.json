@@ -1,0 +1,379 @@
+{
+  "url": "http://127.0.0.1:5180/",
+  "startedAt": "2026-11-10T11:55:59.150Z",
+  "checks": [
+    {
+      "name": "五个原有 GLB 正常加载，驿站与固定出生点保留",
+      "details": {
+        "pose": {
+          "x": 0,
+          "z": 9,
+          "yaw": 0,
+          "pitch": 0
+        },
+        "assets": [
+          {
+            "name": "Tree_01",
+            "url": "/assets/Tree_01.glb",
+            "meshes": 2,
+            "triangles": 494,
+            "texturedMaterials": 2,
+            "alphaCutoutMaterials": 1,
+            "dimensions": {
+              "x": 3.752058982849121,
+              "y": 5.369998455047607,
+              "z": 3.6866196393966675
+            },
+            "instances": 86
+          },
+          {
+            "name": "Rock_01",
+            "url": "/assets/Rock_01.glb",
+            "meshes": 1,
+            "triangles": 80,
+            "texturedMaterials": 1,
+            "alphaCutoutMaterials": 0,
+            "dimensions": {
+              "x": 1.350000023841858,
+              "y": 0.7799999713897705,
+              "z": 1.0499999523162842
+            },
+            "instances": 20
+          },
+          {
+            "name": "Grass_01",
+            "url": "/assets/Grass_01.glb",
+            "meshes": 1,
+            "triangles": 6,
+            "texturedMaterials": 1,
+            "alphaCutoutMaterials": 1,
+            "dimensions": {
+              "x": 0.8600000143051147,
+              "y": 0.6399999856948853,
+              "z": 0.7447818517684937
+            },
+            "instances": 349
+          },
+          {
+            "name": "PathTile_01",
+            "url": "/assets/PathTile_01.glb",
+            "meshes": 2,
+            "triangles": 20,
+            "texturedMaterials": 2,
+            "alphaCutoutMaterials": 0,
+            "dimensions": {
+              "x": 2,
+              "y": 0.11999999731779099,
+              "z": 2
+            },
+            "instances": 67
+          },
+          {
+            "name": "Outpost_01",
+            "url": "/assets/Outpost_01.glb",
+            "meshes": 21,
+            "triangles": 526,
+            "texturedMaterials": 9,
+            "alphaCutoutMaterials": 0,
+            "dimensions": {
+              "x": 6.105000019073486,
+              "y": 5.179999828338623,
+              "z": 5.450000047683716
+            },
+            "instances": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "实际场景 M 俯视全图暂停移动，关闭需明确点击恢复",
+      "details": true
+    },
+    {
+      "name": "三段主要道路真实连续行走，无传送、卡住或穿地",
+      "details": [
+        {
+          "name": "旧网驿站前道路 → 回声档案馆",
+          "start": {
+            "x": 0,
+            "z": -2.0027999999999695,
+            "yaw": 0,
+            "pitch": 0
+          },
+          "end": {
+            "x": 19.951920000000012,
+            "z": -35.06879999999986,
+            "yaw": 0,
+            "pitch": 0
+          },
+          "distanceMetres": 53.64,
+          "walkingSeconds": 22.39,
+          "elapsedSeconds": 22.46,
+          "frames": {
+            "samples": 5392,
+            "averageFps": 239.96,
+            "above50ms": 0,
+            "longestFrameMs": 4.5,
+            "cappedTimeRatio": 1
+          },
+          "measuredSpeed": 2.4
+        },
+        {
+          "name": "回声档案馆 → 桥梁中心",
+          "start": {
+            "x": 19.951920000000012,
+            "z": -35.06879999999986,
+            "yaw": 0,
+            "pitch": 0
+          },
+          "end": {
+            "x": 39.14759999999962,
+            "z": -7.944000000000317,
+            "yaw": 0,
+            "pitch": 0
+          },
+          "distanceMetres": 59.79,
+          "walkingSeconds": 25,
+          "elapsedSeconds": 25.12,
+          "frames": {
+            "samples": 6012,
+            "averageFps": 239.33,
+            "above50ms": 0,
+            "longestFrameMs": 8.6,
+            "cappedTimeRatio": 1
+          },
+          "measuredSpeed": 2.39
+        },
+        {
+          "name": "桥梁中心 → 记忆灯塔",
+          "start": {
+            "x": 39.14759999999962,
+            "z": -7.944000000000317,
+            "yaw": -2.7755575615628914e-16,
+            "pitch": 6.938893903907228e-18
+          },
+          "end": {
+            "x": 57.211439999999875,
+            "z": -34.957919999999795,
+            "yaw": -2.7755575615628914e-16,
+            "pitch": 6.938893903907228e-18
+          },
+          "distanceMetres": 45.72,
+          "walkingSeconds": 19.12,
+          "elapsedSeconds": 19.21,
+          "frames": {
+            "samples": 4583,
+            "averageFps": 238.55,
+            "above50ms": 0,
+            "longestFrameMs": 8.7,
+            "cappedTimeRatio": 1
+          },
+          "measuredSpeed": 2.39
+        }
+      ]
+    },
+    {
+      "name": "新地图东岸位置刷新恢复，不被旧版 14 米边界重置",
+      "details": {
+        "x": 57.211439999999875,
+        "z": -34.957919999999795,
+        "yaw": -2.7755575615628914e-16,
+        "pitch": 0.30000002441406254
+      }
+    }
+  ],
+  "timings": [
+    {
+      "name": "旧网驿站前道路 → 回声档案馆",
+      "start": {
+        "x": 0,
+        "z": -2.0027999999999695,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "end": {
+        "x": 19.951920000000012,
+        "z": -35.06879999999986,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "distanceMetres": 53.64,
+      "walkingSeconds": 22.39,
+      "elapsedSeconds": 22.46,
+      "frames": {
+        "samples": 5392,
+        "averageFps": 239.96,
+        "above50ms": 0,
+        "longestFrameMs": 4.5,
+        "cappedTimeRatio": 1
+      },
+      "measuredSpeed": 2.4
+    },
+    {
+      "name": "回声档案馆 → 桥梁中心",
+      "start": {
+        "x": 19.951920000000012,
+        "z": -35.06879999999986,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "end": {
+        "x": 39.14759999999962,
+        "z": -7.944000000000317,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "distanceMetres": 59.79,
+      "walkingSeconds": 25,
+      "elapsedSeconds": 25.12,
+      "frames": {
+        "samples": 6012,
+        "averageFps": 239.33,
+        "above50ms": 0,
+        "longestFrameMs": 8.6,
+        "cappedTimeRatio": 1
+      },
+      "measuredSpeed": 2.39
+    },
+    {
+      "name": "桥梁中心 → 记忆灯塔",
+      "start": {
+        "x": 39.14759999999962,
+        "z": -7.944000000000317,
+        "yaw": -2.7755575615628914e-16,
+        "pitch": 6.938893903907228e-18
+      },
+      "end": {
+        "x": 57.211439999999875,
+        "z": -34.957919999999795,
+        "yaw": -2.7755575615628914e-16,
+        "pitch": 6.938893903907228e-18
+      },
+      "distanceMetres": 45.72,
+      "walkingSeconds": 19.12,
+      "elapsedSeconds": 19.21,
+      "frames": {
+        "samples": 4583,
+        "averageFps": 238.55,
+        "above50ms": 0,
+        "longestFrameMs": 8.7,
+        "cappedTimeRatio": 1
+      },
+      "measuredSpeed": 2.39
+    }
+  ],
+  "waypoints": [
+    {
+      "x": 0,
+      "z": -1.9826399999999704,
+      "yaw": 0,
+      "pitch": 0
+    },
+    {
+      "x": 13.601519999999988,
+      "z": -2.0027999999999695,
+      "yaw": 0,
+      "pitch": 0
+    },
+    {
+      "x": 13.45151999999999,
+      "z": -2.0027999999999695,
+      "yaw": 0,
+      "pitch": 0
+    },
+    {
+      "x": 13.43135999999999,
+      "z": -30.00887999999976,
+      "yaw": 0,
+      "pitch": 0
+    },
+    {
+      "x": 20.111520000000006,
+      "z": -30.02879999999976,
+      "yaw": 0,
+      "pitch": 0
+    },
+    {
+      "x": 19.971600000000013,
+      "z": -30.02879999999976,
+      "yaw": 0,
+      "pitch": 0
+    },
+    {
+      "x": 19.951920000000012,
+      "z": -35.04887999999986,
+      "yaw": 0,
+      "pitch": 0
+    },
+    {
+      "x": 19.951920000000012,
+      "z": -29.85791999999979,
+      "yaw": 0,
+      "pitch": 0
+    },
+    {
+      "x": 13.398720000000038,
+      "z": -29.837759999999797,
+      "yaw": 0,
+      "pitch": 0
+    },
+    {
+      "x": 13.349040000000027,
+      "z": -30.017759999999793,
+      "yaw": 0,
+      "pitch": 0
+    },
+    {
+      "x": 13.498800000000019,
+      "z": -30.067919999999795,
+      "yaw": 0,
+      "pitch": 0
+    },
+    {
+      "x": 13.548720000000028,
+      "z": -7.9641600000003026,
+      "yaw": 0,
+      "pitch": 0
+    },
+    {
+      "x": 39.13751999999961,
+      "z": -7.944000000000317,
+      "yaw": 0,
+      "pitch": 0
+    },
+    {
+      "x": 50.12952000000002,
+      "z": -7.944000000000317,
+      "yaw": -2.7755575615628914e-16,
+      "pitch": 6.938893903907228e-18
+    },
+    {
+      "x": 49.969680000000004,
+      "z": -7.944000000000317,
+      "yaw": -2.7755575615628914e-16,
+      "pitch": 6.938893903907228e-18
+    },
+    {
+      "x": 49.94952,
+      "z": -35.12807999999975,
+      "yaw": -2.7755575615628914e-16,
+      "pitch": 6.938893903907228e-18
+    },
+    {
+      "x": 57.161279999999884,
+      "z": -35.168399999999764,
+      "yaw": -2.7755575615628914e-16,
+      "pitch": 6.938893903907228e-18
+    },
+    {
+      "x": 57.211439999999875,
+      "z": -35.00807999999978,
+      "yaw": -2.7755575615628914e-16,
+      "pitch": 6.938893903907228e-18
+    }
+  ],
+  "errors": [],
+  "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 Ti Laptop GPU (0x00002F58) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "passed": true,
+  "finishedAt": "2026-11-10T11:57:15.178Z"
+}

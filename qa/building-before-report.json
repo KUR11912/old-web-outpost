@@ -1,0 +1,12 @@
+{
+  "url": "http://127.0.0.1:5180/",
+  "startedAt": "2026-11-10T11:18:43.051Z",
+  "checks": [],
+  "route": [],
+  "errors": [
+    "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:5180/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:5180/\", waiting until \"networkidle\"\u001b[22m\n\n    at setup (E:\\6311 final\\old-web-outpost\\qa\\building-browser-test.mjs:22:13)\n    at async photo (E:\\6311 final\\old-web-outpost\\qa\\building-browser-test.mjs:57:10)\n    at async file:///E:/6311%20final/old-web-outpost/qa/building-browser-test.mjs:61:3",
+    "Failed to read the 'localStorage' property from 'Window': Access is denied for this document."
+  ],
+  "passed": false,
+  "finishedAt": "2026-11-10T11:18:43.674Z"
+}

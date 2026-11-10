@@ -1,0 +1,252 @@
+{
+  "url": "http://127.0.0.1:5180/",
+  "startedAt": "2026-11-10T13:07:22.451Z",
+  "checks": [
+    {
+      "name": "第六个 CRT GLB 实际请求成功，网格与贴图加载完成",
+      "details": {
+        "name": "OldTerminal_CRT_01",
+        "url": "/assets/OldTerminal_CRT_01.glb",
+        "meshes": 61,
+        "triangles": 3048,
+        "texturedMaterials": 4,
+        "alphaCutoutMaterials": 0,
+        "dimensions": {
+          "x": 0.800000011920929,
+          "y": 0.7599999904632568,
+          "z": 0.7008000090718269
+        },
+        "instances": 1,
+        "materialDetails": [
+          {
+            "name": "CRT_Ivory_Plastic",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.699999988079071,
+            "metalness": 0,
+            "map": {
+              "width": 128,
+              "height": 128
+            },
+            "emissiveMap": null
+          },
+          {
+            "name": "CRT_Rear_Vent_Texture",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.699999988079071,
+            "metalness": 0,
+            "map": {
+              "width": 128,
+              "height": 128
+            },
+            "emissiveMap": null
+          },
+          {
+            "name": "CRT_Recessed_Dark_Rim",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.8199999928474426,
+            "metalness": 0,
+            "map": null,
+            "emissiveMap": null
+          },
+          {
+            "name": "CRT_Screen_Glass",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.25,
+            "metalness": 0,
+            "map": {
+              "width": 256,
+              "height": 192
+            },
+            "emissiveMap": {
+              "width": 256,
+              "height": 192
+            }
+          },
+          {
+            "name": "CRT_Power_LED",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.4000000059604645,
+            "metalness": 0,
+            "map": null,
+            "emissiveMap": null
+          },
+          {
+            "name": "CRT_Keycaps_Atlas",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.7599999904632568,
+            "metalness": 0,
+            "map": {
+              "width": 128,
+              "height": 128
+            },
+            "emissiveMap": null
+          }
+        ]
+      }
+    },
+    {
+      "name": "其他五类 GLB 实例数与五个调查点 ID 保持不变",
+      "details": {
+        "Tree_01": 86,
+        "Rock_01": 20,
+        "Grass_01": 349,
+        "PathTile_01": 67,
+        "Outpost_01": 1
+      }
+    },
+    {
+      "name": "网页中的塑料与玻璃粗糙度保留 .7 / .25，未统一覆盖为 1",
+      "details": [
+        {
+          "name": "CRT_Ivory_Plastic",
+          "type": "MeshPhysicalMaterial",
+          "roughness": 0.699999988079071,
+          "metalness": 0,
+          "map": {
+            "width": 128,
+            "height": 128
+          },
+          "emissiveMap": null
+        },
+        {
+          "name": "CRT_Rear_Vent_Texture",
+          "type": "MeshPhysicalMaterial",
+          "roughness": 0.699999988079071,
+          "metalness": 0,
+          "map": {
+            "width": 128,
+            "height": 128
+          },
+          "emissiveMap": null
+        },
+        {
+          "name": "CRT_Recessed_Dark_Rim",
+          "type": "MeshPhysicalMaterial",
+          "roughness": 0.8199999928474426,
+          "metalness": 0,
+          "map": null,
+          "emissiveMap": null
+        },
+        {
+          "name": "CRT_Screen_Glass",
+          "type": "MeshPhysicalMaterial",
+          "roughness": 0.25,
+          "metalness": 0,
+          "map": {
+            "width": 256,
+            "height": 192
+          },
+          "emissiveMap": {
+            "width": 256,
+            "height": 192
+          }
+        },
+        {
+          "name": "CRT_Power_LED",
+          "type": "MeshPhysicalMaterial",
+          "roughness": 0.4000000059604645,
+          "metalness": 0,
+          "map": null,
+          "emissiveMap": null
+        },
+        {
+          "name": "CRT_Keycaps_Atlas",
+          "type": "MeshPhysicalMaterial",
+          "roughness": 0.7599999904632568,
+          "metalness": 0,
+          "map": {
+            "width": 128,
+            "height": 128
+          },
+          "emissiveMap": null
+        }
+      ]
+    },
+    {
+      "name": "既有 v1 四卡及已完成调查状态保持",
+      "details": {
+        "answers": {
+          "meaning": "emotion",
+          "context": "shared-self-mockery"
+        },
+        "completed": true
+      }
+    },
+    {
+      "name": "新电脑挂接原 old-terminal 调查对象，原桌面和四条桌腿保留",
+      "details": true
+    },
+    {
+      "name": "真实瞄准 CRT 按 E 仍打开原读音资料，已持有线索不重复发放",
+      "details": true
+    },
+    {
+      "name": "窗口暂停、关闭后明确点击恢复正常",
+      "details": true
+    },
+    {
+      "name": "可从左侧绕到后方，桌面与建筑碰撞没有新增卡点",
+      "details": true
+    },
+    {
+      "name": "刷新后位置、四张线索、两项答案和完成状态完整恢复",
+      "details": {
+        "x": 15.339279999999968,
+        "z": -36.380320000000545,
+        "yaw": -2.1803584472656246,
+        "pitch": -0.2726812316894531
+      }
+    }
+  ],
+  "routes": [
+    {
+      "name": "走近终端并观察与右侧聊天站的关系",
+      "start": {
+        "x": 16.6,
+        "z": -31.3,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "end": {
+        "x": 17.459919999999947,
+        "z": -31.859919999999992,
+        "yaw": 0,
+        "pitch": 0
+      }
+    },
+    {
+      "name": "真实靠近旧终端",
+      "start": {
+        "x": 17.459919999999947,
+        "z": -31.859919999999992,
+        "yaw": 1.3877787807814457e-17,
+        "pitch": 6.71386718720246e-8
+      },
+      "end": {
+        "x": 16.58919999999993,
+        "z": -33.76048000000007,
+        "yaw": 1.3877787807814457e-17,
+        "pitch": 6.71386718720246e-8
+      }
+    },
+    {
+      "name": "绕左侧查看 CRT 深度及背面",
+      "start": {
+        "x": 16.58919999999993,
+        "z": -33.76048000000007,
+        "yaw": 1.5178830414797062e-17,
+        "pitch": 6.713867188590239e-8
+      },
+      "end": {
+        "x": 15.339279999999968,
+        "z": -36.380320000000545,
+        "yaw": 1.5178830414797062e-17,
+        "pitch": 6.713867188590239e-8
+      }
+    }
+  ],
+  "errors": [],
+  "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 Ti Laptop GPU (0x00002F58) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "passed": true,
+  "finishedAt": "2026-11-10T13:07:32.259Z"
+}

@@ -1,0 +1,119 @@
+{
+  "url": "http://127.0.0.1:5180/",
+  "startedAt": "2026-11-10T13:35:53.683Z",
+  "checks": [
+    {
+      "name": "新玩家从原有固定出生点开始，档案馆任务未完成",
+      "details": {
+        "x": 0,
+        "z": 9,
+        "yaw": 0,
+        "pitch": 0
+      }
+    },
+    {
+      "name": "原邮箱流程和用户上传原图保留，领取唯一原线索",
+      "details": true
+    },
+    {
+      "name": "缺少档案馆线索时，整理界面提示缺卡及调查地点",
+      "details": "已收集 1 / 4\n还需要一些资料\n\n把四张线索收齐后，就可以开始判断。已找到的卡片会一直留在背包里。\n\n读音便笺\n回声档案馆 · 旧终端\n聊天片段\n回声档案馆 · 聊天窗口\n图片改编记录\n回声档案馆 · 图片缓存"
+    },
+    {
+      "name": "独立调查并领取：old-terminal",
+      "details": "echo-meaning-note"
+    },
+    {
+      "name": "独立调查并领取：chat-viewer",
+      "details": "echo-chat-context"
+    },
+    {
+      "name": "独立调查并领取：image-cache",
+      "details": "echo-image-variants"
+    },
+    {
+      "name": "重复调查已领取的物件不重复发卡",
+      "details": true
+    },
+    {
+      "name": "背包四卡均可反复打开回看，原图显示一致",
+      "details": true
+    },
+    {
+      "name": "错误反馈 → 回看材料 → 改选重试 → 整理完成，并提示断链桥",
+      "details": true
+    },
+    {
+      "name": "刷新后恢复四张卡、整理答案、完成状态及档案馆位置",
+      "details": {
+        "answers": {
+          "meaning": "emotion",
+          "context": "shared-self-mockery"
+        },
+        "completed": true
+      }
+    },
+    {
+      "name": "旧 v1 单卡存档兼容；东岸位置及原卡保留，新增任务默认未完成",
+      "details": true
+    },
+    {
+      "name": "桥梁未因本轮任务新增门锁，仍可双向走通",
+      "details": true
+    }
+  ],
+  "routes": [
+    {
+      "name": "出生点 → 邮箱",
+      "seconds": 5.03,
+      "start": {
+        "x": 0,
+        "z": 9,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "end": {
+        "x": 1.5004799999999998,
+        "z": -1.4798399999999547,
+        "yaw": 0,
+        "pitch": 0
+      }
+    },
+    {
+      "name": "邮箱 → 回声档案馆",
+      "seconds": 20.43,
+      "start": {
+        "x": 1.5004799999999998,
+        "z": -1.4798399999999547,
+        "yaw": -2.710505431213761e-20,
+        "pitch": 6.71386718720246e-8
+      },
+      "end": {
+        "x": 19.961039999999997,
+        "z": -28.99559999999966,
+        "yaw": -2.710505431213761e-20,
+        "pitch": 6.71386718720246e-8
+      }
+    },
+    {
+      "name": "未完成档案馆时桥梁仍双向开放",
+      "seconds": 10.16,
+      "start": {
+        "x": 33,
+        "z": -8,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "end": {
+        "x": 32.9097599999999,
+        "z": -8,
+        "yaw": 0,
+        "pitch": 0
+      }
+    }
+  ],
+  "errors": [],
+  "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 Ti Laptop GPU (0x00002F58) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "passed": true,
+  "finishedAt": "2026-11-10T13:37:03.653Z"
+}

@@ -1,0 +1,674 @@
+{
+  "blender_version": "5.2.3 LTS",
+  "source": "E:\\6311 final\\old-web-outpost\\building_asset\\Outpost_01.blend",
+  "glb": "E:\\6311 final\\old-web-outpost\\building_asset\\Outpost_01.glb",
+  "passed": true,
+  "checks": [
+    {
+      "name": "Editable source has independent Outpost_01 collection",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "Source uses metres",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "Asset root is at bottom-centre origin with unit scale",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "Source triangle count",
+      "passed": true,
+      "details": 526
+    },
+    {
+      "name": "Source retains editable mesh parts",
+      "passed": true,
+      "details": 10
+    },
+    {
+      "name": "All source meshes have UVs",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "Source rests at Z=0",
+      "passed": true,
+      "details": {
+        "min": [
+          -3.075000047683716,
+          -2.7699999809265137,
+          0.0
+        ],
+        "max": [
+          3.0299999713897705,
+          2.680000066757202,
+          5.179999828338623
+        ],
+        "dimensions": [
+          6.105000019073486,
+          5.450000047683716,
+          5.179999828338623
+        ]
+      }
+    },
+    {
+      "name": "Seven 128px nearest-sampled source textures decode",
+      "passed": true,
+      "details": {
+        "plaster_128.png": {
+          "size": [
+            128,
+            128
+          ],
+          "decoded": true,
+          "packed": true,
+          "filter": "Closest"
+        },
+        "roof_stone_128.png": {
+          "size": [
+            128,
+            128
+          ],
+          "decoded": true,
+          "packed": true,
+          "filter": "Closest"
+        },
+        "blue_cornice_128.png": {
+          "size": [
+            128,
+            128
+          ],
+          "decoded": true,
+          "packed": true,
+          "filter": "Closest"
+        },
+        "base_stone_128.png": {
+          "size": [
+            128,
+            128
+          ],
+          "decoded": true,
+          "packed": true,
+          "filter": "Closest"
+        },
+        "windows_atlas_128.png": {
+          "size": [
+            128,
+            128
+          ],
+          "decoded": true,
+          "packed": true,
+          "filter": "Closest"
+        },
+        "double_door_128.png": {
+          "size": [
+            128,
+            128
+          ],
+          "decoded": true,
+          "packed": true,
+          "filter": "Closest"
+        },
+        "envelope_128.png": {
+          "size": [
+            128,
+            128
+          ],
+          "decoded": true,
+          "packed": true,
+          "filter": "Closest"
+        }
+      }
+    },
+    {
+      "name": "Source texture images are packed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "Seven editable PNG texture files exist",
+      "passed": true,
+      "details": [
+        "base_stone_128.png",
+        "blue_cornice_128.png",
+        "double_door_128.png",
+        "envelope_128.png",
+        "plaster_128.png",
+        "roof_stone_128.png",
+        "windows_atlas_128.png"
+      ]
+    },
+    {
+      "name": "All blue cornice faces point outward",
+      "passed": true,
+      "details": {
+        "minimum_normal_dot": 0.9999999701976776,
+        "faces": 12
+      }
+    },
+    {
+      "name": "Source facade faces Blender -Y",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "GLB header is valid",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "GLB contains JSON and embedded binary data",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "GLB image is embedded PNG",
+      "passed": true,
+      "details": "plaster_128"
+    },
+    {
+      "name": "Embedded image bytes are a valid PNG",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "GLB image is embedded PNG",
+      "passed": true,
+      "details": "base_stone_128"
+    },
+    {
+      "name": "Embedded image bytes are a valid PNG",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "GLB image is embedded PNG",
+      "passed": true,
+      "details": "roof_stone_128"
+    },
+    {
+      "name": "Embedded image bytes are a valid PNG",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "GLB image is embedded PNG",
+      "passed": true,
+      "details": "blue_cornice_128"
+    },
+    {
+      "name": "Embedded image bytes are a valid PNG",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "GLB image is embedded PNG",
+      "passed": true,
+      "details": "windows_atlas_128"
+    },
+    {
+      "name": "Embedded image bytes are a valid PNG",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "GLB image is embedded PNG",
+      "passed": true,
+      "details": "double_door_128"
+    },
+    {
+      "name": "Embedded image bytes are a valid PNG",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "GLB image is embedded PNG",
+      "passed": true,
+      "details": "envelope_128"
+    },
+    {
+      "name": "Embedded image bytes are a valid PNG",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "All seven textures are embedded at 128px",
+      "passed": true,
+      "details": [
+        {
+          "name": "plaster_128",
+          "width": 128,
+          "height": 128,
+          "bytes": 21480
+        },
+        {
+          "name": "base_stone_128",
+          "width": 128,
+          "height": 128,
+          "bytes": 24825
+        },
+        {
+          "name": "roof_stone_128",
+          "width": 128,
+          "height": 128,
+          "bytes": 21501
+        },
+        {
+          "name": "blue_cornice_128",
+          "width": 128,
+          "height": 128,
+          "bytes": 24630
+        },
+        {
+          "name": "windows_atlas_128",
+          "width": 128,
+          "height": 128,
+          "bytes": 1518
+        },
+        {
+          "name": "double_door_128",
+          "width": 128,
+          "height": 128,
+          "bytes": 1201
+        },
+        {
+          "name": "envelope_128",
+          "width": 128,
+          "height": 128,
+          "bytes": 1499
+        }
+      ]
+    },
+    {
+      "name": "GLB texture samplers preserve nearest filtering",
+      "passed": true,
+      "details": [
+        {
+          "magFilter": 9728,
+          "minFilter": 9984
+        }
+      ]
+    },
+    {
+      "name": "GLB triangle count matches source",
+      "passed": true,
+      "details": 526
+    },
+    {
+      "name": "Presentation objects are excluded from GLB",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "Geometry accessor uses float vectors",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "Geometry accessor uses float vectors",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "Geometry accessor uses float vectors",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "Geometry accessor uses float vectors",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "Geometry accessor uses float vectors",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "Geometry accessor uses float vectors",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "Exported facade faces glTF +Z",
+      "passed": true,
+      "details": {
+        "front_z": 2.515000104904175,
+        "normal_z": 1.0
+      }
+    },
+    {
+      "name": "Game GLB matches validated export",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "Actual Blender reimport triangle count matches",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "Actual reimport UVs are intact",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "Actual reimport bounds match source",
+      "passed": true,
+      "details": {
+        "min": [
+          -3.075000047683716,
+          -2.7699999809265137,
+          0.0
+        ],
+        "max": [
+          3.0299999713897705,
+          2.680000066757202,
+          5.179999828338623
+        ],
+        "dimensions": [
+          6.105000019073486,
+          5.450000047683716,
+          5.179999828338623
+        ]
+      }
+    },
+    {
+      "name": "Actual reimport materials decode all seven textures",
+      "passed": true,
+      "details": {
+        "plaster_128": {
+          "size": [
+            128,
+            128
+          ],
+          "decoded": true,
+          "packed": true,
+          "filter": "Closest"
+        },
+        "base_stone_128": {
+          "size": [
+            128,
+            128
+          ],
+          "decoded": true,
+          "packed": true,
+          "filter": "Closest"
+        },
+        "blue_cornice_128": {
+          "size": [
+            128,
+            128
+          ],
+          "decoded": true,
+          "packed": true,
+          "filter": "Closest"
+        },
+        "windows_atlas_128": {
+          "size": [
+            128,
+            128
+          ],
+          "decoded": true,
+          "packed": true,
+          "filter": "Closest"
+        },
+        "roof_stone_128": {
+          "size": [
+            128,
+            128
+          ],
+          "decoded": true,
+          "packed": true,
+          "filter": "Closest"
+        },
+        "double_door_128": {
+          "size": [
+            128,
+            128
+          ],
+          "decoded": true,
+          "packed": true,
+          "filter": "Closest"
+        },
+        "envelope_128": {
+          "size": [
+            128,
+            128
+          ],
+          "decoded": true,
+          "packed": true,
+          "filter": "Closest"
+        }
+      }
+    }
+  ],
+  "source_info": {
+    "mesh_count": 10,
+    "triangles": 526,
+    "bounds": {
+      "min": [
+        -3.075000047683716,
+        -2.7699999809265137,
+        0.0
+      ],
+      "max": [
+        3.0299999713897705,
+        2.680000066757202,
+        5.179999828338623
+      ],
+      "dimensions": [
+        6.105000019073486,
+        5.450000047683716,
+        5.179999828338623
+      ]
+    },
+    "missing_uv": [],
+    "images": {
+      "plaster_128.png": {
+        "size": [
+          128,
+          128
+        ],
+        "decoded": true,
+        "packed": true,
+        "filter": "Closest"
+      },
+      "roof_stone_128.png": {
+        "size": [
+          128,
+          128
+        ],
+        "decoded": true,
+        "packed": true,
+        "filter": "Closest"
+      },
+      "blue_cornice_128.png": {
+        "size": [
+          128,
+          128
+        ],
+        "decoded": true,
+        "packed": true,
+        "filter": "Closest"
+      },
+      "base_stone_128.png": {
+        "size": [
+          128,
+          128
+        ],
+        "decoded": true,
+        "packed": true,
+        "filter": "Closest"
+      },
+      "windows_atlas_128.png": {
+        "size": [
+          128,
+          128
+        ],
+        "decoded": true,
+        "packed": true,
+        "filter": "Closest"
+      },
+      "double_door_128.png": {
+        "size": [
+          128,
+          128
+        ],
+        "decoded": true,
+        "packed": true,
+        "filter": "Closest"
+      },
+      "envelope_128.png": {
+        "size": [
+          128,
+          128
+        ],
+        "decoded": true,
+        "packed": true,
+        "filter": "Closest"
+      }
+    }
+  },
+  "glb_info": {
+    "triangles": 526,
+    "meshes": 10,
+    "primitives": 21,
+    "images": [
+      {
+        "name": "plaster_128",
+        "width": 128,
+        "height": 128,
+        "bytes": 21480
+      },
+      {
+        "name": "base_stone_128",
+        "width": 128,
+        "height": 128,
+        "bytes": 24825
+      },
+      {
+        "name": "roof_stone_128",
+        "width": 128,
+        "height": 128,
+        "bytes": 21501
+      },
+      {
+        "name": "blue_cornice_128",
+        "width": 128,
+        "height": 128,
+        "bytes": 24630
+      },
+      {
+        "name": "windows_atlas_128",
+        "width": 128,
+        "height": 128,
+        "bytes": 1518
+      },
+      {
+        "name": "double_door_128",
+        "width": 128,
+        "height": 128,
+        "bytes": 1201
+      },
+      {
+        "name": "envelope_128",
+        "width": 128,
+        "height": 128,
+        "bytes": 1499
+      }
+    ]
+  },
+  "reimport_info": {
+    "mesh_count": 10,
+    "triangles": 526,
+    "bounds": {
+      "min": [
+        -3.075000047683716,
+        -2.7699999809265137,
+        0.0
+      ],
+      "max": [
+        3.0299999713897705,
+        2.680000066757202,
+        5.179999828338623
+      ],
+      "dimensions": [
+        6.105000019073486,
+        5.450000047683716,
+        5.179999828338623
+      ]
+    },
+    "missing_uv": [],
+    "images": {
+      "plaster_128": {
+        "size": [
+          128,
+          128
+        ],
+        "decoded": true,
+        "packed": true,
+        "filter": "Closest"
+      },
+      "base_stone_128": {
+        "size": [
+          128,
+          128
+        ],
+        "decoded": true,
+        "packed": true,
+        "filter": "Closest"
+      },
+      "blue_cornice_128": {
+        "size": [
+          128,
+          128
+        ],
+        "decoded": true,
+        "packed": true,
+        "filter": "Closest"
+      },
+      "windows_atlas_128": {
+        "size": [
+          128,
+          128
+        ],
+        "decoded": true,
+        "packed": true,
+        "filter": "Closest"
+      },
+      "roof_stone_128": {
+        "size": [
+          128,
+          128
+        ],
+        "decoded": true,
+        "packed": true,
+        "filter": "Closest"
+      },
+      "double_door_128": {
+        "size": [
+          128,
+          128
+        ],
+        "decoded": true,
+        "packed": true,
+        "filter": "Closest"
+      },
+      "envelope_128": {
+        "size": [
+          128,
+          128
+        ],
+        "decoded": true,
+        "packed": true,
+        "filter": "Closest"
+      }
+    }
+  },
+  "reimport_preview": "E:\\6311 final\\old-web-outpost\\building_asset\\previews\\reimport.png"
+}

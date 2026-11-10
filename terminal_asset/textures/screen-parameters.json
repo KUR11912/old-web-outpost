@@ -1,0 +1,11 @@
+{
+  "fonts": [
+    "Consolas",
+    "Microsoft YaHei"
+  ],
+  "filter": "nearest",
+  "height": 192,
+  "content": "ARCHIVE_LOCAL / OPEN LOG / READ TEXT",
+  "seed": 63112028,
+  "width": 256
+}

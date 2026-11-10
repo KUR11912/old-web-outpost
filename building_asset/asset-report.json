@@ -1,0 +1,65 @@
+{
+  "blender_version": "5.2.3 LTS",
+  "params": {
+    "seed": 63112026,
+    "units": "metres",
+    "body": [
+      5.6,
+      5.0,
+      4.3
+    ],
+    "roof": [
+      5.96,
+      5.36,
+      0.14
+    ],
+    "cornice": {
+      "length": 6.06,
+      "segments": 10,
+      "radius_depth": 0.23,
+      "radius_height": 0.18,
+      "height": 4.31
+    },
+    "window_size": 0.49,
+    "front_columns": 7,
+    "window_rows": [
+      2.23,
+      3.02,
+      3.8
+    ],
+    "texture_size": 128,
+    "roughness": 0.94,
+    "metallic": 0,
+    "filter": "NEAREST",
+    "world_position": [
+      0,
+      0,
+      -7.5
+    ],
+    "front": "Blender -Y / glTF +Z",
+    "root_origin": "bottom centre",
+    "render_samples": 24
+  },
+  "triangles": 526,
+  "meshes": 10,
+  "min": [
+    -3.075000047683716,
+    -2.7699999809265137,
+    0.0
+  ],
+  "max": [
+    3.0299999713897705,
+    2.680000066757202,
+    5.179999828338623
+  ],
+  "texture_files": [
+    "base_stone_128.png",
+    "blue_cornice_128.png",
+    "double_door_128.png",
+    "envelope_128.png",
+    "plaster_128.png",
+    "roof_stone_128.png",
+    "windows_atlas_128.png"
+  ],
+  "glb": "E:\\6311 final\\old-web-outpost\\building_asset\\Outpost_01.glb"
+}

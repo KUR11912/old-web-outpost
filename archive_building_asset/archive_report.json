@@ -1,0 +1,359 @@
+{
+  "asset": "Archive_01",
+  "blender_version": "5.2.3 LTS",
+  "blender_executable": "E:\\BLEND\\blender.exe",
+  "parameters": {
+    "seed": 63112029,
+    "units": "metres",
+    "origin": "bottom centre",
+    "front": "Blender -Y / glTF +Z",
+    "world_centre": [
+      20,
+      0,
+      -40
+    ],
+    "body_width": 5.0,
+    "body_depth": 6.0,
+    "front_body_height": 6.3,
+    "rear_body_height": 5.94,
+    "parapet_height": 7.22,
+    "base_width": 5.16,
+    "base_depth": 6.16,
+    "base_height": 0.04,
+    "awning_width": 4.88,
+    "awning_back_gltf_z": 3.025,
+    "awning_front_gltf_z": 4.0,
+    "awning_top": 3.4,
+    "awning_bottom": 2.68,
+    "awning_thickness": 0.06,
+    "awning_segments": 8,
+    "door_centre_x": 0.55,
+    "door_width": 1.1,
+    "door_height": 2.45,
+    "upper_window": [
+      2.4,
+      1.6
+    ],
+    "upper_window_centre_height": 4.8,
+    "sign_centre": [
+      -2.78,
+      4.65,
+      3.1
+    ],
+    "sign_image_size": [
+      128,
+      256
+    ],
+    "texture_size": 128,
+    "roughness": 0.92,
+    "render_samples": 24
+  },
+  "export": {
+    "triangles": 700,
+    "mesh_count": 65,
+    "mesh_names": [
+      "Archive_Base_Platform",
+      "Archive_Main_Body",
+      "Archive_High_Front_Parapet",
+      "Archive_Parapet_Coping",
+      "Archive_Facade_Edge",
+      "Archive_Short_Parapet_Return",
+      "Archive_Facade_Edge.001",
+      "Archive_Short_Parapet_Return.001",
+      "Archive_Front_Parapet_Band",
+      "Archive_Rear_Low_Slope_Roof",
+      "Archive_Front_Brick_Left",
+      "Archive_Front_Brick_Right",
+      "Archive_Left_Brick",
+      "Archive_Right_Brick",
+      "Archive_Rear_Brick",
+      "Archive_Shop_Left_Window_Glass",
+      "Archive_Shop_Left_Window_Vertical_Frame",
+      "Archive_Shop_Left_Window_Vertical_Frame.001",
+      "Archive_Shop_Left_Window_Horizontal_Frame",
+      "Archive_Shop_Left_Window_Horizontal_Frame.001",
+      "Archive_Shop_Right_Window_Glass",
+      "Archive_Shop_Right_Window_Vertical_Frame",
+      "Archive_Shop_Right_Window_Vertical_Frame.001",
+      "Archive_Shop_Right_Window_Horizontal_Frame",
+      "Archive_Shop_Right_Window_Horizontal_Frame.001",
+      "Archive_Offset_Glass_Door_Glass",
+      "Archive_Offset_Glass_Door_Vertical_Frame",
+      "Archive_Offset_Glass_Door_Vertical_Frame.001",
+      "Archive_Offset_Glass_Door_Horizontal_Frame",
+      "Archive_Offset_Glass_Door_Horizontal_Frame.001",
+      "Archive_Door_Handle",
+      "Archive_Upper_Main_Window_Glass",
+      "Archive_Upper_Main_Window_Vertical_Frame",
+      "Archive_Upper_Main_Window_Vertical_Frame.001",
+      "Archive_Upper_Main_Window_Horizontal_Frame",
+      "Archive_Upper_Main_Window_Horizontal_Frame.001",
+      "Archive_Upper_Main_Window_Centre_Divider",
+      "Archive_Upper_Window_Sill",
+      "Archive_Upper_Small_Rain_Ledge",
+      "Archive_Curved_Rose_Awning",
+      "Archive_Awning_End_Cheek",
+      "Archive_Awning_End_Cheek.001",
+      "Archive_Vertical_Sign_Frame",
+      "Archive_Vertical_Sign_Lettering",
+      "Archive_Sign_Bracket",
+      "Archive_Sign_Bracket.001",
+      "Archive_Side_-1_Upper_Backing",
+      "Archive_Side_-1_Upper_Glass",
+      "Archive_Side_-1_Upper_Divider",
+      "Archive_Side_-1_Lower_Backing",
+      "Archive_Side_-1_Lower_Glass",
+      "Archive_Side_-1_Lower_Divider",
+      "Archive_Side_1_Upper_Backing",
+      "Archive_Side_1_Upper_Glass",
+      "Archive_Side_1_Upper_Divider",
+      "Archive_Side_1_Lower_Backing",
+      "Archive_Side_1_Lower_Glass",
+      "Archive_Side_1_Lower_Divider",
+      "Archive_Rear_Window_Frame",
+      "Archive_Rear_Window_Glass",
+      "Archive_Rear_Window_Frame.001",
+      "Archive_Rear_Window_Glass.001",
+      "Archive_Rear_Door_Frame",
+      "Archive_Rear_Door",
+      "Archive_Rear_Door_Handle"
+    ],
+    "bounds_blender": {
+      "min": [
+        -3.069999933242798,
+        -4.0,
+        0.0
+      ],
+      "max": [
+        2.5924999713897705,
+        3.128000020980835,
+        7.28000020980835
+      ]
+    },
+    "bounds_gltf": {
+      "min": [
+        -3.069999933242798,
+        0.0,
+        -3.128000020980835
+      ],
+      "max": [
+        2.5924999713897705,
+        7.28000020980835,
+        4.0
+      ]
+    },
+    "dimensions_gltf": [
+      5.662499904632568,
+      7.28000020980835,
+      7.128000020980835
+    ]
+  },
+  "reimport": {
+    "triangles": 700,
+    "mesh_count": 65,
+    "mesh_names": [
+      "Archive_Awning_End_Cheek",
+      "Archive_Awning_End_Cheek.001",
+      "Archive_Base_Platform",
+      "Archive_Curved_Rose_Awning",
+      "Archive_Door_Handle",
+      "Archive_Facade_Edge",
+      "Archive_Facade_Edge.001",
+      "Archive_Front_Brick_Left",
+      "Archive_Front_Brick_Right",
+      "Archive_Front_Parapet_Band",
+      "Archive_High_Front_Parapet",
+      "Archive_Left_Brick",
+      "Archive_Main_Body",
+      "Archive_Offset_Glass_Door_Glass",
+      "Archive_Offset_Glass_Door_Horizontal_Frame",
+      "Archive_Offset_Glass_Door_Horizontal_Frame.001",
+      "Archive_Offset_Glass_Door_Vertical_Frame",
+      "Archive_Offset_Glass_Door_Vertical_Frame.001",
+      "Archive_Parapet_Coping",
+      "Archive_Rear_Brick",
+      "Archive_Rear_Door",
+      "Archive_Rear_Door_Frame",
+      "Archive_Rear_Door_Handle",
+      "Archive_Rear_Low_Slope_Roof",
+      "Archive_Rear_Window_Frame",
+      "Archive_Rear_Window_Frame.001",
+      "Archive_Rear_Window_Glass",
+      "Archive_Rear_Window_Glass.001",
+      "Archive_Right_Brick",
+      "Archive_Shop_Left_Window_Glass",
+      "Archive_Shop_Left_Window_Horizontal_Frame",
+      "Archive_Shop_Left_Window_Horizontal_Frame.001",
+      "Archive_Shop_Left_Window_Vertical_Frame",
+      "Archive_Shop_Left_Window_Vertical_Frame.001",
+      "Archive_Shop_Right_Window_Glass",
+      "Archive_Shop_Right_Window_Horizontal_Frame",
+      "Archive_Shop_Right_Window_Horizontal_Frame.001",
+      "Archive_Shop_Right_Window_Vertical_Frame",
+      "Archive_Shop_Right_Window_Vertical_Frame.001",
+      "Archive_Short_Parapet_Return",
+      "Archive_Short_Parapet_Return.001",
+      "Archive_Side_-1_Lower_Backing",
+      "Archive_Side_-1_Lower_Divider",
+      "Archive_Side_-1_Lower_Glass",
+      "Archive_Side_-1_Upper_Backing",
+      "Archive_Side_-1_Upper_Divider",
+      "Archive_Side_-1_Upper_Glass",
+      "Archive_Side_1_Lower_Backing",
+      "Archive_Side_1_Lower_Divider",
+      "Archive_Side_1_Lower_Glass",
+      "Archive_Side_1_Upper_Backing",
+      "Archive_Side_1_Upper_Divider",
+      "Archive_Side_1_Upper_Glass",
+      "Archive_Sign_Bracket",
+      "Archive_Sign_Bracket.001",
+      "Archive_Upper_Main_Window_Centre_Divider",
+      "Archive_Upper_Main_Window_Glass",
+      "Archive_Upper_Main_Window_Horizontal_Frame",
+      "Archive_Upper_Main_Window_Horizontal_Frame.001",
+      "Archive_Upper_Main_Window_Vertical_Frame",
+      "Archive_Upper_Main_Window_Vertical_Frame.001",
+      "Archive_Upper_Small_Rain_Ledge",
+      "Archive_Upper_Window_Sill",
+      "Archive_Vertical_Sign_Frame",
+      "Archive_Vertical_Sign_Lettering"
+    ],
+    "bounds_blender": {
+      "min": [
+        -3.069999933242798,
+        -4.0,
+        0.0
+      ],
+      "max": [
+        2.5924999713897705,
+        3.128000020980835,
+        7.28000020980835
+      ]
+    },
+    "bounds_gltf": {
+      "min": [
+        -3.069999933242798,
+        0.0,
+        -3.128000020980835
+      ],
+      "max": [
+        2.5924999713897705,
+        7.28000020980835,
+        4.0
+      ]
+    },
+    "dimensions_gltf": [
+      5.662499904632568,
+      7.28000020980835,
+      7.128000020980835
+    ]
+  },
+  "embedded_images": [
+    {
+      "material": "Archive_Low_Rear_Roof.001",
+      "image": "rear_roof_128.001",
+      "size": [
+        128,
+        128
+      ],
+      "has_pixels": true
+    },
+    {
+      "material": "Archive_DustyRose_Awning.001",
+      "image": "awning_archive_256",
+      "size": [
+        256,
+        128
+      ],
+      "has_pixels": true
+    },
+    {
+      "material": "Archive_Red_Brick.001",
+      "image": "dark_red_brick_128.001",
+      "size": [
+        128,
+        128
+      ],
+      "has_pixels": true
+    },
+    {
+      "material": "Archive_Upper_Glass_And_Blind.001",
+      "image": "upper_window_blind_128.001",
+      "size": [
+        128,
+        128
+      ],
+      "has_pixels": true
+    },
+    {
+      "material": "Archive_Vertical_Sign.001",
+      "image": "vertical_sign_128x256",
+      "size": [
+        128,
+        256
+      ],
+      "has_pixels": true
+    },
+    {
+      "material": "Archive_Awning_Sides.001",
+      "image": "awning_side_128.001",
+      "size": [
+        128,
+        128
+      ],
+      "has_pixels": true
+    },
+    {
+      "material": "Archive_Base.001",
+      "image": "base_stone_128.001",
+      "size": [
+        128,
+        128
+      ],
+      "has_pixels": true
+    },
+    {
+      "material": "Archive_BlueGrey_Glass.001",
+      "image": "blue_grey_glass_128.001",
+      "size": [
+        128,
+        128
+      ],
+      "has_pixels": true
+    },
+    {
+      "material": "Archive_Faded_Plaster.001",
+      "image": "faded_plaster_128.001",
+      "size": [
+        128,
+        128
+      ],
+      "has_pixels": true
+    }
+  ],
+  "awning_min_height": 2.680000066757202,
+  "collision": {
+    "body_half_width": 2.5,
+    "body_half_depth": 3.0,
+    "base_half_width": 2.58,
+    "base_half_depth": 3.08,
+    "recommended_half_width": 2.6,
+    "recommended_half_depth": 3.13,
+    "ignore_overhead_canopy_and_sign": true,
+    "ground_nodes": [
+      "Archive_Main_Body",
+      "Archive_Base_Platform"
+    ]
+  },
+  "checks": {
+    "reimport_passed": true,
+    "images_loaded": true,
+    "asset_root_at_origin": true,
+    "bottom_at_zero": true,
+    "awning_clears_2_045m_signs_by_m": 0.6350000667572022
+  },
+  "limitations": [
+    "Opaque simplified glass; building is an exterior shell with no playable interior.",
+    "Side and back windows are intentionally reduced to plain frames and low-resolution glass textures."
+  ]
+}

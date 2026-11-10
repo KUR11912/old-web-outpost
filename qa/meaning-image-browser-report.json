@@ -1,0 +1,39 @@
+{
+  "url": "http://127.0.0.1:5180/",
+  "startedAt": "2026-11-10T14:10:18.135Z",
+  "checks": [
+    {
+      "name": "旧终端读音便笺显示用户原始PNG，594×528等比例完整置于112×112缩略图",
+      "details": {
+        "src": "http://127.0.0.1:5180/assets/blue-mushroom-meme.png",
+        "width": 594,
+        "height": 528,
+        "objectFit": "contain",
+        "box": {
+          "width": 112,
+          "height": 112
+        }
+      }
+    },
+    {
+      "name": "已持有读音便笺的旧存档无需重领，重复调查不增发",
+      "details": true
+    },
+    {
+      "name": "背包的读音便笺与原图片卡复用同一原始图片，显示一致",
+      "details": true
+    },
+    {
+      "name": "窗口暂停及关闭后点击恢复正常，刷新保留四卡、位置与完成状态",
+      "details": true
+    },
+    {
+      "name": "尚未领取读音便笺的存档仍可正常领取一次，领取后图片持续显示",
+      "details": true
+    }
+  ],
+  "errors": [],
+  "imageSha256": "ffd6990d1b3b76a7bfcd45633fa94a449b704e6180a5aea9bbd98793c1ac795e",
+  "passed": true,
+  "finishedAt": "2026-11-10T14:10:22.689Z"
+}

@@ -1,0 +1,37 @@
+{
+  "url": "http://127.0.0.1:5180/",
+  "startedAt": "2026-11-10T13:38:21.491Z",
+  "checks": [],
+  "routes": [
+    {
+      "name": "archive-building-game-oblique",
+      "pose": {
+        "x": 14.9,
+        "z": -29.5,
+        "yaw": -0.4840529052734376,
+        "pitch": 0.17609278564453126
+      }
+    },
+    {
+      "name": "archive-building-game-rear",
+      "pose": {
+        "x": 20,
+        "z": -49.2,
+        "yaw": 3.141592653589793,
+        "pitch": 0.19844056396484375
+      }
+    },
+    {
+      "name": "archive-building-game-right",
+      "pose": {
+        "x": 28.8,
+        "z": -37.8,
+        "yaw": 1.3258177001953126,
+        "pitch": 0.19058466796875004
+      }
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "finishedAt": "2026-11-10T13:38:25.424Z"
+}

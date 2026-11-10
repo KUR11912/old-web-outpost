@@ -1,0 +1,222 @@
+{
+  "url": "http://127.0.0.1:5180/",
+  "startedAt": "2026-11-10T11:23:30.424Z",
+  "checks": [
+    {
+      "name": "四个环境 GLB 与新驿站 GLB 实际加载",
+      "details": [
+        {
+          "url": "http://127.0.0.1:5180/assets/Grass_01.glb",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:5180/assets/Rock_01.glb",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:5180/assets/PathTile_01.glb",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:5180/assets/Tree_01.glb",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:5180/assets/Outpost_01.glb",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:5180/assets/Tree_01.glb",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:5180/assets/Rock_01.glb",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:5180/assets/Grass_01.glb",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:5180/assets/PathTile_01.glb",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:5180/assets/Outpost_01.glb",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "name": "出生点实际 WASD 行走、拖拽转头、接近并看向邮箱",
+      "details": {
+        "x": 1.4400000000000004,
+        "z": -1.4399999999999855,
+        "yaw": -0.029990979003906217,
+        "pitch": -0.19730914306640623
+      }
+    },
+    {
+      "name": "E 调查、阅读虚构留言、获得唯一线索，窗口中停止移动",
+      "details": true
+    },
+    {
+      "name": "重复调查不重复发卡，B 背包可查看名称和说明",
+      "details": true
+    },
+    {
+      "name": "刷新后位置、调查状态和线索恢复，必须明确点击恢复探索",
+      "details": true
+    },
+    {
+      "name": "树干实际行走碰撞阻挡",
+      "details": {
+        "collider": {
+          "kind": "circle",
+          "x": -5.5,
+          "z": 6.5,
+          "radius": 0.45599999999999996,
+          "label": "树干"
+        },
+        "result": {
+          "x": -5.5,
+          "z": 7.215921875000003,
+          "yaw": 0,
+          "pitch": 0
+        }
+      }
+    },
+    {
+      "name": "石头实际行走碰撞阻挡",
+      "details": {
+        "collider": {
+          "kind": "circle",
+          "x": -3.7,
+          "z": 3.4,
+          "radius": 0.8640000000000001,
+          "label": "石头"
+        },
+        "result": {
+          "x": -3.7,
+          "z": 4.523921875000006,
+          "yaw": 0,
+          "pitch": 0
+        }
+      }
+    },
+    {
+      "name": "建筑实际行走碰撞阻挡",
+      "details": {
+        "collider": {
+          "kind": "box",
+          "x": 0,
+          "z": -7.5,
+          "halfX": 2.85,
+          "halfZ": 2.55,
+          "label": "驿站外墙"
+        },
+        "result": {
+          "x": 0,
+          "z": -4.690078124999996,
+          "yaw": 0,
+          "pitch": 0
+        }
+      }
+    },
+    {
+      "name": "地图边界阻挡",
+      "details": true
+    },
+    {
+      "name": "新建筑 GLB 加载失败显示文件名与重试提示",
+      "details": true
+    },
+    {
+      "name": "真实鼠标锁定/转头、背包释放、点击恢复、Esc 释放",
+      "details": true
+    },
+    {
+      "name": "模拟锁定被拒时自动回退拖拽，仍可转头与行走",
+      "details": true
+    },
+    {
+      "name": "只读未领取刷新不自动发卡，确认重置清空本原型并保留旧游戏存档",
+      "details": true
+    }
+  ],
+  "assets": [
+    {
+      "name": "Tree_01",
+      "url": "/assets/Tree_01.glb",
+      "meshes": 2,
+      "triangles": 494,
+      "texturedMaterials": 2,
+      "alphaCutoutMaterials": 1,
+      "dimensions": {
+        "x": 3.752058982849121,
+        "y": 5.369998455047607,
+        "z": 3.6866196393966675
+      },
+      "instances": 14
+    },
+    {
+      "name": "Rock_01",
+      "url": "/assets/Rock_01.glb",
+      "meshes": 1,
+      "triangles": 80,
+      "texturedMaterials": 1,
+      "alphaCutoutMaterials": 0,
+      "dimensions": {
+        "x": 1.350000023841858,
+        "y": 0.7799999713897705,
+        "z": 1.0499999523162842
+      },
+      "instances": 6
+    },
+    {
+      "name": "Grass_01",
+      "url": "/assets/Grass_01.glb",
+      "meshes": 1,
+      "triangles": 6,
+      "texturedMaterials": 1,
+      "alphaCutoutMaterials": 1,
+      "dimensions": {
+        "x": 0.8600000143051147,
+        "y": 0.6399999856948853,
+        "z": 0.7447818517684937
+      },
+      "instances": 89
+    },
+    {
+      "name": "PathTile_01",
+      "url": "/assets/PathTile_01.glb",
+      "meshes": 2,
+      "triangles": 20,
+      "texturedMaterials": 2,
+      "alphaCutoutMaterials": 0,
+      "dimensions": {
+        "x": 2,
+        "y": 0.11999999731779099,
+        "z": 2
+      },
+      "instances": 8
+    },
+    {
+      "name": "Outpost_01",
+      "url": "/assets/Outpost_01.glb",
+      "meshes": 21,
+      "triangles": 526,
+      "texturedMaterials": 9,
+      "alphaCutoutMaterials": 0,
+      "dimensions": {
+        "x": 6.105000019073486,
+        "y": 5.179999828338623,
+        "z": 5.450000047683716
+      },
+      "instances": 1
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "finishedAt": "2026-11-10T11:24:22.400Z"
+}

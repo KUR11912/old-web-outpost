@@ -1,0 +1,549 @@
+{
+  "url": "http://127.0.0.1:5180/",
+  "startedAt": "2026-11-10T13:57:15.602Z",
+  "checks": [
+    {
+      "name": "第八个灯塔GLB与贴图真实加载，保留独立Lighthouse_Lamp_Core节点",
+      "details": {
+        "name": "Lighthouse_01",
+        "url": "/assets/Lighthouse_01.glb",
+        "meshes": 74,
+        "triangles": 1616,
+        "texturedMaterials": 7,
+        "alphaCutoutMaterials": 0,
+        "dimensions": {
+          "x": 3.8399999141693115,
+          "y": 14.299999618902802,
+          "z": 5.409999966621399
+        },
+        "instances": 1,
+        "materialDetails": [
+          {
+            "name": "Lighthouse_Stone_Base",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.9200000166893005,
+            "metalness": 0,
+            "map": {
+              "width": 128,
+              "height": 128
+            },
+            "emissiveMap": null,
+            "transparent": false,
+            "opacity": 1,
+            "emissive": "000000",
+            "emissiveIntensity": 1
+          },
+          {
+            "name": "Lighthouse_Narrow_Window",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.699999988079071,
+            "metalness": 0,
+            "map": {
+              "width": 128,
+              "height": 128
+            },
+            "emissiveMap": null,
+            "transparent": false,
+            "opacity": 1,
+            "emissive": "000000",
+            "emissiveIntensity": 1
+          },
+          {
+            "name": "Lighthouse_Dark_Metal",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.7799999713897705,
+            "metalness": 0,
+            "map": {
+              "width": 128,
+              "height": 128
+            },
+            "emissiveMap": null,
+            "transparent": false,
+            "opacity": 1,
+            "emissive": "000000",
+            "emissiveIntensity": 1
+          },
+          {
+            "name": "Lighthouse_Pale_Plaster",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.9200000166893005,
+            "metalness": 0,
+            "map": {
+              "width": 128,
+              "height": 128
+            },
+            "emissiveMap": null,
+            "transparent": false,
+            "opacity": 1,
+            "emissive": "000000",
+            "emissiveIntensity": 1
+          },
+          {
+            "name": "Lighthouse_Hut_Door",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.9200000166893005,
+            "metalness": 0,
+            "map": {
+              "width": 128,
+              "height": 128
+            },
+            "emissiveMap": null,
+            "transparent": false,
+            "opacity": 1,
+            "emissive": "000000",
+            "emissiveIntensity": 1
+          },
+          {
+            "name": "Lighthouse_Hut_Roof",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.9200000166893005,
+            "metalness": 0,
+            "map": {
+              "width": 128,
+              "height": 128
+            },
+            "emissiveMap": null,
+            "transparent": false,
+            "opacity": 1,
+            "emissive": "000000",
+            "emissiveIntensity": 1
+          },
+          {
+            "name": "Lighthouse_Warm_Lamp",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.550000011920929,
+            "metalness": 0,
+            "map": null,
+            "emissiveMap": null,
+            "transparent": false,
+            "opacity": 1,
+            "emissive": "ffd381",
+            "emissiveIntensity": 1.7999999523162842
+          },
+          {
+            "name": "Lighthouse_Lantern_Glass",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.44999998807907104,
+            "metalness": 0,
+            "map": {
+              "width": 128,
+              "height": 128
+            },
+            "emissiveMap": null,
+            "transparent": true,
+            "opacity": 0.23999999463558197,
+            "emissive": "000000",
+            "emissiveIntensity": 1
+          }
+        ],
+        "nodeNames": [
+          "Scene",
+          "Lighthouse_01",
+          "Lighthouse_Band_Window_Frame_1",
+          "Lighthouse_Band_Window_Frame_2",
+          "Lighthouse_Band_Window_Glass_1",
+          "Lighthouse_Band_Window_Glass_2",
+          "Lighthouse_Central_Slim_Pole",
+          "Lighthouse_Ground_Base",
+          "Lighthouse_Helical_Thick_Wall",
+          "Lighthouse_Hut_Door",
+          "Lighthouse_Hut_Door_Frame",
+          "Lighthouse_Hut_Door_Handle",
+          "Lighthouse_Hut_Gabled_Roof",
+          "Lighthouse_Hut_Gables",
+          "Lighthouse_Hut_Platform",
+          "Lighthouse_Hut_Side_Window",
+          "Lighthouse_Hut_Side_Window001",
+          "Lighthouse_Hut_Side_Window_Frame",
+          "Lighthouse_Hut_Side_Window_Frame001",
+          "Lighthouse_Hut_Walls",
+          "Lighthouse_Hut_Window",
+          "Lighthouse_Hut_Window001",
+          "Lighthouse_Hut_Window_Frame",
+          "Lighthouse_Hut_Window_Frame001",
+          "Lighthouse_Lamp_Core",
+          "Lighthouse_Lamp_Core_Cap",
+          "Lighthouse_Lamp_Core_Pedestal",
+          "Lighthouse_Lantern_Glass_Pane_1",
+          "Lighthouse_Lantern_Glass_Pane_2",
+          "Lighthouse_Lantern_Glass_Pane_3",
+          "Lighthouse_Lantern_Glass_Pane_4",
+          "Lighthouse_Lantern_Glass_Pane_5",
+          "Lighthouse_Lantern_Glass_Pane_6",
+          "Lighthouse_Lantern_Glass_Pane_7",
+          "Lighthouse_Lantern_Glass_Pane_8",
+          "Lighthouse_Lantern_Lower_Rim",
+          "Lighthouse_Lantern_Platform",
+          "Lighthouse_Lantern_Post_1",
+          "Lighthouse_Lantern_Post_2",
+          "Lighthouse_Lantern_Post_3",
+          "Lighthouse_Lantern_Post_4",
+          "Lighthouse_Lantern_Post_5",
+          "Lighthouse_Lantern_Post_6",
+          "Lighthouse_Lantern_Post_7",
+          "Lighthouse_Lantern_Post_8",
+          "Lighthouse_Lantern_Upper_Rim",
+          "Lighthouse_Pointed_Roof",
+          "Lighthouse_Roof_Finial",
+          "Lighthouse_Roof_Tip",
+          "Lighthouse_Simple_Step_01",
+          "Lighthouse_Simple_Step_02",
+          "Lighthouse_Simple_Step_03",
+          "Lighthouse_Simple_Step_04",
+          "Lighthouse_Simple_Step_05",
+          "Lighthouse_Simple_Step_06",
+          "Lighthouse_Simple_Step_07",
+          "Lighthouse_Simple_Step_08",
+          "Lighthouse_Simple_Step_09",
+          "Lighthouse_Simple_Step_10",
+          "Lighthouse_Simple_Step_11",
+          "Lighthouse_Simple_Step_12",
+          "Lighthouse_Simple_Step_13",
+          "Lighthouse_Simple_Step_14",
+          "Lighthouse_Simple_Step_15",
+          "Lighthouse_Simple_Step_16",
+          "Lighthouse_Simple_Step_17",
+          "Lighthouse_Simple_Step_18",
+          "Lighthouse_Simple_Step_19",
+          "Lighthouse_Simple_Step_20",
+          "Lighthouse_Simple_Step_21",
+          "Lighthouse_Simple_Step_22",
+          "Lighthouse_Simple_Step_23",
+          "Lighthouse_Simple_Step_24",
+          "Lighthouse_Simple_Step_25",
+          "Lighthouse_Simple_Step_26",
+          "Lighthouse_Simple_Step_27"
+        ]
+      }
+    },
+    {
+      "name": "灯芯发光材质保留，玻璃参数可检查",
+      "details": [
+        {
+          "name": "Lighthouse_Stone_Base",
+          "type": "MeshPhysicalMaterial",
+          "roughness": 0.9200000166893005,
+          "metalness": 0,
+          "map": {
+            "width": 128,
+            "height": 128
+          },
+          "emissiveMap": null,
+          "transparent": false,
+          "opacity": 1,
+          "emissive": "000000",
+          "emissiveIntensity": 1
+        },
+        {
+          "name": "Lighthouse_Narrow_Window",
+          "type": "MeshPhysicalMaterial",
+          "roughness": 0.699999988079071,
+          "metalness": 0,
+          "map": {
+            "width": 128,
+            "height": 128
+          },
+          "emissiveMap": null,
+          "transparent": false,
+          "opacity": 1,
+          "emissive": "000000",
+          "emissiveIntensity": 1
+        },
+        {
+          "name": "Lighthouse_Dark_Metal",
+          "type": "MeshPhysicalMaterial",
+          "roughness": 0.7799999713897705,
+          "metalness": 0,
+          "map": {
+            "width": 128,
+            "height": 128
+          },
+          "emissiveMap": null,
+          "transparent": false,
+          "opacity": 1,
+          "emissive": "000000",
+          "emissiveIntensity": 1
+        },
+        {
+          "name": "Lighthouse_Pale_Plaster",
+          "type": "MeshPhysicalMaterial",
+          "roughness": 0.9200000166893005,
+          "metalness": 0,
+          "map": {
+            "width": 128,
+            "height": 128
+          },
+          "emissiveMap": null,
+          "transparent": false,
+          "opacity": 1,
+          "emissive": "000000",
+          "emissiveIntensity": 1
+        },
+        {
+          "name": "Lighthouse_Hut_Door",
+          "type": "MeshPhysicalMaterial",
+          "roughness": 0.9200000166893005,
+          "metalness": 0,
+          "map": {
+            "width": 128,
+            "height": 128
+          },
+          "emissiveMap": null,
+          "transparent": false,
+          "opacity": 1,
+          "emissive": "000000",
+          "emissiveIntensity": 1
+        },
+        {
+          "name": "Lighthouse_Hut_Roof",
+          "type": "MeshPhysicalMaterial",
+          "roughness": 0.9200000166893005,
+          "metalness": 0,
+          "map": {
+            "width": 128,
+            "height": 128
+          },
+          "emissiveMap": null,
+          "transparent": false,
+          "opacity": 1,
+          "emissive": "000000",
+          "emissiveIntensity": 1
+        },
+        {
+          "name": "Lighthouse_Warm_Lamp",
+          "type": "MeshPhysicalMaterial",
+          "roughness": 0.550000011920929,
+          "metalness": 0,
+          "map": null,
+          "emissiveMap": null,
+          "transparent": false,
+          "opacity": 1,
+          "emissive": "ffd381",
+          "emissiveIntensity": 1.7999999523162842
+        },
+        {
+          "name": "Lighthouse_Lantern_Glass",
+          "type": "MeshPhysicalMaterial",
+          "roughness": 0.44999998807907104,
+          "metalness": 0,
+          "map": {
+            "width": 128,
+            "height": 128
+          },
+          "emissiveMap": null,
+          "transparent": true,
+          "opacity": 0.23999999463558197,
+          "emissive": "000000",
+          "emissiveIntensity": 1
+        }
+      ]
+    },
+    {
+      "name": "原七类模型数量、调查站位、任务接入口、灯塔位置及桥开放状态不变",
+      "details": true
+    },
+    {
+      "name": "桥中央正常站位远眺，未站在桥栏或抬高相机",
+      "details": {
+        "x": 39,
+        "z": -8,
+        "yaw": 0,
+        "pitch": 0
+      }
+    },
+    {
+      "name": "实际走到(57,-35)，道路和预留任务点未被新门房阻断",
+      "details": {
+        "x": 57.08448000000115,
+        "z": -35.05424000000045,
+        "yaw": 8.326672684688674e-17,
+        "pitch": 6.713867183733013e-8
+      }
+    },
+    {
+      "name": "灯塔附近背包四卡正常，窗口暂停与明确点击恢复保持",
+      "details": true
+    },
+    {
+      "name": "左右与背后实际绕行畅通，眼高稳定，不穿地",
+      "details": true
+    },
+    {
+      "name": "刷新保持位置、四卡、两题答案及档案馆完成状态",
+      "details": {
+        "x": 56.96520000000114,
+        "z": -34.93376000000043,
+        "yaw": 6.938893903907228e-17,
+        "pitch": 5.37109374247613e-7
+      }
+    },
+    {
+      "name": "基座西侧实际碰撞阻挡准确",
+      "details": {
+        "x": 54.840080000000015,
+        "z": -41,
+        "yaw": -1.5707963267948966,
+        "pitch": 0
+      }
+    },
+    {
+      "name": "基座东侧实际碰撞阻挡准确",
+      "details": {
+        "x": 59.15992000000001,
+        "z": -41,
+        "yaw": 1.5707963267948966,
+        "pitch": 0
+      }
+    },
+    {
+      "name": "基座后侧实际碰撞阻挡准确",
+      "details": {
+        "x": 57,
+        "z": -43.159905312500015,
+        "yaw": 3.141592653589793,
+        "pitch": 0
+      }
+    },
+    {
+      "name": "门房正面实际碰撞阻挡准确",
+      "details": {
+        "x": 57,
+        "z": -37.28007999999997,
+        "yaw": 0,
+        "pitch": 0
+      }
+    },
+    {
+      "name": "门房左墙实际碰撞阻挡准确",
+      "details": {
+        "x": 54.98009234375,
+        "z": -38.2,
+        "yaw": -1.5707963267948966,
+        "pitch": 0
+      }
+    },
+    {
+      "name": "门房右墙实际碰撞阻挡准确",
+      "details": {
+        "x": 59.02,
+        "z": -38.2,
+        "yaw": 1.5707963267948966,
+        "pitch": 0
+      }
+    },
+    {
+      "name": "旧塔合法站位(57,-38.4)载入后自动推出新门房，仍能走动且进度不丢",
+      "details": {
+        "x": 57,
+        "z": -37.2799,
+        "yaw": 0,
+        "pitch": 0
+      }
+    }
+  ],
+  "routes": [
+    {
+      "name": "桥梁中心沿既有道路走向灯塔",
+      "start": {
+        "x": 39,
+        "z": -8,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "end": {
+        "x": 50.062800000000884,
+        "z": -30.114080000000328,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "seconds": 13.87
+    },
+    {
+      "name": "沿既有道路抵达预留灯塔任务点",
+      "start": {
+        "x": 50.062800000000884,
+        "z": -30.114080000000328,
+        "yaw": 8.326672684688674e-17,
+        "pitch": 6.713867183733013e-8
+      },
+      "end": {
+        "x": 57.08448000000115,
+        "z": -35.05424000000045,
+        "yaw": 8.326672684688674e-17,
+        "pitch": 6.713867183733013e-8
+      },
+      "seconds": 5.03
+    },
+    {
+      "name": "从左侧绕到灯塔背后",
+      "start": {
+        "x": 57.08448000000115,
+        "z": -35.05424000000045,
+        "yaw": 8.348356728138384e-17,
+        "pitch": 2.0141601556056266e-7
+      },
+      "end": {
+        "x": 57.11544000000115,
+        "z": -44.51576000000082,
+        "yaw": 8.348356728138384e-17,
+        "pitch": 2.0141601556056266e-7
+      },
+      "seconds": 6.62
+    },
+    {
+      "name": "从右侧绕回门房前",
+      "start": {
+        "x": 57.11544000000115,
+        "z": -44.51576000000082,
+        "yaw": 6.938893903907228e-17,
+        "pitch": 5.37109374247613e-7
+      },
+      "end": {
+        "x": 56.96520000000114,
+        "z": -34.93376000000043,
+        "yaw": 6.938893903907228e-17,
+        "pitch": 5.37109374247613e-7
+      },
+      "seconds": 6.61
+    },
+    {
+      "name": "lighthouse-game-side",
+      "pose": {
+        "x": 66.5,
+        "z": -41,
+        "yaw": 1.5707963745117186,
+        "pitch": 0.38503551635742184
+      }
+    },
+    {
+      "name": "lighthouse-game-rear",
+      "pose": {
+        "x": 57,
+        "z": -51.5,
+        "yaw": -3.1415923461914077,
+        "pitch": 0.3763948364257811
+      }
+    }
+  ],
+  "errors": [],
+  "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5070 Ti Laptop GPU (0x00002F58) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "colliders": {
+    "base": {
+      "kind": "circle",
+      "x": 57,
+      "z": -41,
+      "radius": 1.9,
+      "label": "记忆灯塔基座"
+    },
+    "hut": {
+      "kind": "box",
+      "x": 57,
+      "z": -38.8,
+      "halfX": 1.76,
+      "halfZ": 1.26,
+      "label": "记忆灯塔门房"
+    }
+  },
+  "passed": true,
+  "finishedAt": "2026-11-10T13:58:08.577Z"
+}

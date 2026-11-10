@@ -1,0 +1,20 @@
+{
+  "seed": 63112029,
+  "vertical": {
+    "glyphScaleY": 0.38518518,
+    "height": 2.7,
+    "width": 0.52,
+    "pixels": [
+      128,
+      256
+    ]
+  },
+  "awning": {
+    "ownIcon": "envelope",
+    "text": "旧网资料室",
+    "pixels": [
+      256,
+      128
+    ]
+  }
+}

@@ -1,0 +1,287 @@
+{
+  "asset": "OldTerminal_CRT_01",
+  "blender_version": "5.2.3 LTS",
+  "blender_executable": "E:\\BLEND\\blender.exe",
+  "parameters": {
+    "seed": 63112028,
+    "units": "metres",
+    "front": "Blender -Y / glTF +Z",
+    "origin": "tabletop bottom centre (0,0,0)",
+    "body_width": 0.8,
+    "body_bottom": 0.14,
+    "body_top": 0.76,
+    "front_gltf_z": 0.135,
+    "rear_gltf_z": -0.35,
+    "screen_width": 0.56,
+    "screen_height": 0.42,
+    "screen_centre_height": 0.48,
+    "glass_bulge": 0.016,
+    "glass_roughness": 0.25,
+    "glass_emission": 0.22,
+    "keyboard_width": 0.59,
+    "keyboard_depth": 0.2,
+    "keyboard_centre_gltf_z": 0.25,
+    "plastic_roughness": 0.7,
+    "plastic_texture_size": 128,
+    "screen_texture": "textures/screen_desktop_256.png",
+    "render_samples": 32,
+    "render_resolution": [
+      1200,
+      1000
+    ]
+  },
+  "keycaps": 47,
+  "export": {
+    "triangles": 3048,
+    "mesh_count": 61,
+    "mesh_names": [
+      "CRT_Tapered_Rear_Housing",
+      "CRT_Asymmetric_Front_Bezel",
+      "CRT_Recessed_Inner_Rim",
+      "CRT_Convex_4x3_Screen",
+      "CRT_Layered_Lower_Base",
+      "CRT_Layered_Upper_Base",
+      "CRT_Short_Support",
+      "CRT_Back_Vents",
+      "CRT_Side_Vents_-1",
+      "CRT_Side_Vents_1",
+      "CRT_Power_Button",
+      "CRT_Green_LED",
+      "CRT_Chin_Mark",
+      "Keyboard_Low_Profile_Body",
+      "Keyboard_Key_00",
+      "Keyboard_Key_01",
+      "Keyboard_Key_02",
+      "Keyboard_Key_03",
+      "Keyboard_Key_04",
+      "Keyboard_Key_05",
+      "Keyboard_Key_06",
+      "Keyboard_Key_07",
+      "Keyboard_Key_08",
+      "Keyboard_Key_09",
+      "Keyboard_Key_10",
+      "Keyboard_Key_11",
+      "Keyboard_Key_12",
+      "Keyboard_Key_13",
+      "Keyboard_Key_14",
+      "Keyboard_Key_15",
+      "Keyboard_Key_16",
+      "Keyboard_Key_17",
+      "Keyboard_Key_18",
+      "Keyboard_Key_19",
+      "Keyboard_Key_20",
+      "Keyboard_Key_21",
+      "Keyboard_Key_22",
+      "Keyboard_Key_23",
+      "Keyboard_Key_24",
+      "Keyboard_Key_25",
+      "Keyboard_Key_26",
+      "Keyboard_Key_27",
+      "Keyboard_Key_28",
+      "Keyboard_Key_29",
+      "Keyboard_Key_30",
+      "Keyboard_Key_31",
+      "Keyboard_Key_32",
+      "Keyboard_Key_33",
+      "Keyboard_Key_34",
+      "Keyboard_Key_35",
+      "Keyboard_Key_36",
+      "Keyboard_Key_37",
+      "Keyboard_Key_38",
+      "Keyboard_Key_39",
+      "Keyboard_Key_40",
+      "Keyboard_Key_41",
+      "Keyboard_Key_42",
+      "Keyboard_Key_43",
+      "Keyboard_Key_44",
+      "Keyboard_Key_45",
+      "Keyboard_Key_46"
+    ],
+    "bounds_blender": {
+      "min": [
+        -0.4000000059604645,
+        -0.3499999940395355,
+        0.0
+      ],
+      "max": [
+        0.4000000059604645,
+        0.3508000075817108,
+        0.7599999904632568
+      ]
+    },
+    "bounds_gltf": {
+      "min": [
+        -0.4000000059604645,
+        0.0,
+        -0.3508000075817108
+      ],
+      "max": [
+        0.4000000059604645,
+        0.7599999904632568,
+        0.3499999940395355
+      ]
+    },
+    "dimensions_gltf": [
+      0.800000011920929,
+      0.7599999904632568,
+      0.7008000016212463
+    ]
+  },
+  "reimport": {
+    "triangles": 3048,
+    "mesh_count": 61,
+    "mesh_names": [
+      "CRT_Asymmetric_Front_Bezel",
+      "CRT_Back_Vents",
+      "CRT_Chin_Mark",
+      "CRT_Convex_4x3_Screen",
+      "CRT_Green_LED",
+      "CRT_Layered_Lower_Base",
+      "CRT_Layered_Upper_Base",
+      "CRT_Power_Button",
+      "CRT_Recessed_Inner_Rim",
+      "CRT_Short_Support",
+      "CRT_Side_Vents_-1",
+      "CRT_Side_Vents_1",
+      "CRT_Tapered_Rear_Housing",
+      "Keyboard_Key_00",
+      "Keyboard_Key_01",
+      "Keyboard_Key_02",
+      "Keyboard_Key_03",
+      "Keyboard_Key_04",
+      "Keyboard_Key_05",
+      "Keyboard_Key_06",
+      "Keyboard_Key_07",
+      "Keyboard_Key_08",
+      "Keyboard_Key_09",
+      "Keyboard_Key_10",
+      "Keyboard_Key_11",
+      "Keyboard_Key_12",
+      "Keyboard_Key_13",
+      "Keyboard_Key_14",
+      "Keyboard_Key_15",
+      "Keyboard_Key_16",
+      "Keyboard_Key_17",
+      "Keyboard_Key_18",
+      "Keyboard_Key_19",
+      "Keyboard_Key_20",
+      "Keyboard_Key_21",
+      "Keyboard_Key_22",
+      "Keyboard_Key_23",
+      "Keyboard_Key_24",
+      "Keyboard_Key_25",
+      "Keyboard_Key_26",
+      "Keyboard_Key_27",
+      "Keyboard_Key_28",
+      "Keyboard_Key_29",
+      "Keyboard_Key_30",
+      "Keyboard_Key_31",
+      "Keyboard_Key_32",
+      "Keyboard_Key_33",
+      "Keyboard_Key_34",
+      "Keyboard_Key_35",
+      "Keyboard_Key_36",
+      "Keyboard_Key_37",
+      "Keyboard_Key_38",
+      "Keyboard_Key_39",
+      "Keyboard_Key_40",
+      "Keyboard_Key_41",
+      "Keyboard_Key_42",
+      "Keyboard_Key_43",
+      "Keyboard_Key_44",
+      "Keyboard_Key_45",
+      "Keyboard_Key_46",
+      "Keyboard_Low_Profile_Body"
+    ],
+    "bounds_blender": {
+      "min": [
+        -0.4000000059604645,
+        -0.3499999940395355,
+        0.0
+      ],
+      "max": [
+        0.4000000059604645,
+        0.3508000075817108,
+        0.7599999904632568
+      ]
+    },
+    "bounds_gltf": {
+      "min": [
+        -0.4000000059604645,
+        0.0,
+        -0.3508000075817108
+      ],
+      "max": [
+        0.4000000059604645,
+        0.7599999904632568,
+        0.3499999940395355
+      ]
+    },
+    "dimensions_gltf": [
+      0.800000011920929,
+      0.7599999904632568,
+      0.7008000016212463
+    ]
+  },
+  "reimport_images": [
+    {
+      "material": "CRT_Ivory_Plastic.001",
+      "image": "plastic_ivory_128.001",
+      "size": [
+        128,
+        128
+      ],
+      "has_pixels": true
+    },
+    {
+      "material": "CRT_Screen_Glass.001",
+      "image": "screen_desktop_256",
+      "size": [
+        256,
+        192
+      ],
+      "has_pixels": true
+    },
+    {
+      "material": "CRT_Screen_Glass.001",
+      "image": "screen_desktop_256",
+      "size": [
+        256,
+        192
+      ],
+      "has_pixels": true
+    },
+    {
+      "material": "CRT_Keycaps_Atlas.001",
+      "image": "key_legends_128.001",
+      "size": [
+        128,
+        128
+      ],
+      "has_pixels": true
+    },
+    {
+      "material": "CRT_Rear_Vent_Texture.001",
+      "image": "rear_vents_128.001",
+      "size": [
+        128,
+        128
+      ],
+      "has_pixels": true
+    }
+  ],
+  "checks": {
+    "reimport_passed": true,
+    "all_embedded_images_loaded": true,
+    "metres": true,
+    "bottom_on_tabletop": true,
+    "within_1m_by_078m_desk": true,
+    "asset_root_at_origin": true,
+    "screen_aspect": "4:3",
+    "screen_not_transparent": true,
+    "screen_glass_recessed_behind_bezel": true
+  },
+  "limitations": [
+    "Prototype uses one textured desktop and 47 simplified keycaps; no animated boot screen."
+  ]
+}
