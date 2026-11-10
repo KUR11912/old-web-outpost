@@ -2,6 +2,8 @@
 
 《网络梗考古》的独立第一人称自由探索原型。Vite + TypeScript + Three.js，目前包含 84×74 米地图和回声档案馆完整调查流程；原 28×28 米驿站区域位于西南侧。保持基础 Y2K 低多边形效果，未改动原字符网页游戏或 Blender 工程。
 
+GitHub Pages 试玩地址：[旧网驿站](https://kur11912.github.io/old-web-outpost/)。网页会把进度保存在当前浏览器中；线上地址与本地地址各自保存进度。
+
 ## 直接运行
 
 当前电脑双击 `启动旧网驿站.cmd`，会检查已有服务，必要时在后台启动并打开 **http://127.0.0.1:5180/**。关闭浏览器不会关闭后台服务；重启电脑后再次双击即可。
@@ -9,13 +11,28 @@
 也可在本目录执行：
 
 ```powershell
-npm install
-npm run dev
+pnpm install --frozen-lockfile
+pnpm run dev
 ```
 
-需要 Node.js 22.12+（也支持 20.19+）。本机已有依赖，启动脚本优先使用 PATH 中的 Node，再尝试已安装的 Codex 附带 Node。脚本不下载软件。若把项目复制到其他电脑，应先正常安装 Node.js，并执行 `npm install`。
+推荐 Node.js 24；包管理器在 `package.json` 中固定为 pnpm 11.25.0，与线上构建一致。本机已有依赖，启动脚本优先使用 PATH 中的 Node，再尝试已安装的 Codex 附带 Node。脚本不下载软件。若把项目复制到其他电脑，应先安装 Node.js 和 pnpm，再执行上面的依赖安装命令。
 
-构建：`npm run build`；预览构建结果：`npm run preview`（同用 5180 端口，先关闭开发服务）。不能直接双击 `index.html`，GLB 和模块需要通过 HTTP 服务加载。本地址仅本机可访问，未部署到公网。
+构建：`pnpm run build`；预览构建结果：`pnpm run preview`，然后访问 **http://127.0.0.1:5180/old-web-outpost/**（同用 5180 端口，先关闭开发服务）。开发模式仍使用 **http://127.0.0.1:5180/**。不能直接双击 `index.html`，GLB 和模块需要通过 HTTP 服务加载。
+
+## GitHub Pages 部署
+
+`vite.config.ts` 为生产构建和构建预览设置 `/old-web-outpost/`，开发服务器保留根路径。模型和线索图片使用同一资源前缀。
+
+提交并推送到仓库 `main` 分支后，[Deploy old-web-outpost to GitHub Pages](https://github.com/KUR11912/old-web-outpost/actions/workflows/deploy.yml) 会自动安装锁定依赖、执行 TypeScript 检查和 Vite 构建，再将 `dist/` 发布到 GitHub Pages。也可以在 Actions 页面点击 **Run workflow** 手动重新部署。仓库 **Settings → Pages → Source** 使用 **GitHub Actions**。
+
+本地复现线上构建：
+
+```powershell
+pnpm install --frozen-lockfile
+pnpm run build
+```
+
+只发布构建后的 `dist/`；Blender 源文件、参考图和 QA 记录保留在源码仓库中，不进入游戏站点。部署配置参考 [Vite 官方 GitHub Pages 指南](https://vite.dev/guide/static-deploy.html#github-pages) 与 [pnpm 官方安装 Action](https://github.com/pnpm/action-setup)。
 
 ## 操作与完整流程
 
