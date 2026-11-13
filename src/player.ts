@@ -178,10 +178,10 @@ export class PlayerController {
     const request = ++this.lockRequest;
     if (mode === 'drag') {
       if (document.pointerLockElement === this.canvas) document.exitPointerLock();
-      this.emit('拖拽转头 · WASD 行走 · Esc 暂停');
+      this.emit('Drag to look · WASD to move · Esc to pause');
       return;
     }
-    this.emit('正在进入鼠标控制…');
+    this.emit('Enabling mouse look…');
     try {
       if (typeof this.canvas.requestPointerLock !== 'function') {
         this.fallback(request);
@@ -198,7 +198,7 @@ export class PlayerController {
     if (request !== this.lockRequest || !this._active || this._mode !== 'locked') return;
     this._mode = 'drag';
     this.keys.clear();
-    this.emit('鼠标锁定不可用，已切换拖拽转头 · WASD 行走');
+    this.emit('Mouse lock unavailable · Drag to look · WASD to move');
   }
 
   pause(): void {
@@ -207,7 +207,7 @@ export class PlayerController {
     this.dragging = false;
     this.keys.clear();
     if (document.pointerLockElement === this.canvas) document.exitPointerLock();
-    this.emit('已暂停 · 点击继续探索');
+    this.emit('Paused · Click to resume exploring');
   }
 
   setPose(x: number, z: number, yaw: number, pitch: number): void {
@@ -261,7 +261,7 @@ export class PlayerController {
   private lockchange = () => {
     if (document.pointerLockElement === this.canvas) {
       if (!this._active || this._mode !== 'locked') { document.exitPointerLock(); return; }
-      this.emit('鼠标转头 · WASD 行走 · Esc 释放鼠标');
+      this.emit('Mouse to look · WASD to move · Esc to release the mouse');
     } else if (this._active && this._mode === 'locked') {
       this.pause();
     }

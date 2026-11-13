@@ -1,8 +1,8 @@
-name: Deploy old-web-outpost to GitHub Pages
+name: Deploy Chinese and English editions to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [main, en]
   workflow_dispatch:
 
 permissions:
@@ -21,8 +21,16 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Check out source
+      - name: Check out the Chinese edition
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: main
+
+      - name: Check out the English edition
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: en
+          path: english-source
 
       - name: Set up Node.js 24
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
@@ -40,6 +48,19 @@ jobs:
 
       - name: Typecheck and build
         run: pnpm run build
+
+      - name: Install English edition dependencies
+        working-directory: english-source
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck and build English edition
+        working-directory: english-source
+        run: pnpm run build
+
+      - name: Include English edition at /en/
+        run: |
+          mkdir -p dist/en
+          cp -R english-source/dist/. dist/en/
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6

@@ -13,10 +13,10 @@ export const MAP = {
   roadTop:.02,
   source:{file:'../ember-courier/dist/world.js',size:[104,48],oldSites:{outpost:[16,33],archive:[44,15],lighthouse:[87,15]},oldRiverX:65,oldBridgeRow:28},
   locations:{
-    outpost:{id:'outpost',name:'旧网驿站',tag:'01',position:point(0,-7.5),approach:point(0,-2),size:{width:5.6,depth:5,height:5.18},region:{minX:-14,maxX:14,minZ:-15,maxZ:16},note:'文件夹拾取 · 邮箱留言'},
-    archive:{id:'archive',name:'回声档案馆',tag:'02',position:point(20,-40),approach:point(20,-35),size:{width:5,depth:6,height:7.3},region:{minX:10,maxX:31,minZ:-52,maxZ:-25},note:'旧终端 · 老梗检索'},
-    bridge:{id:'bridge',name:'断链桥',tag:'03',position:point(39,-8),approach:point(34,-8),size:{width:10,depth:3.8,height:4.62},region:{minX:30,maxX:48,minZ:-15,maxZ:-1},note:'石质拱廊 · 开放通行'},
-    lighthouse:{id:'lighthouse',name:'记忆灯塔',tag:'04',position:point(57,-41),approach:point(57,-35),size:{width:3.84,depth:5.41,height:14.3},region:{minX:47,maxX:67,minZ:-53,maxZ:-26},note:'地标区域 · 后续任务'},
+    outpost:{id:'outpost',name:'Old Web Outpost',tag:'01',position:point(0,-7.5),approach:point(0,-2),size:{width:5.6,depth:5,height:5.18},region:{minX:-14,maxX:14,minZ:-15,maxZ:16},note:'Collect folders · Read the mailbox'},
+    archive:{id:'archive',name:'Echo Archive',tag:'02',position:point(20,-40),approach:point(20,-35),size:{width:5,depth:6,height:7.3},region:{minX:10,maxX:31,minZ:-52,maxZ:-25},note:'Old Terminal · Meme search'},
+    bridge:{id:'bridge',name:'Broken Link Bridge',tag:'03',position:point(39,-8),approach:point(34,-8),size:{width:10,depth:3.8,height:4.62},region:{minX:30,maxX:48,minZ:-15,maxZ:-1},note:'Stone arcade · Crossing open'},
+    lighthouse:{id:'lighthouse',name:'Memory Lighthouse',tag:'04',position:point(57,-41),approach:point(57,-35),size:{width:3.84,depth:5.41,height:14.3},region:{minX:47,maxX:67,minZ:-53,maxZ:-26},note:'Landmark · More to come'},
   },
   mailbox:point(1.5,-3.7),
   lighthouse:{baseRadius:1.9,hut:{width:3.4,depth:2.4,z:2.2},sign:{y:2.4,z:3.495,width:1.55,height:.22}},
@@ -31,9 +31,9 @@ export const MAP = {
     {id:'east-lighthouse',width:2,points:[point(44,-8),point(50,-8),point(50,-35),point(57,-35)]},
   ] as MapRoad[],
   timedRoutes:[
-    {id:'outpost-archive',name:'旧网驿站 → 回声档案馆',points:[point(0,-2),point(13.5,-2),point(13.5,-30),point(20,-30),point(20,-35)]},
-    {id:'archive-bridge',name:'回声档案馆 → 桥中央',points:[point(20,-35),point(20,-30),point(13.5,-30),point(13.5,-8),point(39,-8)]},
-    {id:'bridge-lighthouse',name:'桥中央 → 记忆灯塔',points:[point(39,-8),point(50,-8),point(50,-35),point(57,-35)]},
+    {id:'outpost-archive',name:'Old Web Outpost → Echo Archive',points:[point(0,-2),point(13.5,-2),point(13.5,-30),point(20,-30),point(20,-35)]},
+    {id:'archive-bridge',name:'Echo Archive → Bridge center',points:[point(20,-35),point(20,-30),point(13.5,-30),point(13.5,-8),point(39,-8)]},
+    {id:'bridge-lighthouse',name:'Bridge center → Memory Lighthouse',points:[point(39,-8),point(50,-8),point(50,-35),point(57,-35)]},
   ],
   futureHooks:[
     {id:'archive_investigation',locationId:'archive',position:point(20,-35),enabled:false},
@@ -49,9 +49,9 @@ export const MAP = {
 };
 
 export function currentRegion(x:number,z:number):string {
-  if(x>=MAP.river.minX&&x<=MAP.river.maxX)return '断链桥 · 走测开放';
+  if(x>=MAP.river.minX&&x<=MAP.river.maxX)return 'Broken Link Bridge · Crossing open';
   for(const site of Object.values(MAP.locations)){
     const r=site.region;if(x>=r.minX&&x<=r.maxX&&z>=r.minZ&&z<=r.maxZ)return site.name;
   }
-  return x>MAP.river.maxX?'河东林地':'西岸步道';
+  return x>MAP.river.maxX?'East Bank Woods':'West Bank Trail';
 }

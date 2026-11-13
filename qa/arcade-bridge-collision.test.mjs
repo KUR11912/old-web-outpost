@@ -39,8 +39,8 @@ const reports = assets.map(name => ({ name, instances: 0 }));
 environment.addMapAssetInstances(scene, models, reports, colliders);
 scene.updateMatrixWorld(true);
 const bridge = MAP.bridge;
-const columns = colliders.filter(c => c.label === '拱廊桥石柱');
-const curbs = colliders.filter(c => c.label === '拱廊桥石缘');
+const columns = colliders.filter(c => c.label === 'Arcade bridge column');
+const curbs = colliders.filter(c => c.label === 'Arcade bridge curb');
 const west = { x: bridge.x - bridge.length / 2, z: bridge.z };
 const east = { x: bridge.x + bridge.length / 2, z: bridge.z };
 const move = (from, to) => resolveMovement(from, { x: to.x - from.x, z: to.z - from.z }, colliders, MAP.bounds);
@@ -64,7 +64,7 @@ function meshesMatching(pattern) {
 test('actual bridge has eight separate columns, two edges and no old rail or solid deck obstacles', () => {
   assert.equal(columns.length, 8);
   assert.equal(curbs.length, 2);
-  assert.equal(colliders.filter(c => c.label === '桥栏').length, 0);
+  assert.equal(colliders.filter(c => c.label === 'Bridge rail').length, 0);
   assert.equal(scene.getObjectByName('Bridge_railings'), undefined);
   assert.equal(scene.getObjectByName('Bridge_flush_walkable_deck'), undefined);
   assert.equal(bridge.crossingOpen, true);
@@ -190,7 +190,7 @@ test('road approach joints meet the real bridge deck, with no nearby trees or re
     const contacts = down.intersectObjects(scene.children, true);
     assert.ok(contacts.length, 'no road or bridge surface at the join');
     close(contacts[0].point.y, MAP.roadTop, 'actual visible surface at road join');
-    for (const tree of colliders.filter(c => c.label === '树干')) {
+    for (const tree of colliders.filter(c => c.label === 'Tree trunk')) {
       assert.ok(Math.hypot(tree.x - endpoint.x, tree.z - endpoint.z) > tree.radius + 2, 'tree overlaps bridge entrance');
     }
     const approach = { x: endpoint.x + (endpoint.x < bridge.x ? -3 : 3), z: endpoint.z };

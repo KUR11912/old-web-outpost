@@ -17,31 +17,31 @@ export interface MemeArchive {
 /** Only existing, documented materials are eligible for unlocking. */
 export const MEME_ARCHIVES: Record<string, MemeArchive> = {
   'blue-mushroom': {
-    id: 'blue-mushroom', name: '蓝瘦香菇', aliases: ['蓝瘦香菇图片', '蓝瘦，香菇'], available: true,
+    id: 'blue-mushroom', name: 'Blue and Mushroom', aliases: ['Blue Mushroom', 'Blue Skinny Mushroom', 'Lan Shou Xiang Gu', '蓝瘦香菇', '蓝瘦香菇图片', '蓝瘦，香菇'], available: true,
     clueIds: ['missing-caption-image', 'echo-meaning-note', 'echo-chat-context', 'echo-image-variants'],
     image: CLUES['missing-caption-image'].image,
     summary: CLUES['echo-meaning-note'].summary,
   },
   'friendship-boat': {
-    id: 'friendship-boat', name: '友谊的小船', aliases: ['友谊的小船说翻就翻', '友谊小船'], available: true,
+    id: 'friendship-boat', name: 'Friendship Boat', aliases: ['The Friendship Boat', '友谊的小船', '友谊的小船说翻就翻', '友谊小船'], available: true,
     clueIds: ['collection-friendship-boat'],
     image: CLUES['collection-friendship-boat'].image,
     summary: CLUES['collection-friendship-boat'].summary,
   },
   'gg-or-mm': {
-    id: 'gg-or-mm', name: '你是GG还是MM', aliases: ['你是gg还是mm', '你是GG还是MM？', 'GG还是MM'], available: true,
+    id: 'gg-or-mm', name: 'Are You GG or MM?', aliases: ['Are You GG or MM', 'GG or MM', '你是GG还是MM', '你是gg还是mm', '你是GG还是MM？', 'GG还是MM'], available: true,
     clueIds: ['collection-gg-or-mm'],
     image: CLUES['collection-gg-or-mm'].image,
     summary: CLUES['collection-gg-or-mm'].summary,
   },
   'awesome-my-bro': {
-    id: 'awesome-my-bro', name: '厉害了我的哥', aliases: ['厉害了，我的哥', '厉害了word哥', '厉害了，word哥'], available: true,
+    id: 'awesome-my-bro', name: 'Awesome, My Bro!', aliases: ['Awesome, My Bro', 'Awesome My Bro', 'Awesome My Bro!', '厉害了我的哥', '厉害了，我的哥', '厉害了word哥', '厉害了，word哥'], available: true,
     clueIds: ['collection-awesome-my-bro'],
     image: CLUES['collection-awesome-my-bro'].image,
     summary: CLUES['collection-awesome-my-bro'].summary,
   },
   'devil-or-showoff': {
-    id: 'devil-or-showoff', name: '你是魔鬼还是秀儿', aliases: ['你是魔鬼还是秀儿？'], available: true,
+    id: 'devil-or-showoff', name: 'Devil or Show-off?', aliases: ['Devil or Show-off', 'Devil or Showoff', 'Devil or Showoff?', '你是魔鬼还是秀儿', '你是魔鬼还是秀儿？'], available: true,
     clueIds: ['collection-devil-or-showoff'],
     image: CLUES['collection-devil-or-showoff'].image,
     summary: CLUES['collection-devil-or-showoff'].summary,
@@ -73,7 +73,7 @@ export function ownsMeme(save: Pick<SaveData, 'pickupInventory'>, id: string): b
 export function hasMemeArchiveContent(archive: MemeArchive): boolean {
   return archive.available && !!archive.image && !!archive.summary?.trim() && archive.clueIds.length > 0
     && archive.clueIds.every(id => Object.hasOwn(CLUES, id) && CLUES[id].content.length > 0
-      && CLUES[id].sourceLabel !== '资料待补充');
+      && CLUES[id].sourceLabel !== 'Information pending');
 }
 
 export type MemeSearchResult =

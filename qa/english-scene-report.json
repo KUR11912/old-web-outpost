@@ -1,0 +1,119 @@
+{
+  "url": "http://127.0.0.1:5174/",
+  "materialTargets": [
+    {
+      "model": "Archive_01",
+      "material": "Archive_Vertical_Sign",
+      "meshUsers": [
+        "Archive_Vertical_Sign_Lettering_Mesh"
+      ]
+    },
+    {
+      "model": "Archive_01",
+      "material": "Archive_DustyRose_Awning",
+      "meshUsers": [
+        "Archive_Curved_Rose_Awning_Mesh"
+      ]
+    },
+    {
+      "model": "OldTerminal_CRT_01",
+      "material": "CRT_Screen_Glass",
+      "meshUsers": [
+        "CRT_Convex_4x3_Screen_Mesh"
+      ]
+    }
+  ],
+  "errors": [],
+  "failedResponses": [],
+  "terminalMaterial": {
+    "name": "CRT_Screen_Glass",
+    "type": "MeshPhysicalMaterial",
+    "roughness": 0.25,
+    "metalness": 0,
+    "map": {
+      "width": 256,
+      "height": 192
+    },
+    "emissiveMap": {
+      "width": 256,
+      "height": 192
+    }
+  },
+  "labels": [
+    {
+      "text": "01Old Web Outpost\nCollect folders · Read the mailbox",
+      "rect": {
+        "x": 243.9609375,
+        "y": 515,
+        "width": 174.078125,
+        "height": 49,
+        "top": 515,
+        "right": 418.0390625,
+        "bottom": 564,
+        "left": 243.9609375
+      },
+      "scrollWidth": 172,
+      "clientWidth": 172,
+      "scrollHeight": 47,
+      "clientHeight": 47
+    },
+    {
+      "text": "02Echo Archive\nOld Terminal · Meme search",
+      "rect": {
+        "x": 395.5078125,
+        "y": 289.34375,
+        "width": 149.421875,
+        "height": 49,
+        "top": 289.34375,
+        "right": 544.9296875,
+        "bottom": 338.34375,
+        "left": 395.5078125
+      },
+      "scrollWidth": 147,
+      "clientWidth": 147,
+      "scrollHeight": 47,
+      "clientHeight": 47
+    },
+    {
+      "text": "03Broken Link Bridge\nStone arcade · Crossing open",
+      "rect": {
+        "x": 522.0234375,
+        "y": 511.53125,
+        "width": 160.921875,
+        "height": 49,
+        "top": 511.53125,
+        "right": 682.9453125,
+        "bottom": 560.53125,
+        "left": 522.0234375
+      },
+      "scrollWidth": 159,
+      "clientWidth": 159,
+      "scrollHeight": 47,
+      "clientHeight": 47
+    },
+    {
+      "text": "04Memory Lighthouse\nLandmark · More to come",
+      "rect": {
+        "x": 645.5234375,
+        "y": 282.40625,
+        "width": 164.515625,
+        "height": 49,
+        "top": 282.40625,
+        "right": 810.0390625,
+        "bottom": 331.40625,
+        "left": 645.5234375
+      },
+      "scrollWidth": 163,
+      "clientWidth": 163,
+      "scrollHeight": 47,
+      "clientHeight": 47
+    }
+  ],
+  "viewport": {
+    "x": 6,
+    "y": 86,
+    "width": 1012,
+    "height": 615
+  },
+  "passed": true
+}

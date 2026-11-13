@@ -61,7 +61,7 @@ function createErrorGlyphs() {
   canvas.width = 256;
   canvas.height = 128;
   const ctx = canvas.getContext('2d');
-  if (!ctx) throw new Error('无法绘制山体报错字符');
+  if (!ctx) throw new Error('Could not draw the mountain error text.');
   ctx.fillStyle = '#e0e8ff';
   ctx.font = '9px monospace';
   ctx.textBaseline = 'top';
@@ -90,7 +90,7 @@ export function applyMountainFaults(peaks: THREE.InstancedMesh<THREE.BufferGeome
   canvas.width = COLUMNS * TILE_WIDTH;
   canvas.height = rows * TILE_HEIGHT;
   const ctx = canvas.getContext('2d');
-  if (!ctx) throw new Error('无法绘制山体局部故障材质');
+  if (!ctx) throw new Error('Could not draw the mountain glitch texture.');
   const offsets = new Float32Array(peaks.count * 2);
   for (let index = 0; index < peaks.count; index++) {
     const column = index % COLUMNS, row = Math.floor(index / COLUMNS);

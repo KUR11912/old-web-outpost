@@ -123,11 +123,11 @@ test('playback rejections and media errors are recoverable and never escape into
   const env = environment(t), track = env.create(), audio = env.instances[0];
   audio.nextPlay = () => Promise.reject(new DOMException('blocked', 'NotAllowedError'));
   assert.doesNotThrow(() => track.start()); await tick();
-  assert.match(track.snapshot().error, /点击音乐按钮/);
+  assert.match(track.snapshot().error, /Click Music/);
   track.start(); await tick();
   assert.equal(track.snapshot().error, null);
   audio.pause(); audio.error = { code: 4 }; audio.dispatchEvent(new Event('error'));
-  assert.match(track.snapshot().error, /格式/);
+  assert.match(track.snapshot().error, /format/i);
   track.start(); await tick();
   assert.equal(audio.loads, 1); assert.equal(track.snapshot().error, null);
 });

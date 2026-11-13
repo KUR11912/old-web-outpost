@@ -21,7 +21,7 @@ test('a pre-archive v1 save retains its original card, investigation and east-ba
   assert.equal(migrated.investigated, true);
   assert.equal(migrated.updatedAt, 1234);
   assert.deepEqual(migrated.archive, { answers: { meaning: null, context: null }, completed: false });
-  assert.equal(CLUES[CLUE_ID].name, '蓝瘦香菇图片');
+  assert.equal(CLUES[CLUE_ID].name, 'Blue and Mushroom Image');
   assert.equal(CLUES[CLUE_ID].image, 'assets/blue-mushroom-meme.png');
   assert.equal(store.getItem(SAVE_KEY), JSON.stringify(previous), 'Loading migration does not destructively rewrite stored data');
 });
@@ -89,8 +89,8 @@ test('data contains two three-option judgments, concrete card references and sou
       }
     }
   }
-  assert.match(CLUES[CLUE_ID].sourceLabel, /用户提供图片.*来源待核验/);
-  assert.match(CLUES['echo-meaning-note'].sourceLabel, /读音示意.*无原始录音/);
-  assert.match(CLUES['echo-chat-context'].sourceLabel, /游戏情境示例/);
-  assert.match(CLUES['echo-image-variants'].sourceLabel, /游戏改编示例/);
+  assert.match(CLUES[CLUE_ID].sourceLabel, /User-supplied image.*origin unverified/);
+  assert.match(CLUES['echo-meaning-note'].sourceLabel, /pronunciation guide.*no original recording/);
+  assert.match(CLUES['echo-chat-context'].sourceLabel, /Fictional game example/);
+  assert.match(CLUES['echo-image-variants'].sourceLabel, /Game adaptations/);
 });

@@ -25,7 +25,7 @@ test('picking up only awards stable ownership, never archive cards or query stat
   }
   assert.equal(state.pickupInventory.length, 5);
   assert.deepEqual(normalizeSave(state), state);
-  assert.equal(getPickupContent(PICKUPS[0]).name, '蓝瘦香菇');
+  assert.equal(getPickupContent(PICKUPS[0]).name, 'Blue and Mushroom');
 });
 
 test('empty, unknown and uncollected queries are distinct and never modify saves', () => {
@@ -118,7 +118,7 @@ test('unavailable or placeholder materials stay locked even for an owned item', 
     assert.equal(unavailable.archive.id, id);
     assert.equal(unlockMemeArchive(state, id), false);
     MEME_ARCHIVES[id] = old;
-    CLUES[clueId] = { ...originalClue, sourceLabel: '资料待补充' };
+    CLUES[clueId] = { ...originalClue, sourceLabel: 'Information pending' };
     assert.equal(searchMemeArchive(state, old.name).status, 'unavailable');
     assert.equal(unlockMemeArchive(state, id), false);
     assert.deepEqual(state, before);
@@ -213,4 +213,19 @@ test('save/reload preserves each state and repeated queries never add reward cou
   assert.equal(resetSave(storage), true);
   assert.equal(storage.getItem('unrelated'), 'preserve');
   assert.deepEqual(loadSave(storage), createDefaultSave());
+});
+
+
+test('English display names and explicit English aliases resolve the same five stable identities', () => {
+  const expected = {
+    'blue-mushroom': 'Blue and Mushroom', 'friendship-boat': 'Friendship Boat',
+    'gg-or-mm': 'Are You GG or MM?', 'awesome-my-bro': 'Awesome, My Bro!', 'devil-or-showoff': 'Devil or Show-off?',
+  };
+  for (const [id, name] of Object.entries(expected)) {
+    assert.equal(MEME_ARCHIVES[id].name, name);
+    assert.equal(matchMemeName('  ' + name.toUpperCase() + '  ')?.id, id);
+    for (const alias of MEME_ARCHIVES[id].aliases) assert.equal(matchMemeName(alias)?.id, id, alias);
+  }
+  assert.equal(matchMemeName('ＡＲＥ ＹＯＵ ＧＧ ＯＲ ＭＭ？')?.id, 'gg-or-mm');
+  for (const partial of ['Blue', 'Friendship', 'GG MM', 'Awesome', 'Devil']) assert.equal(matchMemeName(partial), undefined);
 });

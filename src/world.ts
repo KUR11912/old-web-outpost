@@ -5,6 +5,7 @@ import { makeExpandedTerrain, addMapStructures, addMapAssetInstances } from './m
 import { addArchiveObjects, type SceneInteractable } from './archive-scene';
 import { createPickupObjects, type PickupObjects } from './pickups';
 import { createSkyEnclosure } from './sky-enclosure';
+import { localizeSceneText } from './english-scene-text';
 
 /** Ground-plane colliders, in metres. Foliage intentionally has no collider. */
 export interface Collider {
@@ -68,7 +69,7 @@ function canvasTexture(width: number, height: number, draw: (ctx: CanvasRenderin
   canvas.width = width;
   canvas.height = height;
   const ctx = canvas.getContext('2d');
-  if (!ctx) throw new Error('浏览器无法创建场景标牌纹理。');
+  if (!ctx) throw new Error('Could not create the scene sign texture.');
   draw(ctx);
   const texture = new THREE.CanvasTexture(canvas);
   texture.colorSpace = THREE.SRGBColorSpace;
@@ -88,23 +89,23 @@ function addOutpost(scene: THREE.Scene, colliders: Collider[], building: THREE.G
   const trim = material('#6d7254');
   const timber = material('#71644b');
 
-  // Keep Chinese text editable in the existing canvas pipeline. The small plaque
+  // Keep English lettering editable in the existing canvas pipeline. The small plaque
   // fits between the double doors and the lowest row of windows.
   const signTexture = canvasTexture(512, 128, (ctx) => {
     ctx.fillStyle = '#244a67'; ctx.fillRect(0, 0, 512, 128);
     ctx.strokeStyle = '#d5d3bb'; ctx.lineWidth = 5; ctx.strokeRect(7, 7, 498, 114);
     ctx.textAlign = 'center'; ctx.fillStyle = '#f2edda';
-    ctx.font = 'bold 70px "Microsoft YaHei", sans-serif';
-    ctx.fillText('旧 网 驿 站', 256, 91);
+    ctx.font = 'bold 48px Arial, sans-serif';
+    ctx.fillText('OLD WEB OUTPOST', 256, 83, 470);
   });
   const sign = new THREE.Mesh(new THREE.PlaneGeometry(1.3, 0.20), new THREE.MeshBasicMaterial({ map: signTexture }));
   sign.name = 'Outpost_editable_nameplate';
   sign.position.set(offset.x, 1.82, -4.88+offset.z);
   scene.add(sign);
-  colliders.push({ kind: 'box', x: site.x, z: site.z, halfX: 2.85, halfZ: 2.55, label: '驿站外墙' });
+  colliders.push({ kind: 'box', x: site.x, z: site.z, halfX: 2.85, halfZ: 2.55, label: 'Outpost wall' });
   // The roof overhang is above head-height; only the side ladder needs added
   // ground-plane clearance. Players can still pass around either side.
-  colliders.push({ kind: 'box', x: site.x-2.97, z: site.z, halfX: 0.22, halfZ: 1.1, label: '驿站侧梯' });
+  colliders.push({ kind: 'box', x: site.x-2.97, z: site.z, halfX: 0.22, halfZ: 1.1, label: 'Outpost ladder' });
 
   // A simple bench reinforces that this is a small outdoor stop, not an interior.
   const bench = new THREE.Group();
@@ -114,7 +115,7 @@ function addOutpost(scene: THREE.Scene, colliders: Collider[], building: THREE.G
   box(bench, [0.16, 0.5, 0.43], [3.43, 0.25, -5.4], trim);
   box(bench, [0.16, 0.5, 0.43], [4.77, 0.25, -5.4], trim);
   scene.add(bench);
-  colliders.push({ kind: 'box', x: 4.1+offset.x, z: -5.4+offset.z, halfX: 0.98, halfZ: 0.35, label: '长椅' });
+  colliders.push({ kind: 'box', x: 4.1+offset.x, z: -5.4+offset.z, halfX: 0.98, halfZ: 0.35, label: 'Bench' });
 }
 
 function addMailbox(scene: THREE.Scene, colliders: Collider[]) {
@@ -141,7 +142,7 @@ function addMailbox(scene: THREE.Scene, colliders: Collider[]) {
   const plinth = box(mailbox, [0.58, 0.08, 0.58], [0, 0.04, 0], material('#9a9884'));
   plinth.name = 'Mailbox_foot';
   scene.add(mailbox);
-  colliders.push({ kind: 'box', x: MAP.mailbox.x, z: MAP.mailbox.z, halfX: 0.4, halfZ: 0.31, label: '邮箱' });
+  colliders.push({ kind: 'box', x: MAP.mailbox.x, z: MAP.mailbox.z, halfX: 0.4, halfZ: 0.31, label: 'Mailbox' });
   return mailbox;
 }
 
@@ -217,7 +218,7 @@ function describeAsset(name: string, url: string, group: THREE.Group): AssetEntr
   const size = new THREE.Vector3();
   new THREE.Box3().setFromObject(group).getSize(size);
   entry.dimensions = { x: size.x, y: size.y, z: size.z };
-  if (entry.meshes === 0 || entry.texturedMaterials === 0) throw new Error(`${name}.glb 未包含有效网格或贴图，请重新复制原始资产。`);
+  if (entry.meshes === 0 || entry.texturedMaterials === 0) throw new Error(`${name}.glb has no valid meshes or textures. Restore the original asset.`);
   return entry;
 }
 
@@ -265,12 +266,13 @@ export async function createWorld(
     const url = `${import.meta.env.BASE_URL}assets/${name}.glb`;
     try {
       const gltf = await loader.loadAsync(url);
+      localizeSceneText(name, gltf.scene);
       const report = describeAsset(name, url, gltf.scene);
       models.set(name, gltf.scene);
       assetReport.push(report);
       onProgress(++loaded, names.length, name);
     } catch (error) {
-      throw new Error(`资源加载失败：${name}.glb。请确认 public/assets 中的文件完整，并通过本地服务器打开。${error instanceof Error ? `（${error.message}）` : ''}`);
+      throw new Error(`Could not load ${name}.glb. Check the files in public/assets and open the game through a web server.${error instanceof Error ? ` (${error.message})` : ''}`);
     }
   }));
   const sky = await createSkyEnclosure(scene);
@@ -293,12 +295,12 @@ export async function createWorld(
   const trees = MAP.preserved.trees;
   for (const [x, z, scale] of trees) {
     plant('Tree_01', x, z, scale, random() * Math.PI * 2);
-    colliders.push({ kind: 'circle', x, z, radius: 0.48 * scale, label: '树干' });
+    colliders.push({ kind: 'circle', x, z, radius: 0.48 * scale, label: 'Tree trunk' });
   }
   const rocks = MAP.preserved.rocks;
   for (const [x, z, scale] of rocks) {
     plant('Rock_01', x, z, scale, random() * Math.PI * 2);
-    colliders.push({ kind: 'circle', x, z, radius: 0.64 * scale, label: '石头' });
+    colliders.push({ kind: 'circle', x, z, radius: 0.64 * scale, label: 'Rock' });
   }
   for (let i = 0; i < 110; i++) {
     const x = (random() * 2 - 1) * 12.8;
@@ -318,7 +320,7 @@ export async function createWorld(
   assetReport.find((entry) => entry.name === 'Lighthouse_01')!.instances = 1;
   addMapAssetInstances(scene, models, assetReport, colliders);
   const interactables: SceneInteractable[] = [
-    { id: 'mailbox', name: '旧邮箱', object: mailbox,
+    { id: 'mailbox', name: 'Old Mailbox', object: mailbox,
       aim: { x: MAP.mailbox.x, y: 1.25, z: MAP.mailbox.z + .245 },
       approach: { x: MAP.mailbox.x, z: MAP.mailbox.z + 1.8 } },
     ...addArchiveObjects(scene, colliders, models.get('OldTerminal_CRT_01')!),

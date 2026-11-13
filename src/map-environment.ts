@@ -7,7 +7,7 @@ const simple = (color:THREE.ColorRepresentation) => new THREE.MeshLambertMateria
 function rng(seed:number) { return ()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;}; }
 function texture(draw:(c:CanvasRenderingContext2D)=>void,w=128,h=128) {
   const canvas=document.createElement('canvas');canvas.width=w;canvas.height=h;
-  const c=canvas.getContext('2d');if(!c)throw new Error('无法绘制地图纹理');draw(c);
+  const c=canvas.getContext('2d');if(!c)throw new Error('Could not draw the map texture.');draw(c);
   const t=new THREE.CanvasTexture(canvas);t.colorSpace=THREE.SRGBColorSpace;t.magFilter=t.minFilter=THREE.NearestFilter;t.generateMipmaps=false;return t;
 }
 function cube(parent:THREE.Object3D,s:number[],p:number[],m:THREE.Material) {
@@ -19,7 +19,7 @@ function boxes(parent:THREE.Object3D,items:{p:number[];s:number[]}[],mat:THREE.M
   mesh.castShadow=mesh.receiveShadow=true;mesh.computeBoundingSphere();parent.add(mesh);return mesh;
 }
 function sign(scene:THREE.Scene,name:string,subtitle:string,x:number,y:number,z:number,w=3.5,h=.8) {
-  const map=texture(c=>{c.fillStyle='#244a67';c.fillRect(0,0,512,128);c.strokeStyle='#d7d4b5';c.lineWidth=5;c.strokeRect(6,6,500,116);c.textAlign='center';c.fillStyle='#faf1d3';c.font='bold 47px "Microsoft YaHei",sans-serif';c.fillText(name,256,60);c.font='20px "Microsoft YaHei",sans-serif';c.fillText(subtitle,256,101);},512,128);
+  const map=texture(c=>{c.fillStyle='#244a67';c.fillRect(0,0,512,128);c.strokeStyle='#d7d4b5';c.lineWidth=5;c.strokeRect(6,6,500,116);c.textAlign='center';c.fillStyle='#faf1d3';c.font='bold 43px Arial,sans-serif';c.fillText(name,256,60,470);c.font='20px Arial,sans-serif';c.fillText(subtitle,256,101,470);},512,128);
   const panel=new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshBasicMaterial({map,side:THREE.DoubleSide}));panel.position.set(x,y,z);scene.add(panel);return panel;
 }
 
@@ -54,7 +54,7 @@ export function addMapStructures(scene:THREE.Scene,colliders:Collider[],archiveM
   const river=MAP.river,bridge=MAP.bridge,archive=MAP.locations.archive,tower=MAP.locations.lighthouse;
   const openingHalf=bridge.width/2-.20;
   for(const [minZ,maxZ] of [[river.minZ,bridge.z-openingHalf],[bridge.z+openingHalf,river.maxZ]])
-    colliders.push({kind:'box',x:(river.minX+river.maxX)/2,z:(minZ+maxZ)/2,halfX:(river.maxX-river.minX)/2,halfZ:(maxZ-minZ)/2,label:'河流 · 只能从桥上通过'});
+    colliders.push({kind:'box',x:(river.minX+river.maxX)/2,z:(minZ+maxZ)/2,halfX:(river.maxX-river.minX)/2,halfZ:(maxZ-minZ)/2,label:'River · Cross at the bridge'});
   // Authored bottom-centre origin; the flat top stays flush with both stone roads.
   const arcade=bridge.arcade;
   bridgeModel.name='ArcadeBridge_scene_loaded';
@@ -63,12 +63,12 @@ export function addMapStructures(scene:THREE.Scene,colliders:Collider[],archiveM
   // Keep the uninterrupted flat walking corridor. Only low edges and individual
   // column bases obstruct horizontal movement; overhead arches are not ground boxes.
   for(const side of [-1,1]) {
-    colliders.push({kind:'box',x:bridge.x,z:bridge.z+side*(bridge.width/2-arcade.curbWidth/2),halfX:bridge.length/2,halfZ:arcade.curbWidth/2,label:'拱廊桥石缘'});
+    colliders.push({kind:'box',x:bridge.x,z:bridge.z+side*(bridge.width/2-arcade.curbWidth/2),halfX:bridge.length/2,halfZ:arcade.curbWidth/2,label:'Arcade bridge curb'});
     for(const dx of arcade.columnOffsetsX) {
-      colliders.push({kind:'box',x:bridge.x+dx,z:bridge.z+side*arcade.columnZ,halfX:arcade.columnHalfWidth,halfZ:arcade.columnHalfWidth,label:'拱廊桥石柱'});
+      colliders.push({kind:'box',x:bridge.x+dx,z:bridge.z+side*arcade.columnZ,halfX:arcade.columnHalfWidth,halfZ:arcade.columnHalfWidth,label:'Arcade bridge column'});
     }
   }
-  if(!bridge.crossingOpen)colliders.push({kind:'box',x:bridge.x,z:bridge.z,halfX:.2,halfZ:bridge.width/2,label:'断链桥 · 待解锁'});
+  if(!bridge.crossingOpen)colliders.push({kind:'box',x:bridge.x,z:bridge.z,halfX:.2,halfZ:bridge.width/2,label:'Broken Link Bridge · Locked'});
   const {x:ax,z:az}=archive.position;
   // Blender source: bottom-centre origin, metre scale, glTF front +Z.
   // The canopy is above the player's head; only the body/base obstruct walking.
@@ -76,17 +76,17 @@ export function addMapStructures(scene:THREE.Scene,colliders:Collider[],archiveM
   archiveModel.position.set(ax,0,az);
   scene.add(archiveModel);
   // Include the shallow window trim and door handles, excluding overhead signage.
-  colliders.push({kind:'box',x:ax,z:az,halfX:archive.size.width/2+.10,halfZ:archive.size.depth/2+.13,label:'回声档案馆外墙'});
+  colliders.push({kind:'box',x:ax,z:az,halfX:archive.size.width/2+.10,halfZ:archive.size.depth/2+.13,label:'Echo Archive wall'});
   const {x:tx,z:tz}=tower.position;
   const lighthouse=MAP.lighthouse;
   lighthouseModel.name='Lighthouse_scene_loaded';
   lighthouseModel.position.set(tx,0,tz);
   scene.add(lighthouseModel);
-  const plaque=sign(scene,tower.name,'后续任务',tx,lighthouse.sign.y,tz+lighthouse.sign.z,lighthouse.sign.width,lighthouse.sign.height);
+  const plaque=sign(scene,tower.name,'More to come',tx,lighthouse.sign.y,tz+lighthouse.sign.z,lighthouse.sign.width,lighthouse.sign.height);
   plaque.name='Lighthouse_editable_nameplate';
   // Ground-only obstacles: the open spiral, balcony and lantern remain overhead.
-  colliders.push({kind:'circle',x:tx,z:tz,radius:lighthouse.baseRadius,label:'记忆灯塔基座'});
-  colliders.push({kind:'box',x:tx,z:tz+lighthouse.hut.z,halfX:lighthouse.hut.width/2+.06,halfZ:lighthouse.hut.depth/2+.06,label:'记忆灯塔门房'});
+  colliders.push({kind:'circle',x:tx,z:tz,radius:lighthouse.baseRadius,label:'Memory Lighthouse base'});
+  colliders.push({kind:'box',x:tx,z:tz+lighthouse.hut.z,halfX:lighthouse.hut.width/2+.06,halfZ:lighthouse.hut.depth/2+.06,label:'Memory Lighthouse entrance'});
 }
 
 type Placement={x:number;z:number;y?:number;sx?:number;sy?:number;sz?:number;rotation?:number};
@@ -130,10 +130,10 @@ export function addMapAssetInstances(scene:THREE.Scene,models:Map<string,THREE.G
     return !colliders.some(c=>Math.hypot(p.x-c.x,p.z-c.z)<2);
   };
   const treePoses:Placement[]=[];
-  for(let i=0;i<380&&treePoses.length<72;i++){const p={x:b.minX+2+random()*(b.maxX-b.minX-4),z:b.minZ+2+random()*(b.maxZ-b.minZ-4)};if(!valid(p,3.2)||treePoses.some(q=>Math.hypot(p.x-q.x,p.z-q.z)<3))continue;const s=.8+random()*.35;treePoses.push({...p,sx:s,rotation:random()*Math.PI*2});colliders.push({kind:'circle',...p,radius:.48*s,label:'树干'});}
+  for(let i=0;i<380&&treePoses.length<72;i++){const p={x:b.minX+2+random()*(b.maxX-b.minX-4),z:b.minZ+2+random()*(b.maxZ-b.minZ-4)};if(!valid(p,3.2)||treePoses.some(q=>Math.hypot(p.x-q.x,p.z-q.z)<3))continue;const s=.8+random()*.35;treePoses.push({...p,sx:s,rotation:random()*Math.PI*2});colliders.push({kind:'circle',...p,radius:.48*s,label:'Tree trunk'});}
   const grassPoses:Placement[]=[];
   for(let i=0;i<750&&grassPoses.length<260;i++){const p={x:b.minX+1+random()*(b.maxX-b.minX-2),z:b.minZ+1+random()*(b.maxZ-b.minZ-2)};if(valid(p,1.6))grassPoses.push({...p,sx:.65+random()*.55,rotation:random()*Math.PI*2});}
   const rocks:Placement[]=[];
-  for(let i=0;i<120&&rocks.length<14;i++){const p={x:b.minX+2+random()*(b.maxX-b.minX-4),z:b.minZ+2+random()*(b.maxZ-b.minZ-4)};if(!valid(p,3.4))continue;const s=.9+random()*.6;rocks.push({...p,sx:s,rotation:random()*6.28});colliders.push({kind:'circle',...p,radius:.7*s,label:'石头'});}
+  for(let i=0;i<120&&rocks.length<14;i++){const p={x:b.minX+2+random()*(b.maxX-b.minX-4),z:b.minZ+2+random()*(b.maxZ-b.minZ-4)};if(!valid(p,3.4))continue;const s=.9+random()*.6;rocks.push({...p,sx:s,rotation:random()*6.28});colliders.push({kind:'circle',...p,radius:.7*s,label:'Rock'});}
   for(const [asset,placements,name] of [['Tree_01',treePoses,'Tree_extension'],['Grass_01',grassPoses,'Grass_extension'],['Rock_01',rocks,'Rock_extension']] as const){batch(scene,models.get(asset)!,placements,name);reports.find(r=>r.name===asset)!.instances+=placements.length;}
 }

@@ -7,7 +7,7 @@ import { SAVE_KEY, CLUE_ID, createDefaultSave, collectPickup, normalizeSave, loa
 const folderIds = ['field-folder-01', 'field-folder-02', 'field-folder-03', 'field-folder-04'];
 const memeIds = ['friendship-boat', 'gg-or-mm', 'awesome-my-bro', 'devil-or-showoff'];
 const collectionIds = memeIds.map(id => `collection-${id}`);
-const names = ['友谊的小船', '你是GG还是MM', '厉害了我的哥', '你是魔鬼还是秀儿'];
+const names = ['Friendship Boat', 'Are You GG or MM?', 'Awesome, My Bro!', 'Devil or Show-off?'];
 const positions = [{ x: 20.4, z: -46 }, { x: 24.5, z: -20 }, { x: 26.6, z: 9 }, { x: 60, z: 3 }];
 const originalPickupId = 'outpost-blue-mushroom-folder';
 const correctAnswers = { meaning: 'emotion', context: 'shared-self-mockery' };

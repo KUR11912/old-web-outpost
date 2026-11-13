@@ -21,7 +21,7 @@ const station = (id: string, name: string, dx: number, dz: number, aimY: number,
 });
 
 export const ARCHIVE_OBJECTS = [
-  station('old-terminal', '旧终端', -3.4, 4.5, .805 + .48, .122, .51, .41),
+  station('old-terminal', 'Old Terminal', -3.4, 4.5, .805 + .48, .122, .51, .41),
 ] as const;
 
 function color(value: string) {
@@ -40,7 +40,7 @@ function pixels(draw: (ctx: CanvasRenderingContext2D) => void, height = 128) {
   const canvas = document.createElement('canvas');
   canvas.width = 128; canvas.height = height;
   const ctx = canvas.getContext('2d');
-  if (!ctx) throw new Error('无法创建档案馆屏幕纹理。');
+  if (!ctx) throw new Error('Could not create the archive screen texture.');
   ctx.imageSmoothingEnabled = false;
   draw(ctx);
   const texture = new THREE.CanvasTexture(canvas);
@@ -72,7 +72,7 @@ export function addArchiveObjects(scene: THREE.Scene, colliders: Collider[], ter
       ctx.fillStyle = '#244d67'; ctx.fillRect(0, 0, 128, 32);
       ctx.strokeStyle = '#d4d1b3'; ctx.strokeRect(1, 1, 126, 30);
       ctx.fillStyle = '#faf1d3'; ctx.textAlign = 'center';
-      ctx.font = 'bold 13px "Microsoft YaHei", sans-serif'; ctx.fillText(config.name, 64, 21);
+      ctx.font = 'bold 13px Arial, sans-serif'; ctx.fillText(config.name, 64, 21, 118);
     }, 32);
     const label = new THREE.Mesh(new THREE.PlaneGeometry(1.25, .31), new THREE.MeshBasicMaterial({ map: nameTexture, side: THREE.DoubleSide }));
     label.name = `${config.id}_label`;

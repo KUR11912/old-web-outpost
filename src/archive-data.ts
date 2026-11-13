@@ -46,322 +46,343 @@ export const CLUE_ORDER: string[] = [
 ];
 
 export const CLUES: Record<string, ClueCard> = {
-  // Exploration collections have content cards, but are not in CLUE_ORDER.
-  'collection-friendship-boat': {
+  "collection-friendship-boat": {
     "id": "collection-friendship-boat",
-    "name": "友谊的小船",
-    "location": "回声档案馆北侧草地",
-    "summary": "把朋友间的小分歧，夸张成一场说翻就翻的“绝交事故”。",
-    "period": "2016年春走红",
+    "name": "Friendship Boat",
+    "location": "Grassland north of the Echo Archive",
+    "summary": "A small disagreement between friends becomes an exaggerated friendship-ending shipwreck.",
+    "period": "Became popular in spring 2016",
     "content": [
-      "两只企鹅坐在小船上，其中一只突然变瘦，船就失去平衡翻了。这组荒诞的漫画，把看不见的“友谊”画成了一条经不起折腾的小船。",
-      "2016年春，喃东尼的企鹅漫画广泛传播，网友不断更换对白，把抢零食、意见不合、说好一起偷懒却偷偷努力等日常吐槽装进同一条船。说“友谊的小船说翻就翻”，通常是在熟人之间假装生气，不一定真的要绝交。"
+      "Two penguins sit in a little boat. When one suddenly becomes thinner, the boat loses its balance and capsizes. This absurd comic turns the invisible idea of friendship into a fragile little boat.",
+      "Nandongni's penguin comics spread widely in spring 2016. People replaced the dialogue with everyday complaints about stolen snacks, disagreements, or a friend who secretly worked hard after agreeing to slack off together. Saying that the friendship boat can capsize at any moment usually means pretending to be angry with a friend, rather than actually ending the friendship."
     ],
     "example": {
-      "label": "使用示例（新写的情境）",
-      "text": "说好一起迷路，你却偷偷开了地图？友谊的小船说翻就翻！"
+      "label": "Example written for this game",
+      "text": "We agreed to get lost together, but you secretly opened the map? There goes our friendship boat!"
     },
-    "contextNote": "适合熟人之间的轻松互损；如果对方正在认真表达难过，就别只用一个“翻船”表情敷衍。",
-    "sourceLabel": "资料包档案 · 含来源说明",
-    "sourceNote": "广泛传播的企鹅漫画作者为喃东尼。这句话在漫画走红之前已经流传，不能把漫画作者直接等同于句子的最早发明者。",
+    "contextNote": "Works as light teasing between friends. If someone is seriously upset, replying with only a capsizing-boat meme can feel dismissive.",
+    "sourceLabel": "Supplied archive pack · source notes",
+    "sourceNote": "The widely circulated penguin comics are by Nandongni. The phrase was already in circulation before those comics became popular, so the comic artist should not automatically be credited as the first person to invent the phrase.",
     "image": "assets/memes/friendship-boat.jpg",
     "gallery": [
       {
         "src": "assets/memes/friendship-boat.jpg",
-        "caption": "喃东尼的企鹅漫画；新华网2016年报道所附版本。",
-        "role": "当年报道配图",
-        "creator": "喃东尼",
+        "caption": "A penguin comic by Nandongni, in the version accompanying a 2016 Xinhua article.",
+        "role": "Illustration from a contemporary news report",
+        "creator": "Nandongni",
         "sourcePage": "https://www.xinhuanet.com/politics/2016-04/15/c_128896932.htm",
         "originalUrl": "https://www.xinhuanet.com/politics/2016-04/15/128896932_14606747597881n.jpg",
-        "note": "当年报道的转载配图，不标为首次上传文件。"
+        "note": "An image republished in a contemporary report; not identified as the first uploaded file."
       }
     ],
     "sources": [
       {
-        "title": "揭秘“友谊的小船”漫画原作者：宅男 大学退学",
+        "title": "Meet the original artist of the Friendship Boat comics",
         "url": "https://www.xinhuanet.com/politics/2016-04/15/c_128896932.htm",
-        "note": "成都商报／新华网 · 2016-04-15"
+        "note": "Chengdu Business Daily / Xinhua · 2016-04-15"
       }
     ]
   },
-  'collection-gg-or-mm': {
+  "collection-gg-or-mm": {
     "id": "collection-gg-or-mm",
-    "name": "你是GG还是MM",
-    "location": "回声档案馆东南侧 · 河流西岸林隙",
-    "summary": "早期聊天室里的搭话暗号：GG指“哥哥”，MM指“妹妹”或“美眉”。",
-    "period": "世纪之交至2000年代初常见",
+    "name": "Are You GG or MM?",
+    "location": "Woodland clearing southeast of the Echo Archive · west riverbank",
+    "summary": "An icebreaker from early chat rooms: GG stands for gege (older brother), while MM means meimei (younger sister) or meimei (pretty girl).",
+    "period": "Common around the turn of the millennium and in the early 2000s",
     "content": [
-      "在早期聊天室、论坛和QQ里，网友常把“哥哥”“妹妹”写成拼音首字母GG、MM。“你是GG还是MM？”大致是在问对方是男生还是女生，也是陌生网友打开话题的一种方式。这里的称呼并不表示亲属关系，也不一定对应真实年龄。",
-      "至少在2000年的网络用语报道里，GG、MM这些缩写已经出现。今天重新敲出这句话，往往是在模仿早期上网聊天的口吻，唤起“刚认识一个网友”的感觉。"
+      "In early Chinese chat rooms, forums and QQ conversations, people shortened gege and meimei to their pinyin initials, GG and MM. \"Are you GG or MM?\" roughly asked whether the other person was a boy or a girl, and served as an opening line between strangers online. These terms did not imply a family relationship or necessarily indicate someone's actual age.",
+      "GG and MM already appeared in reports about internet slang in 2000. Using the question today often imitates the tone of early online chat, recalling the feeling of meeting a new internet friend."
     ],
     "example": {
-      "label": "使用示例（新写的情境）",
-      "text": "你好，你是GG还是MM？你也喜欢玩游戏吗？"
+      "label": "Example written for this game",
+      "text": "Hi, are you GG or MM? Do you like playing games too?"
     },
-    "contextNote": "这是特定年代的聊天用语。在这个问句里，GG按“哥哥”理解；它与游戏对局中的英文缩写GG属于不同语境。",
-    "sourceLabel": "资料包档案 · 含来源说明",
-    "sourceNote": "属于早期网友共同形成的网络用语，尚未确认单一创作者或精确首发日期。配图只展示旧版QQ界面，未包含这句对话。",
+    "contextNote": "This is chat slang from a particular era. Here, GG means gege, or older brother; it is a different use from the English gaming abbreviation for \"good game\".",
+    "sourceLabel": "Supplied archive pack · source notes",
+    "sourceNote": "This language developed collectively among early internet users. No single creator or exact first publication date has been confirmed. The accompanying image shows an old QQ interface and does not contain this conversation.",
     "image": "assets/memes/gg-mm-qq-context.jpg",
     "gallery": [
       {
         "src": "assets/memes/gg-mm-qq-context.jpg",
-        "caption": "旧版QQ界面，作为早期网络聊天的背景配图；不是该问句的原始聊天记录。",
-        "role": "时代背景配图",
-        "creator": "旧版QQ界面；截图制作者未标明",
+        "caption": "An old QQ interface, provided as background for early online chatting. This is not an original chat record containing the question.",
+        "role": "Historical interface context",
+        "creator": "Old QQ interface; screenshot creator not identified",
         "sourcePage": "https://sdxw.iqilu.com/share/YS0yMS02MTYyMDU=.html",
         "originalUrl": "https://img9.iqilu.com/wx/2017/11/22/191447nyouaueu0hl0.jpg",
-        "note": "时代背景配图。图中没有GG/MM对话；页面标注年代与图中文字有差异，不为截图指定确切年份。"
+        "note": "Background image only. There is no GG/MM conversation in it. The date given on the source page differs from text visible in the image, so no exact year is assigned to this screenshot."
       }
     ],
     "sources": [
       {
-        "title": "网络“黑话”你懂吗？",
+        "title": "Do you understand internet slang?",
         "url": "https://news.zol.com.cn/2000/0605/5062.shtml",
-        "note": "中关村在线 · 2000-06-05"
+        "note": "ZOL · 2000-06-05"
       },
       {
-        "title": "上海语言专家提出：网络语言是汉语发展",
+        "title": "Shanghai language experts: internet language is part of the development of Chinese",
         "url": "https://news.sina.com.cn/c/2001-08-09/324406.html",
-        "note": "新闻晨报／新浪 · 2001-08-09"
+        "note": "Morning News / Sina · 2001-08-09"
       }
     ]
   },
-  'collection-awesome-my-bro': {
+  "collection-awesome-my-bro": {
     "id": "collection-awesome-my-bro",
-    "name": "厉害了我的哥",
-    "location": "地图南部 · 河流西侧草地",
-    "summary": "把一句“你好厉害”，说成夸张、亲近又带点喜剧感的赞叹。",
-    "period": "2016年广泛流行",
+    "name": "Awesome, My Bro!",
+    "location": "Southern grassland · west of the river",
+    "summary": "An exaggerated, friendly and slightly comic way to say, \"You are amazing!\"",
+    "period": "Widely popular in 2016",
     "content": [
-      "看到别人完成高难度操作、展示意想不到的本事，网友会回复“厉害了我的哥”。“哥”在这里常是一种拉近距离的称呼，并不要求对方真是自己的哥哥。配上夸张的表情，普通的称赞就变得像在给对方现场鼓掌。",
-      "2016年的报道已经记录了它的刷屏传播，以及“厉害了，word哥”等变体。“word”在这里是对“我的”的谐音写法。它既可以是真心佩服，也可以在离谱的场面里带一点反讽，具体要看双方的语气。"
+      "When someone pulls off a difficult move or reveals an unexpected skill, people may reply with \"Li hai le wo de ge\" — roughly, \"Awesome, my bro!\" Here, \"bro\" is often a friendly way to address someone, rather than a reference to an actual older brother. An exaggerated reaction image makes the compliment feel like a round of applause.",
+      "Reports from 2016 already documented its widespread use and variations such as \"Li hai le, word ge.\" In that version, the English word \"word\" playfully approximates the sound of wo de (my). The phrase can express sincere admiration or a touch of sarcasm in an absurd situation, depending on the tone shared by the people involved."
     ],
     "example": {
-      "label": "使用示例（新写的情境）",
-      "text": "你用记事本画出了整座地图？厉害了我的哥！"
+      "label": "Example written for this game",
+      "text": "You drew the entire map in Notepad? Awesome, my bro!"
     },
-    "contextNote": "看见真正精彩的表现时可以用来称赞；用在别人出丑或失误之后，就可能被理解为嘲讽。",
-    "sourceLabel": "资料包档案 · 含来源说明",
-    "sourceNote": "同期报道存在多个起源版本。关于军训教官接过手机打游戏的故事，目前不足以确认其为唯一源头；本档案记录可核实的流行时期和用法。",
+    "contextNote": "It can praise a genuinely impressive performance. After someone embarrasses themselves or makes a mistake, the same reply may sound mocking.",
+    "sourceLabel": "Supplied archive pack · source notes",
+    "sourceNote": "Contemporary reports offer several origin stories. The story of a military-training instructor taking over a phone to play a game is not sufficiently verified as the sole source. This archive records the documented period of popularity and usage.",
     "image": "assets/memes/lihai-le-wode-ge.jpg",
     "gallery": [
       {
         "src": "assets/memes/lihai-le-wode-ge.jpg",
-        "caption": "带有“厉害了我的哥”文字的网络表情图；图片作者未标明。",
-        "role": "代表性表情图",
-        "creator": "未标明",
+        "caption": "An online reaction image bearing the Chinese phrase translated here as \"Awesome, My Bro!\" The image creator is not identified.",
+        "role": "Representative reaction image",
+        "creator": "Not identified",
         "sourcePage": "https://www.chinlingo.com/articles/601702/",
         "originalUrl": "https://www.chinlingo.com/daily/upload/ueditor/image/20161116/13781479278344956.jpg",
-        "note": "图片已下载查看；本次来源页抓取失败，图片路径日期不作为首发日期。"
+        "note": "The supplied pack reports that the image was downloaded and inspected, but its source page could not be retrieved during preparation. The date in the image URL is not treated as a first publication date."
       }
     ],
     "sources": [
       {
-        "title": "最近刷屏的“厉害了我的哥”到底是什么梗？",
+        "title": "What does the viral phrase \"Awesome, My Bro!\" mean?",
         "url": "https://www.ithome.com/0/258/417.htm",
-        "note": "IT之家 · 2016-09-18"
+        "note": "IT Home · 2016-09-18"
       },
       {
-        "title": "厉害了，我的网络流行语",
+        "title": "Awesome, my internet buzzwords",
         "url": "https://paper.people.com.cn/rmrbhwb/html/2016-10/24/content_1720841.htm",
-        "note": "人民日报海外版 · 2016-10-24"
+        "note": "People's Daily Overseas Edition · 2016-10-24"
       }
     ]
   },
-  'collection-devil-or-showoff': {
+  "collection-devil-or-showoff": {
     "id": "collection-devil-or-showoff",
-    "name": "你是魔鬼还是秀儿",
-    "location": "桥梁东南侧 · 河流东岸林隙",
-    "summary": "把“你太狠了”和“你也太会秀了”放在一起，在惊讶、佩服和吐槽之间摇摆。",
-    "period": "相关表达在2018年流行；整句改编歌于2019年初已有报道",
+    "name": "Devil or Show-off?",
+    "location": "Woodland clearing southeast of the bridge · east riverbank",
+    "summary": "A reaction somewhere between \"That was ruthless!\" and \"What a show-off!\", mixing surprise, admiration and teasing.",
+    "period": "Related expressions were popular in 2018; a parody song using the combined phrase was reported in early 2019",
     "content": [
-      "“你是魔鬼吗”常用来回应扎心的话或出乎意料的操作；“秀儿，是你吗”则把“你真优秀、真会玩”说成一个带调侃意味的称呼。它们的共同点，是用夸张的反应表达“你这一下让我没想到”。",
-      "2019年1月的报道已经把“你是魔鬼还是秀儿”记作一首热门改编歌：它借用《魔鬼中的天使》的旋律，串联了当时的多个短视频热梗。放到聊天里，这个问句可以表达一种又佩服又想吐槽的心情。"
+      "\"Are you a devil?\" often reacts to a cutting remark or an unexpected move. \"Xiu'er, is that you?\" turns the idea of being outstanding or showing off into a teasing nickname. Both use exaggerated surprise to say, \"I did not see that coming.\"",
+      "A January 2019 report already described \"Are you a devil or Xiu'er?\" as a popular parody song. It used the melody of \"Mo Gui Zhong De Tian Shi\" (Angel in the Devil) and linked together several short-video catchphrases of the time. In conversation, the question can convey both admiration and an urge to tease."
     ],
     "example": {
-      "label": "使用示例（新写的情境）",
-      "text": "你把电脑报错截图设成了桌面壁纸？你是魔鬼还是秀儿！"
+      "label": "Example written for this game",
+      "text": "You made a screenshot of a computer error your wallpaper? Devil or show-off?"
     },
-    "contextNote": "适合彼此理解语气的玩笑；其中的“魔鬼”是夸张说法，“秀儿”也不是在认真询问某个人的姓名。",
-    "sourceLabel": "资料包档案 · 含来源说明",
-    "sourceNote": "可确认2019年初已有整句改编歌的报道，最早上传者尚未核实。“你是魔鬼吗”的节目截图只解释相关表达，不能据此把整句话写成节目原台词。",
+    "contextNote": "Best suited to jokes between people who understand each other's tone. \"Devil\" is an exaggeration, and \"Xiu'er\" is not a serious request for someone's name.",
+    "sourceLabel": "Supplied archive pack · source notes",
+    "sourceNote": "Reports confirm that a parody song using the full phrase existed by early 2019, but its first uploader has not been verified. The television screenshot of \"Are you a devil?\" explains a related expression; it does not establish that the full combined phrase was an original line from the show.",
     "image": "assets/memes/mogui-related.jpg",
     "gallery": [
       {
         "src": "assets/memes/mogui-related.jpg",
-        "caption": "相关表达“你是魔鬼吗”的节目截图；用于解释前半句，不是该改编歌的封面。",
-        "role": "相关表达配图 · 节目截图",
-        "creator": "《爸爸去哪儿》节目画面，来源页转载",
+        "caption": "A television screenshot of the related expression \"Are you a devil?\" It illustrates the first half of the phrase and is not the parody song's cover image.",
+        "role": "Related expression · television screenshot",
+        "creator": "Frame from Where Are We Going, Dad?, republished on the source page",
         "sourcePage": "https://www.mnw.cn/keji/internet/2090147.html",
         "originalUrl": "https://upload.mnw.cn/2018/1126/1543224577315.jpg",
-        "note": "相关表达截图，保留原水印。不作为“你是魔鬼还是秀儿”改编歌的原始图片。"
+        "note": "A screenshot illustrating a related expression, with its original watermark retained. It is not presented as an original image for the \"Devil or Show-off?\" parody song."
       },
       {
         "src": "assets/memes/xiuer-related.png",
-        "caption": "2018年报道中的“秀儿，是你吗”评论区截图。",
-        "role": "评论区传播示例",
-        "creator": "评论区截图，原始截取者未标明",
+        "caption": "A comment-section screenshot showing \"Xiu'er, is that you?\", included in a 2018 report.",
+        "role": "Example of circulation in comments",
+        "creator": "Comment-section screenshot; original screenshot creator not identified",
         "sourcePage": "https://shouyou.3dmgame.com/gl/103617.html",
         "originalUrl": "https://syimg.3dmgame.com/uploadimg/upload/image/20181204/20181204102602_42919.png",
-        "note": "相关表达传播示例，保留原水印。"
+        "note": "An example of a related expression in circulation. The original watermark is retained."
       }
     ],
     "sources": [
       {
-        "title": "你是魔鬼还是秀儿是什么歌改编的",
+        "title": "Which song was adapted into \"Are you a devil or Xiu'er?\"",
         "url": "https://www.mnw.cn/yinyue/huayu/2108545.html",
-        "note": "闽南网，页面注明来源QQ音乐 · 2019-01-03"
+        "note": "Minnan Net; the page credits QQ Music as its source · 2019-01-03"
       },
       {
-        "title": "抖音上的秀儿是什么意思 秀儿梗怎么来的出处",
+        "title": "What does Xiu'er mean on Douyin, and where did the meme come from?",
         "url": "https://www.mnw.cn/keji/internet/2093904.html",
-        "note": "闽南网 · 2018-12-04"
+        "note": "Minnan Net · 2018-12-04"
       },
       {
-        "title": "抖音评论你是魔鬼吗是什么梗和意思",
+        "title": "What does \"Are you a devil?\" mean in Douyin comments?",
         "url": "https://www.mnw.cn/keji/internet/2090147.html",
-        "note": "闽南网 · 2018-11-26"
+        "note": "Minnan Net · 2018-11-26"
       }
     ]
   },
-  'missing-caption-image': {
-    id: 'missing-caption-image',
-    name: '蓝瘦香菇图片',
-    location: '旧网驿站 · 邮箱前的漂浮文件夹',
-    summary: '一张带有人物表情、蓝色蘑菇与“蓝瘦香菇”文字的图片。它表达的心情，需要结合文字和语境理解。',
-    content: [
-      '图中能看到人物表情、蓝色蘑菇、自然背景，以及底部“蓝瘦香菇”四个字。',
-      '仅凭图片，可以识别这些视觉元素；要理解它为什么用于聊天，还需要寻找文字含义与使用语境。',
-      '在回声档案馆的旧终端里，可以查看与这张图片相关的读音便笺。',
+  "missing-caption-image": {
+    "id": "missing-caption-image",
+    "name": "Blue and Mushroom Image",
+    "location": "Old Web Outpost · floating folder in front of the mailbox",
+    "summary": "An image combining a face, a blue mushroom and the Chinese words \"Lan Shou Xiang Gu.\" Its emotional meaning depends on the wording and context.",
+    "content": [
+      "The image contains a face, a blue mushroom, a natural background and the Chinese characters for \"Lan Shou Xiang Gu\" along the bottom.",
+      "The visual elements are easy to recognize on their own. Understanding why the image is used in conversation also requires the meaning of the words and the context in which they are sent.",
+      "The old terminal at the Echo Archive contains a pronunciation note related to this image."
     ],
-    sourceLabel: '用户提供图片 · 来源待核验',
-    sourceNote: '本游戏使用用户上传的原始图片。原作者、制作时间与最初传播出处尚未核验，不将其标为首发原件。',
-    image: 'assets/blue-mushroom-meme.png',
+    "sourceLabel": "User-supplied image · origin unverified",
+    "sourceNote": "The game uses the original image file supplied by the user. Its creator, production date and earliest circulation have not been verified, so it is not presented as the first published original.",
+    "image": "assets/blue-mushroom-meme.png"
   },
-  'echo-meaning-note': {
-    id: 'echo-meaning-note',
-    name: '读音便笺',
-    location: '回声档案馆 · 旧终端',
-    summary: '“蓝瘦香菇”与“难受，想哭”的读音联系，帮助解释图片为什么能表达情绪。',
-    image: 'assets/blue-mushroom-meme.png',
-    content: [
-      '读音示意：“难受，想哭” ↔ “蓝瘦香菇”。这里用文字并列提示近似读音关系，不提供或冒充原始录音。',
-      '“难受，想哭”指向难过、委屈或失落的感受；在熟悉这一表达的聊天中，“蓝瘦香菇”可以借这种读音联系表达心情。',
-      '“蓝”和“香菇”又能被画成蓝色蘑菇，让一句情绪表达变成容易认出的图像。它不是在认真介绍蘑菇品种。',
-      '理解这层联系，只说明你认出了意思；是否适合发送，还要看对方的处境和彼此约定的语气。',
+  "echo-meaning-note": {
+    "id": "echo-meaning-note",
+    "name": "Pronunciation Note",
+    "location": "Echo Archive · old terminal",
+    "summary": "The similar sounds of \"Lan Shou Xiang Gu\" and \"nan shou, xiang ku\" (feeling awful, wanting to cry) explain how the image conveys emotion.",
+    "image": "assets/blue-mushroom-meme.png",
+    "content": [
+      "Pronunciation comparison: \"nan shou, xiang ku\" (feeling awful, wanting to cry) ↔ \"lan shou, xiang gu\" (blue, skinny, mushroom). This written comparison illustrates a resemblance in sound; it does not supply or impersonate an original recording.",
+      "\"Feeling awful, wanting to cry\" conveys sadness, hurt or disappointment. In conversations where people know this expression, \"Lan Shou Xiang Gu\" can use the resemblance in sound to express that feeling.",
+      "The words for blue and mushroom can also be drawn as a blue mushroom, turning an emotional expression into a recognizable image. It is not a serious description of a mushroom species.",
+      "Recognizing the connection means you understand the expression. Whether it is appropriate to send still depends on the other person's situation and the tone you share."
     ],
-    sourceLabel: '读音示意 · 无原始录音',
-    sourceNote: '本卡依据下列已复核的新闻报道整理为文字读音示意。报道是二手参考，不是首发原件。本项目未收录或核验原始录音，也未确认上传图片的最初出处。',
-    sources: [
+    "sourceLabel": "Written pronunciation guide · no original recording",
+    "sourceNote": "This card summarizes the word relationship described in the news reports listed below. Those reports are secondary references, not original first publications. The project does not include or verify an original recording, and the earliest source of the supplied image remains unconfirmed.",
+    "sources": [
       {
-        title: '新华社／新华网：《咬文嚼字》公布2016年十大流行语',
-        url: 'https://www.xinhuanet.com/politics/2016-12/15/c_1120121641.htm',
-        note: '报道的第十项说明“蓝瘦，香菇”与“难受，想哭”的谐音联系，并讨论文字表达的视觉化。用于支持本卡的词语解释，不用于认定上传图片的出处。',
+        "title": "Xinhua: Yaowen Jiaozi announces its ten buzzwords of 2016",
+        "url": "https://www.xinhuanet.com/politics/2016-12/15/c_1120121641.htm",
+        "note": "The tenth entry explains the similar sounds of \"Lan Shou Xiang Gu\" and \"nan shou, xiang ku\" and discusses turning written expressions into images. It supports this card's explanation of the words, not a provenance claim about the uploaded image."
       },
       {
-        title: 'SBS中文：为什么大家都在搜“蓝瘦香菇”？南宁失恋小哥一夜刷爆朋友圈',
-        url: 'https://www.sbs.com.au/language/chinese/zh-hans/article/why-are-chinese-netizens-crazy-about-blue-skinny-mushroom/2ijwznvas',
-        note: '报道并列呈现两种文字写法，并提到模仿、歌曲及表情包改编。本游戏仅参考报道文字，未把页面嵌入的视频当作已核验的原始录音。',
+        "title": "SBS Chinese: Why are Chinese netizens searching for \"Blue Skinny Mushroom\"?",
+        "url": "https://www.sbs.com.au/language/chinese/zh-hans/article/why-are-chinese-netizens-crazy-about-blue-skinny-mushroom/2ijwznvas",
+        "note": "The report places the two written expressions side by side and mentions imitations, songs and reaction-image adaptations. The game refers only to the report's text; its embedded video is not treated as a verified original recording."
+      }
+    ]
+  },
+  "echo-chat-context": {
+    "id": "echo-chat-context",
+    "name": "Chat Excerpt",
+    "location": "Echo Archive · chat window",
+    "summary": "The same image can have different effects when a familiar friend is joking about a setback and when someone is seriously asking for support.",
+    "content": [
+      "Example written for this game. Lin and Yao are gaming friends who know each other's tone and both understand \"Blue and Mushroom.\"",
+      "Lin: \"Lost another round. Time for a little Blue and Mushroom moment, haha. Let's take a break and play again!\"",
+      "Yao: \"Mushroom received. Take a breather; we'll play the next one together.\" Lin first jokes lightly about losing, and Yao replies in a similar tone that both understand.",
+      "A different situation. Lin: \"I've been feeling really awful lately. I'm not joking. Could you listen for a while?\"",
+      "A plain-language reply could be: \"I'm here. Take your time. Would you like me to listen first, or help you think things through?\" Sending only a meme could make the other person feel unheard.",
+      "Recognizing an image does not mean it fits every situation. Consider the tone, your relationship and what the person needs now. Plain language is always an option."
+    ],
+    "sourceLabel": "Fictional game example · not a historical chat record",
+    "sourceNote": "The characters, their relationship and the dialogue were written for this game to compare contexts. They are not evidence quoted from real conversations or early circulation records."
+  },
+  "echo-image-variants": {
+    "id": "echo-image-variants",
+    "name": "Image Adaptation Notes",
+    "location": "Echo Archive · image cache",
+    "summary": "Keep the recognizable features of an image while adding a new caption about a specific experience.",
+    "content": [
+      "Reference material: the collected Blue and Mushroom image. The versions below reuse that image with new captions. They are not claimed to be versions that circulated historically.",
+      "Game example A: \"Lost the last round too. Time for a break; I'll try again tomorrow.\" The caption turns disappointment after a losing streak into light self-mockery.",
+      "Game example B: \"The layout I just finished needs redoing. Let me sigh for a moment.\" The caption turns disappointment about revising a project into a small personal complaint.",
+      "Retained: the face, blue mushroom, background and original Chinese text. Added: one caption describing a specific experience.",
+      "A new context changes how the recipient reads an image; a caption does not automatically make it appropriate. When someone is seriously asking for support, express care clearly instead of copying these examples."
+    ],
+    "sourceLabel": "Game adaptations · original image with new captions",
+    "sourceNote": "The base image was supplied by the user, and its original source remains unverified. Captions A and B were written for the game and are not presented as existing historical adaptations.",
+    "image": "assets/blue-mushroom-meme.png",
+    "variants": [
+      {
+        "caption": "Lost the last round too. Time for a break; I'll try again tomorrow.",
+        "context": "Light self-mockery shared with a familiar friend after a losing streak."
       },
-    ],
-  },
-  // Retired station cards remain recognized only for v1 save compatibility.
-  'echo-chat-context': {
-    id: 'echo-chat-context',
-    name: '聊天片段',
-    location: '回声档案馆 · 聊天窗口',
-    summary: '同一张图片，在熟悉朋友主动自嘲和认真求助两种语境中，会产生不同效果。',
-    content: [
-      '游戏创作示例。小林和阿遥是熟悉彼此语气的游戏好友，也都理解“蓝瘦香菇”的意思。',
-      '小林：“刚才那局又输啦，我先蓝瘦香菇一下哈哈。歇一会儿再开！”',
-      '阿遥：“收到这朵香菇，缓一缓，下一局一起。”小林先用轻松的方式自嘲失利，阿遥在双方理解的前提下接上相近语气。',
-      '对照情境。小林：“最近真的很难受，我不是在开玩笑。能听我说一会儿吗？”',
-      '这时可以用普通语言回应：“我在，你慢慢说。你希望我先听着，还是一起想办法？”直接抛出表情梗可能让对方觉得没有被认真听见。',
-      '能认出图片不等于所有时候都适合发它。先确认语气、关系与当下需要，也可以一直选择普通语言。',
-    ],
-    sourceLabel: '游戏情境示例 · 非历史聊天记录',
-    sourceNote: '人物、关系和对话均为本游戏创作，用于比较语境；不是从真实聊天或早期传播材料中摘录的证据。',
-  },
-  'echo-image-variants': {
-    id: 'echo-image-variants',
-    name: '图片改编记录',
-    location: '回声档案馆 · 图片缓存',
-    summary: '保留原图的识别线索，给同一张图添加新配文，表达具体经历。',
-    content: [
-      '参考素材：已收集的“蓝瘦香菇图片”。以下版本只复用这张原图并附上新配文，不声称它们是历史上流传过的版本。',
-      '游戏改编示例 A：“最后一局还是输了，先休息，明天再来。”配文把失落感放进游戏连败后的轻松自嘲。',
-      '游戏改编示例 B：“刚排好的版又要返工，我先叹一口气。”配文把失落感放进自己面对项目返工时的一次吐槽。',
-      '保留部分：人物表情、蓝色蘑菇、背景与“蓝瘦香菇”文字。改动部分：新增一句讲述具体经历的配文。',
-      '新情境会改变接收者的理解；配文并不会自动保证合适。面对认真求助的人，优先清楚地表达关心，而不是照搬这些示例。',
-    ],
-    sourceLabel: '游戏改编示例 · 原图加配文',
-    sourceNote: '底图来自用户提供图片，原始出处待核验。A/B 配文为游戏创作，未将其标为已有历史改编。',
-    image: 'assets/blue-mushroom-meme.png',
-    variants: [
-      { caption: '最后一局还是输了，先休息，明天再来。', context: '游戏连败后，对熟悉的好友轻松自嘲。' },
-      { caption: '刚排好的版又要返工，我先叹一口气。', context: '自己遇到项目返工，讲述具体经历、轻轻吐槽。' },
-    ],
-  },
+      {
+        "caption": "The layout I just finished needs redoing. Let me sigh for a moment.",
+        "context": "A small complaint about the specific experience of having to revise a project."
+      }
+    ]
+  }
 };
 
 /** Legacy answer validation for v1 saves; there is no active association UI. */
 export const ARCHIVE_QUESTIONS: ArchiveQuestion[] = [
   {
-    id: 'meaning',
-    title: '判断一：图片在表达什么？',
-    prompt: '结合“蓝瘦香菇图片”和“读音便笺”，这张图为什么能用来表达心情？',
-    options: [
+    "id": "meaning",
+    "title": "Question 1: What does the image express?",
+    "prompt": "Using the Blue and Mushroom Image and the Pronunciation Note, why can this image convey a feeling?",
+    "options": [
       {
-        id: 'emotion',
-        text: '借近似读音联系“难受，想哭”，再把它画成蓝色蘑菇。',
-        correct: true,
-        feedback: '联系建立了。“读音便笺”给出“难受，想哭”与“蓝瘦香菇”的读音示意；“蓝瘦香菇图片”把文字中的颜色与香菇变成了可辨认的图像。',
-        referenceIds: ['echo-meaning-note', 'missing-caption-image'],
+        "id": "emotion",
+        "text": "It echoes the sound of \"feeling awful, wanting to cry,\" then turns the resulting words into a blue mushroom.",
+        "correct": true,
+        "feedback": "Connection found. The Pronunciation Note compares \"nan shou, xiang ku\" with \"Lan Shou Xiang Gu,\" and the Blue and Mushroom Image turns the words for blue and mushroom into something recognizable.",
+        "referenceIds": [
+          "echo-meaning-note",
+          "missing-caption-image"
+        ]
       },
       {
-        id: 'food',
-        text: '蓝色是一种可食用蘑菇的品种说明。',
-        correct: false,
-        feedback: '图片里确实有蘑菇，但“读音便笺”提供的是“难受，想哭”的情绪与读音联系，没有介绍可食用品种。请回看“读音便笺”，再判断它在聊天里表达什么。',
-        referenceIds: ['echo-meaning-note'],
+        "id": "food",
+        "text": "The blue color identifies an edible species of mushroom.",
+        "correct": false,
+        "feedback": "There is a mushroom in the image, but the Pronunciation Note explains a connection to sadness and sound, not an edible species. Read the note again and consider what the image expresses in conversation.",
+        "referenceIds": [
+          "echo-meaning-note"
+        ]
       },
       {
-        id: 'celebration',
-        text: '不看配文和语境，也能确定它一直是在庆祝胜利。',
-        correct: false,
-        feedback: '“读音便笺”指向失落感；“聊天片段”中的小林是在比赛失利后轻松自嘲。它不能脱离配文与语境，被固定解释成庆祝胜利。',
-        referenceIds: ['echo-meaning-note', 'echo-chat-context'],
-      },
-    ],
+        "id": "celebration",
+        "text": "It always celebrates a victory, regardless of the caption or context.",
+        "correct": false,
+        "feedback": "The Pronunciation Note points to disappointment. In the Chat Excerpt, Lin jokes lightly after losing a game. Without its caption and context, the image cannot always be read as a celebration.",
+        "referenceIds": [
+          "echo-meaning-note",
+          "echo-chat-context"
+        ]
+      }
+    ]
   },
   {
-    id: 'context',
-    title: '判断二：什么时候适合接这个梗？',
-    prompt: '根据“聊天片段”，下面哪个情境最符合这次使用“蓝瘦香菇”的方式？',
-    options: [
+    "id": "context",
+    "title": "Question 2: When does this reply fit?",
+    "prompt": "Based on the Chat Excerpt, which situation best matches this use of Blue and Mushroom?",
+    "options": [
       {
-        id: 'shared-self-mockery',
-        text: '熟悉的朋友已主动轻松自嘲，双方也理解这张图，可以顺着相同语气回应。',
-        correct: true,
-        feedback: '这个选择看到了语境。“聊天片段”里，小林先自嘲比赛失利，熟悉他的阿遥才接上相近语气；认真求助的对照情境则适合普通语言回应。“图片改编记录”也说明新配文要与具体处境相配。',
-        referenceIds: ['echo-chat-context', 'echo-image-variants'],
+        "id": "shared-self-mockery",
+        "text": "A familiar friend has already joked lightly about their setback, and you both understand the image, so you can reply in the same tone.",
+        "correct": true,
+        "feedback": "This choice considers the context. In the Chat Excerpt, Lin jokes about losing first; Yao, who knows Lin well, follows that tone. The contrasting request for support calls for plain language. The Image Adaptation Notes also show why a new caption should fit the particular situation.",
+        "referenceIds": [
+          "echo-chat-context",
+          "echo-image-variants"
+        ]
       },
       {
-        id: 'serious-help',
-        text: '朋友明确说不是开玩笑、正在认真求助时，先发这张图让他别想太多。',
-        correct: false,
-        feedback: '“聊天片段”的对照情境里，对方明确需要被认真倾听。先用普通语言回应他的需要更合适；发梗可能让他觉得自己的难受被轻轻带过。请回看“聊天片段”的两段对话。',
-        referenceIds: ['echo-chat-context'],
+        "id": "serious-help",
+        "text": "A friend says they are not joking and seriously asks for support, so send the image first to tell them not to worry.",
+        "correct": false,
+        "feedback": "In the contrasting Chat Excerpt, the person explicitly needs someone to listen seriously. Responding to that need in plain language is more appropriate; a meme might feel dismissive. Read the two conversations again.",
+        "referenceIds": [
+          "echo-chat-context"
+        ]
       },
       {
-        id: 'anyone-anytime',
-        text: '只要自己知道读音关系，就可以对任何人、在任何时候发送。',
-        correct: false,
-        feedback: '“读音便笺”帮助理解意思，但“聊天片段”还要求注意关系、语气和当下需要。“图片改编记录”中的新配文也只适用于给定情境，不能当成通用回复。',
-        referenceIds: ['echo-meaning-note', 'echo-chat-context', 'echo-image-variants'],
-      },
-    ],
-  },
+        "id": "anyone-anytime",
+        "text": "Once you know the sound connection, you can send it to anyone at any time.",
+        "correct": false,
+        "feedback": "The Pronunciation Note explains the meaning, but the Chat Excerpt also asks you to consider the relationship, tone and current needs. The new captions in the Image Adaptation Notes fit specific situations rather than serving as universal replies.",
+        "referenceIds": [
+          "echo-meaning-note",
+          "echo-chat-context",
+          "echo-image-variants"
+        ]
+      }
+    ]
+  }
 ];
 
 export function createArchiveState(): ArchiveState {

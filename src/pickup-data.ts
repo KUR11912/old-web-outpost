@@ -24,24 +24,24 @@ export interface PickupDefinition {
 export const MEMES: Record<string, MemeDefinition> = {
   'blue-mushroom': {
     id: 'blue-mushroom',
-    name: '蓝瘦香菇',
+    name: 'Blue and Mushroom',
     clueId: 'missing-caption-image',
     clue: CLUES['missing-caption-image'],
   },
   'friendship-boat': {
-    id: 'friendship-boat', name: '友谊的小船', clueId: 'collection-friendship-boat',
+    id: 'friendship-boat', name: 'Friendship Boat', clueId: 'collection-friendship-boat',
     clue: CLUES['collection-friendship-boat'],
   },
   'gg-or-mm': {
-    id: 'gg-or-mm', name: '你是GG还是MM', clueId: 'collection-gg-or-mm',
+    id: 'gg-or-mm', name: 'Are You GG or MM?', clueId: 'collection-gg-or-mm',
     clue: CLUES['collection-gg-or-mm'],
   },
   'awesome-my-bro': {
-    id: 'awesome-my-bro', name: '厉害了我的哥', clueId: 'collection-awesome-my-bro',
+    id: 'awesome-my-bro', name: 'Awesome, My Bro!', clueId: 'collection-awesome-my-bro',
     clue: CLUES['collection-awesome-my-bro'],
   },
   'devil-or-showoff': {
-    id: 'devil-or-showoff', name: '你是魔鬼还是秀儿', clueId: 'collection-devil-or-showoff',
+    id: 'devil-or-showoff', name: 'Devil or Show-off?', clueId: 'collection-devil-or-showoff',
     clue: CLUES['collection-devil-or-showoff'],
   },
 };
@@ -55,31 +55,31 @@ export const PICKUPS: readonly PickupDefinition[] = [
     name: CLUES['missing-caption-image'].name,
     description: CLUES['missing-caption-image'].summary,
     icon: CLUES['missing-caption-image'].image!,
-    location: '旧网驿站 · 邮箱前',
+    location: 'Old Web Outpost · in front of the mailbox',
   },
   {
     id: 'field-folder-01', memeId: 'friendship-boat', model: 'MemeFolder_01',
     position: { x: 20.4, z: -46 }, marker: 1,
-    name: '友谊的小船', description: '梗图、年份与出处待补充。',
-    icon: 'assets/folder-icon.svg', location: '回声档案馆北侧草地',
+    name: 'Friendship Boat', description: 'Image, dates and source information pending.',
+    icon: 'assets/folder-icon.svg', location: 'Grassland north of the Echo Archive',
   },
   {
     id: 'field-folder-02', memeId: 'gg-or-mm', model: 'MemeFolder_01',
     position: { x: 24.5, z: -20 }, marker: 2,
-    name: '你是GG还是MM', description: '梗图、年份与出处待补充。',
-    icon: 'assets/folder-icon.svg', location: '回声档案馆东南侧 · 河流西岸林隙',
+    name: 'Are You GG or MM?', description: 'Image, dates and source information pending.',
+    icon: 'assets/folder-icon.svg', location: 'Woodland clearing southeast of the Echo Archive · west riverbank',
   },
   {
     id: 'field-folder-03', memeId: 'awesome-my-bro', model: 'MemeFolder_01',
     position: { x: 26.6, z: 9 }, marker: 3,
-    name: '厉害了我的哥', description: '梗图、年份与出处待补充。',
-    icon: 'assets/folder-icon.svg', location: '地图南部 · 河流西侧草地',
+    name: 'Awesome, My Bro!', description: 'Image, dates and source information pending.',
+    icon: 'assets/folder-icon.svg', location: 'Southern grassland · west of the river',
   },
   {
     id: 'field-folder-04', memeId: 'devil-or-showoff', model: 'MemeFolder_01',
     position: { x: 60, z: 3 }, marker: 4,
-    name: '你是魔鬼还是秀儿', description: '梗图、年份与出处待补充。',
-    icon: 'assets/folder-icon.svg', location: '桥梁东南侧 · 河流东岸林隙',
+    name: 'Devil or Show-off?', description: 'Image, dates and source information pending.',
+    icon: 'assets/folder-icon.svg', location: 'Woodland clearing southeast of the bridge · east riverbank',
   },
 ];
 

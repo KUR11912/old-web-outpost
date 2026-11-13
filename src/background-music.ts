@@ -106,12 +106,12 @@ export class BackgroundMusic {
         if (this.pendingPlay === attempt) this.pendingPlay = null;
         if (attempt.id !== this.playAttempt || !this.shouldPlay() || error?.name === 'AbortError') return;
         this.error = error?.name === 'NotAllowedError'
-          ? '请点击音乐按钮继续播放'
-          : '背景音乐暂时无法播放，请再次点击音乐按钮重试';
+          ? 'Click Music to resume playback'
+          : 'Music is unavailable. Click Music to try again.';
       });
     } catch {
       if (this.pendingPlay === attempt) this.pendingPlay = null;
-      this.error = '背景音乐暂时无法播放，请再次点击音乐按钮重试';
+      this.error = 'Music is unavailable. Click Music to try again.';
     }
   }
 
@@ -135,8 +135,8 @@ export class BackgroundMusic {
   };
   private onError = () => {
     this.error = this.audio.error?.code === MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED
-      ? '无法读取背景音乐，请检查音频文件格式'
-      : '背景音乐加载失败，请检查音频文件';
+      ? 'Cannot read the music file. Check its audio format.'
+      : 'Music failed to load. Check the audio file.';
   };
 
   snapshot() {

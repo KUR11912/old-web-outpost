@@ -52,7 +52,7 @@ export async function createSkyEnclosure(scene: THREE.Scene): Promise<{ group: T
   const { x, y, z } = config.centre;
   const url = `${import.meta.env.BASE_URL}${config.texture.asset}`;
   const source = await new THREE.TextureLoader().loadAsync(url).catch(() => {
-    throw new Error(`天空云纹加载失败：${url}。请检查本地图片资源是否完整。`);
+    throw new Error(`Could not load the cloud texture: ${url}. Check the local image file.`);
   });
   source.colorSpace = THREE.SRGBColorSpace;
   source.wrapS = source.wrapT = THREE.MirroredRepeatWrapping;
