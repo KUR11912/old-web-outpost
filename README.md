@@ -4,6 +4,14 @@
 
 GitHub Pages 试玩地址：[旧网驿站](https://kur11912.github.io/old-web-outpost/)。网页会把进度保存在当前浏览器中；线上地址与本地地址各自保存进度。
 
+## 中文版与英文版
+
+- `zh-cn`：保留英文翻译前的中文版快照，提交 `754697f`。
+- `main`：继续维护中文版，试玩地址保持 [中文版](https://kur11912.github.io/old-web-outpost/)。
+- `en`：完整英文版，试玩地址为 [English edition](https://kur11912.github.io/old-web-outpost/en/)。界面、提示、档案正文、地图及场景文字均为英文；原始梗图和水印保留，配有英文说明。
+
+两个线上版本保留相同物品 ID 和存档格式，使用当前浏览器同一份进度。切换语言可继续探索；在任一版本确认清空进度，也会清空另一语言版本的共享进度。音量与音效偏好同样共享。本地服务与线上站点仍各自保存。
+
 ## 直接运行
 
 当前电脑双击 `启动旧网驿站.cmd`，会检查已有服务，必要时在后台启动并打开 **http://127.0.0.1:5180/**。关闭浏览器不会关闭后台服务；重启电脑后再次双击即可。
@@ -23,7 +31,7 @@ pnpm run dev
 
 `vite.config.ts` 为生产构建和构建预览设置 `/old-web-outpost/`，开发服务器保留根路径。模型和线索图片使用同一资源前缀。
 
-提交并推送到仓库 `main` 分支后，[Deploy old-web-outpost to GitHub Pages](https://github.com/KUR11912/old-web-outpost/actions/workflows/deploy.yml) 会自动安装锁定依赖、执行 TypeScript 检查和 Vite 构建，再将 `dist/` 发布到 GitHub Pages。也可以在 Actions 页面点击 **Run workflow** 手动重新部署。仓库 **Settings → Pages → Source** 使用 **GitHub Actions**。
+提交并推送到仓库 `main` 或 `en` 分支后，[双语版本发布流程](https://github.com/KUR11912/old-web-outpost/actions/workflows/deploy.yml) 会分别安装锁定依赖、检查类型并构建两个分支，将中文版放在根目录、英文版放在 `en/`，合并为同一份 Pages 发布产物。无需将英文游戏内容合并进 `main`。`zh-cn` 为保留快照，不触发发布。也可以在 Actions 页面点击 **Run workflow** 手动重新部署。仓库 **Settings → Pages → Source** 使用 **GitHub Actions**。
 
 本地复现线上构建：
 
