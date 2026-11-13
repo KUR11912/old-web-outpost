@@ -1,0 +1,66 @@
+{
+  "url": "http://127.0.0.1:5173/",
+  "startedAt": "2026-11-12T19:29:07.038Z",
+  "checks": [
+    {
+      "name": "无存档的新开局背包为空，五个文件夹全部可拾取，没有默认梗图或资料",
+      "details": true
+    },
+    {
+      "name": "旧卡片/梗名单/拾取标记与明确空库存冲突时不发物；孤立蓝瘦查询被过滤，位置和历史任务保留",
+      "details": true
+    },
+    {
+      "name": "真实走近蓝瘦文件夹才入包；旧调查记录不会提前解锁，拾取后仅名字/IMG占位和尚未查询",
+      "details": true
+    },
+    {
+      "name": "四个未拾取梗逐一在终端查询均拒绝，不补发物品或泄露资料",
+      "details": true
+    },
+    {
+      "name": "蓝瘦与其他梗一样，只有终端成功查询才显示完整信息；重复不加物，刷新后查询状态保留",
+      "details": true
+    },
+    {
+      "name": "旧版仅资料卡和新版孤立查询两种存档均不授予蓝瘦；其后首次拾取仍保持未查询",
+      "details": true
+    },
+    {
+      "name": "已明确保存的四件真实收藏和三条显式查询保留，修复不会全局清空旧进度",
+      "details": true
+    },
+    {
+      "name": "隔离浏览器运行错误0，未操作用户存档",
+      "details": true
+    }
+  ],
+  "routes": [
+    {
+      "name": "从真实蓝瘦拾取点沿道路走到旧终端",
+      "seconds": 20.9,
+      "start": {
+        "x": 1.5,
+        "z": -0.9501599999999992,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "end": {
+        "x": 16.520640000000093,
+        "z": -33.88103999999994,
+        "yaw": 0,
+        "pitch": 0
+      }
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "collection-ownership-empty-start.png",
+    "collection-ownership-legacy-empty.png",
+    "collection-ownership-blue-unqueried.png",
+    "collection-ownership-blue-queried.png"
+  ],
+  "method": "Separate headless Chrome contexts only. Deliberately conflicting legacy save fixtures reproduce implicit inventory/research migration. Main flow uses real WASD pickup, walking to the terminal and E interaction. No access to user browser storage or tabs.",
+  "passed": true,
+  "finishedAt": "2026-11-12T19:29:39.891Z"
+}

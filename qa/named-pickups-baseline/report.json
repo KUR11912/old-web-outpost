@@ -1,0 +1,14 @@
+{
+  "url": "http://127.0.0.1:5181/",
+  "startedAt": "2026-11-12T09:42:19.601Z",
+  "checks": [
+    {
+      "name": "Original runtime baseline saved",
+      "details": true
+    }
+  ],
+  "routes": [],
+  "errors": [],
+  "passed": true,
+  "finishedAt": "2026-11-12T09:42:20.761Z"
+}

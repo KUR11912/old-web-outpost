@@ -1,6 +1,7 @@
 import type { SaveData } from './save';
-import { CLUE_ID } from './save';
-import { CLUES, CLUE_ORDER, ARCHIVE_QUESTIONS, hasAllClues, evaluateArchive } from './archive-data';
+import { CLUES } from './archive-data';
+import { PICKUPS, getPickupContent, collectedPickupEntries, type PickupDefinition } from './pickup-data';
+import { getMemeArchive, hasMemeArchiveContent, searchMemeArchive, unlockMemeArchive } from './meme-archives';
 
 interface Action { text:string; id?:string; action:()=>void }
 interface Hooks {
@@ -11,104 +12,132 @@ interface Hooks {
   refresh:()=>void;
   toast:(text:string)=>void;
 }
-type Step = 'meaning'|'context';
 const escape = (value:string) => value.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
-const stationClues:Record<string,string> = {
-  mailbox:CLUE_ID, 'old-terminal':'echo-meaning-note',
-  'chat-viewer':'echo-chat-context', 'image-cache':'echo-image-variants',
-};
-const stationNames:Record<string,string> = {
-  mailbox:'旧邮箱', 'old-terminal':'旧终端', 'chat-viewer':'聊天记录查看器', 'image-cache':'图片缓存终端',
-};
+const LOCKED_HINT = '已找到这个梗，但它的语境还不清楚。前往回声档案馆的旧终端，输入梗名查询。';
+type MemeArchive = NonNullable<ReturnType<typeof getMemeArchive>>;
 
-/** All investigations share the existing window and one source of clue content. */
+/** Only the terminal interaction opens search; collection and knowledge are independent. */
 export function createInvestigationUI(hooks:Hooks) {
   const {save}=hooks;
-  const owns=(id:string)=>save.clues.includes(id);
-  const image=(src:string)=>`<img class="clue-image" src="${escape(import.meta.env.BASE_URL+src)}" alt="人物表情与蓝色蘑菇，底部完整写着蓝瘦香菇" width="112" height="112" />`;
+  const image=(src:string,name:string,small=false)=>`<img class="${small?'pickup-icon':'clue-image'}" src="${escape(import.meta.env.BASE_URL+src)}" alt="${escape(name)}梗图" width="${small?44:112}" height="${small?44:112}" />`;
+  const placeholder=(small=false)=>`<div class="clue-file archive-placeholder${small?' archive-placeholder-small':''}" role="img" aria-label="IMG / ARCHIVE，占位图">IMG<small>ARCHIVE</small></div>`;
+  const archiveFor=(pickup:PickupDefinition)=>pickup.memeId?getMemeArchive(pickup.memeId):undefined;
+  const isQueried=(archive:MemeArchive|undefined)=>!!archive&&hasMemeArchiveContent(archive)&&save.queriedMemes.includes(archive.id);
   const source=(id:string)=>{
     const clue=CLUES[id];
-    return `<details class="source-note"><summary>资料说明 · ${escape(clue.sourceLabel)}</summary><p>${escape(clue.sourceNote)}</p>${clue.sources?.map(s=>`<p><a href="${escape(s.url)}" target="_blank" rel="noopener noreferrer">${escape(s.title)} ↗</a><br>${escape(s.note)}</p>`).join('')??''}</details>`;
+    const imageSources=clue.gallery?.map((item,index)=>`<div class="image-source"><h4>配图 ${index+1} · ${escape(item.role??'档案配图')}</h4><p>${escape(item.caption)}</p>${item.creator?`<p>署名／画面来源：${escape(item.creator)}</p>`:''}${item.note?`<p>${escape(item.note)}</p>`:''}<p>${item.sourcePage?`<a href="${escape(item.sourcePage)}" target="_blank" rel="noopener noreferrer">图片来源页 ↗</a>`:''}${item.sourcePage&&item.originalUrl?' · ':''}${item.originalUrl?`<a href="${escape(item.originalUrl)}" target="_blank" rel="noopener noreferrer">来源图片 ↗</a>`:''}</p></div>`).join('')??'';
+    return `<details class="source-note"><summary>资料说明 · ${escape(clue.sourceLabel)}</summary><p>${escape(clue.sourceNote)}</p>${clue.sources?.map(s=>`<p><a href="${escape(s.url)}" target="_blank" rel="noopener noreferrer">${escape(s.title)} ↗</a><br>${escape(s.note)}</p>`).join('')??''}${imageSources}</details>`;
   };
-  const cardBody=(id:string)=>{
-    const clue=CLUES[id];
-    const visual=clue.image?image(clue.image):`<div class="clue-file" aria-hidden="true">${id==='echo-meaning-note'?'Aa':id==='echo-chat-context'?'[···]':'IMG'}<small>ARCHIVE</small></div>`;
-    const variants=clue.variants?.length?`<div class="variant-grid">${clue.variants.map(v=>`<figure>${image(clue.image??CLUES[CLUE_ID].image!)}<figcaption><strong>${escape(v.caption)}</strong><span>${escape(v.context)}</span></figcaption></figure>`).join('')}</div><p class="note">游戏改编示例：保留同一图片，只更换外围配文。两条配文均非已核验的历史变体。</p>`:'';
-    return `<span class="label">${escape(clue.sourceLabel)}</span><div class="clue clue-heading">${visual}<div><h2>${escape(clue.name)}</h2><p>${escape(clue.summary)}</p><p class="note">获得地点：${escape(clue.location)}</p></div></div><div class="clue-content">${clue.content.map(p=>`<p>${escape(p)}</p>`).join('')}</div>${variants}${source(id)}`;
-  };
-  function showClue(id:string,back:()=>void=()=>showBag(),backText='返回线索背包') {
-    if(!owns(id))return;
-    hooks.open(`线索卡 / ${CLUES[id].name}`,cardBody(id),[{text:backText,id:backText==='返回整理线索'?'return-association':'return-bag',action:back},{text:'关闭窗口',action:hooks.close}],'clue');
-  }
-  function showBag(back?:()=>void) {
-    const found=CLUE_ORDER.filter(owns);
-    const cards=CLUE_ORDER.map((id,index)=>{
+  const archiveBody=(archive:MemeArchive)=>{
+    const visual=archive.image?image(archive.image,archive.name):placeholder();
+    const sections=archive.clueIds.filter(id=>!!CLUES[id]).map(id=>{
       const clue=CLUES[id];
-      return owns(id)?`<article class="bag-card"><span class="card-number">0${index+1}</span><div><h3>${escape(clue.name)}</h3><p>${escape(clue.summary)}</p><small>${escape(clue.location)}</small></div><button data-clue-id="${id}">查看</button></article>`:`<article class="bag-card missing-card"><span class="card-number">0${index+1}</span><div><h3>尚未收集</h3><p>${escape(clue.location)}</p></div></article>`;
+      const variantImage=clue.image??archive.image;
+      const variants=clue.variants?.length?`<div class="variant-grid">${clue.variants.map(v=>`<figure>${variantImage?image(variantImage,archive.name):placeholder()}<figcaption><strong>${escape(v.caption)}</strong><span>${escape(v.context)}</span></figcaption></figure>`).join('')}</div>`:'';
+      const gallery=clue.gallery?.length?`<div class="archive-gallery">${clue.gallery.map((item,index)=>`<figure><button class="archive-image-button" data-archive-image="${escape(id)}:${index}" aria-label="放大查看：${escape(item.caption)}"><img class="archive-gallery-image" src="${escape(import.meta.env.BASE_URL+item.src)}" alt="${escape(item.caption)}"><span>点击放大查看</span></button><figcaption>${item.role?`<strong>${escape(item.role)}</strong> · `:''}${escape(item.caption)}</figcaption></figure>`).join('')}</div>`:'';
+      return `<section class="archive-section" data-archive-clue="${escape(id)}"><h3>${escape(clue.name)}</h3>${clue.period?`<p class="archive-period"><strong>流行时期：</strong>${escape(clue.period)}</p>`:''}${clue.content.map(p=>`<p>${escape(p)}</p>`).join('')}${clue.example?`<div class="archive-example"><h4>${escape(clue.example.label)}</h4><p>${escape(clue.example.text)}</p></div>`:''}${clue.contextNote?`<p class="archive-context"><strong>使用语境：</strong>${escape(clue.contextNote)}</p>`:''}${gallery}${variants}${source(id)}</section>`;
     }).join('');
-    const actions:Action[]=[];
-    if(back)actions.push({text:'返回整理线索',id:'return-association',action:back});
-    actions.push({text:'关闭背包',action:hooks.close});
-    hooks.open(`线索背包 / ${found.length} 件物品`, `<span class="label">资料可反复查看 · 重复调查不重复发放</span><h2>已收集 ${found.length} / 4 张线索</h2><div class="bag-list">${cards}</div><p class="note">${save.archive.completed?'档案馆调查已完成。下一目标：前往断链桥。':hasAllClues(save.clues)?'四张线索已齐。到档案馆门前的整理桌，建立含义与语境的联系。':'读完资料后记得点击“收下线索卡”。资料说明会区分用户图片、游戏示例和待核验来源。'}</p>`,actions,'bag');
-    document.querySelectorAll<HTMLButtonElement>('[data-clue-id]').forEach(b=>b.onclick=()=>showClue(b.dataset.clueId!,()=>showBag(back)));
-  }
-  function showStation(stationId:string) {
-    if(stationId==='archive-desk'){showAssociation();return;}
-    const id=stationClues[stationId];if(!id)return;
-    if(stationId==='mailbox'){save.investigated=true;hooks.persist();}
-    const found=owns(id);
-    const greeting=stationId==='mailbox'?`<span class="label">游戏留言 · 虚构叙述</span><div class="letter">“这张图上明明写着‘蓝瘦香菇’，可我已经忘了它想表达什么、又该在什么时候发。<br><br>去回声档案馆看看，帮我把含义和当时的使用语境找回来吧。”</div>`:'';
-    const actions:Action[]=found?[{text:'查看背包',action:()=>showBag()}]:[{text:'收下线索卡',id:'collect-clue',action:()=>{
-      if(!owns(id))save.clues.push(id);
-      hooks.persist();hooks.refresh();showStation(stationId);hooks.toast(`获得线索：${CLUES[id].name}`);
-    }}];
-    if(stationId!=='mailbox'&&hasAllClues(save.clues))actions.push({text:'整理线索',id:'organize-clues',action:()=>showAssociation()});
-    actions.push({text:found?'收好资料':'稍后再看',action:hooks.close});
-    hooks.open(`${stationNames[stationId]} / 调查资料`,`${greeting}${cardBody(id)}<p class="collection-status">${found?'✓ 已收进背包，重复调查不会重复领取。':'阅读后点击下方“收下线索卡”，保存这份资料。'}</p>`,actions,'station');
-  }
-  function reviewButtons(ids:string[]) {
-    return `<div class="review-links"><span>回看依据：</span>${[...new Set(ids)].filter(owns).map(id=>`<button data-review-clue="${id}">${escape(CLUES[id].name)}</button>`).join('')}</div>`;
-  }
-  function bindReview(back:()=>void) {
-    document.querySelectorAll<HTMLButtonElement>('[data-review-clue]').forEach(b=>b.onclick=()=>showClue(b.dataset.reviewClue!,back,'返回整理线索'));
-  }
-  function showComplete() {
-    const conclusions=ARCHIVE_QUESTIONS.map(q=>{
-      const selected=q.options.find(o=>o.id===save.archive.answers[q.id])!;
-      return `<section class="conclusion"><h3>${escape(q.title)}</h3><p>${escape(selected.feedback)}</p></section>`;
-    }).join('');
-    hooks.open('回声档案馆 / 调查完成',`<span class="label">调查已保存 · 4 / 4 张线索</span><h2>档案馆调查完成</h2><p>你找回了这张图的表达含义，也区分了熟人自嘲与认真求助的语境。</p>${conclusions}<div class="next-destination"><strong>下一目标：前往断链桥</strong><p>沿门前石板路向南，在路口向东。桥梁本轮保持开放，可以直接通行。</p></div>${reviewButtons(CLUE_ORDER)}<p class="note">本次整理不代表来源已核实。原图出处与原始声音材料仍待核验，聊天与改编配文均为游戏创作。</p>`,[{text:'查看线索背包',action:()=>showBag(()=>showComplete())},{text:'继续探索',id:'continue-exploring',action:hooks.close}],'archive-complete');
-    bindReview(()=>showComplete());
-  }
-  function showAssociation(step:Step='meaning',checked=false) {
-    if(!hasAllClues(save.clues)){
-      const missing=CLUE_ORDER.filter(id=>!owns(id));
-      hooks.open('回声档案馆 / 整理线索',`<span class="label">已收集 ${save.clues.length} / 4</span><h2>还需要一些资料</h2><p>把四张线索收齐后，就可以开始判断。已找到的卡片会一直留在背包里。</p><ul class="missing-list">${missing.map(id=>`<li><strong>${escape(CLUES[id].name)}</strong><br><span>${escape(CLUES[id].location)}</span></li>`).join('')}</ul>`,[{text:'查看背包',action:()=>showBag(()=>showAssociation())},{text:'继续寻找',action:hooks.close}],'association');
-      return;
-    }
-    if(save.archive.completed){showComplete();return;}
-    const question=ARCHIVE_QUESTIONS.find(q=>q.id===step)!;
-    const choice=question.options.find(o=>o.id===save.archive.answers[step]);
-    const result=evaluateArchive(save.archive.answers);
-    const refs=choice?.referenceIds??question.options.flatMap(o=>o.referenceIds);
-    const feedback=checked?`<div id="association-feedback" class="association-feedback ${choice?.correct?'correct':'retry'}" role="status"><strong>${choice?choice.correct?'这个判断有依据':'再对照一下资料':'请先选择一个判断'}</strong><p>${choice?escape(choice.feedback):'不用猜，先回看下面的线索，再选择最符合材料的一项。'}</p>${step==='context'&&!result.meaning?'<p>第一个含义关联还没有正确完成，请返回“1 · 含义关联”检查。</p>':''}</div>`:'';
-    const options=question.options.map(option=>`<label class="answer-option"><input type="radio" name="${step}" data-option-id="${option.id}" value="${option.id}" ${choice?.id===option.id?'checked':''} /><span>${escape(option.text)}</span></label>`).join('');
-    const actions:Action[]=[{text:'查看已收集资料',action:()=>showBag(()=>showAssociation(step,checked))}];
-    if(step==='meaning'){
-      actions.push({text:'检查关联',id:'check-association',action:()=>showAssociation(step,true)});
-      if(checked&&choice?.correct)actions.push({text:'下一步：语境判断',id:'next-association',action:()=>showAssociation('context')});
-    } else actions.push({text:'提交调查结论',id:'submit-association',action:()=>{
-      if(evaluateArchive(save.archive.answers).allCorrect&&hasAllClues(save.clues)){
-        save.archive.completed=true;hooks.persist();hooks.refresh();showComplete();hooks.toast('档案馆调查完成 · 下一目标：断链桥');
-      }else showAssociation(step,true);
-    }});
-    hooks.open('回声档案馆 / 整理线索',`<span class="label">4 张线索已齐 · 选择会自动保存</span><div class="association-steps">${ARCHIVE_QUESTIONS.map((q,i)=>`<button data-association-step="${q.id}" aria-current="${q.id===step?'step':'false'}">${i+1} · ${q.id==='meaning'?'含义关联':'语境判断'}</button>`).join('')}</div><section data-question-id="${step}"><h2>${escape(question.title)}</h2><p>${escape(question.prompt)}</p><fieldset class="answer-options"><legend class="sr-only">${escape(question.title)}</legend>${options}</fieldset></section>${feedback}${reviewButtons(refs)}<p class="note">可以回看资料、修改选择并再次尝试；不会扣除或丢失线索。</p>`,actions,'association');
-    document.querySelectorAll<HTMLInputElement>('[data-option-id]').forEach(input=>input.onchange=()=>{
-      save.archive.answers[step]=input.value;hooks.persist();
-      showAssociation(step,false);
+    return `<span class="label" data-archive-state="queried">已查询</span><div class="clue clue-heading">${visual}<div><h2>${escape(archive.name)}</h2>${archive.summary?`<p>${escape(archive.summary)}</p>`:''}<p class="note">检索地点：回声档案馆 · 旧终端</p></div></div><div class="clue-content">${sections}</div>`;
+  };
+  const lockedBody=(name:string)=>`<span class="label" data-archive-state="unqueried">尚未查询</span><div class="clue clue-heading">${placeholder()}<div><h2>${escape(name)}</h2><p class="locked-archive-hint">${LOCKED_HINT}</p></div></div>`;
+
+  function openArchive(title:string,body:string,actions:Action[],kind:string) {
+    hooks.open(title,body,actions,kind);
+    document.querySelectorAll<HTMLButtonElement>('[data-archive-image]').forEach(button=>{
+      button.onclick=()=>{
+        const [clueId,index]=button.dataset.archiveImage!.split(':');
+        const item=CLUES[clueId]?.gallery?.[Number(index)];
+        if(!item)return;
+        // Reuse the paused modal. Returning keeps the expanded source notes and reading position.
+        const panel=document.getElementById('modal-body')!;
+        const returnBody=panel.innerHTML,scrollTop=panel.scrollTop,key=button.dataset.archiveImage;
+        hooks.open(`查看大图 / ${CLUES[clueId].name}`,`<figure class="archive-image-view"><img src="${escape(import.meta.env.BASE_URL+item.src)}" alt="${escape(item.caption)}"><figcaption>${escape(item.caption)}</figcaption></figure>`,[{text:'返回档案',id:'return-archive',action:()=>{
+          openArchive(title,returnBody,actions,kind);
+          document.getElementById('modal-body')!.scrollTop=scrollTop;
+          Array.from(document.querySelectorAll<HTMLButtonElement>('[data-archive-image]')).find(candidate=>candidate.dataset.archiveImage===key)?.focus({preventScroll:true});
+        }},{text:'关闭窗口',action:hooks.close}],'archive-image');
+      };
     });
-    document.querySelectorAll<HTMLButtonElement>('[data-association-step]').forEach(button=>button.onclick=()=>showAssociation(button.dataset.associationStep as Step));
-    bindReview(()=>showAssociation(step,checked));
   }
-  return {showBag,showStation,showAssociation};
+
+  function showPickup(id:string,back:()=>void,backText='返回收藏背包') {
+    const pickup=PICKUPS.find(item=>item.id===id);
+    if(!pickup||!save.pickupInventory.includes(id))return;
+    const archive=archiveFor(pickup),name=archive?.name??getPickupContent(pickup).name;
+    const body=isQueried(archive)?archiveBody(archive!):lockedBody(name);
+    openArchive(`收藏 / ${name}`,body,[{text:backText,id:'return-bag',action:back},{text:'关闭窗口',action:hooks.close}],'pickup-detail');
+  }
+
+  function showBag() {
+    const collections=collectedPickupEntries(save.pickupInventory);
+    const cards=collections.map(pickup=>{
+      const archive=archiveFor(pickup),name=archive?.name??getPickupContent(pickup).name,queried=isQueried(archive);
+      const visual=queried&&archive?.image?image(archive.image,name,true):placeholder(true);
+      const description=queried?archive?.summary??'档案资料已解锁，可随时查看。':'前往旧终端输入梗名，查询资料。';
+      return `<article class="bag-card pickup-bag-card" data-pickup-entry="${escape(pickup.id)}" data-archive-state="${queried?'queried':'unqueried'}">${visual}<div><h3>${escape(name)}</h3><p>${escape(description)}</p><small>${queried?'已查询':'尚未查询'}</small></div><button data-pickup-id="${escape(pickup.id)}">查看</button></article>`;
+    }).join('');
+    hooks.open(`收藏背包 / ${collections.length} 件物品`, `<span class="label">已收藏 ${collections.length} 项</span><section class="extra-collection"><h2>探索收藏</h2>${collections.length?`<div class="bag-list">${cards}</div>`:'<p class="note">还没有探索收藏。靠近场景里的黄色文件夹即可自动拾取。</p>'}</section>`,[{text:'关闭背包',action:hooks.close}],'bag');
+    document.querySelectorAll<HTMLButtonElement>('[data-pickup-id]').forEach(button=>button.onclick=()=>showPickup(button.dataset.pickupId!,showBag));
+  }
+
+  function showSearch(query='') {
+    hooks.open('旧终端 / 老梗检索',`<span class="label">回声档案馆 · 旧终端</span><h2>检索遗失的资料</h2><p>输入你已经找到的梗名，检索遗失的资料。</p><form id="terminal-search-form" class="terminal-search" novalidate><label class="sr-only" for="terminal-query">已收集的梗名</label><div class="terminal-search-row"><input id="terminal-query" type="text" value="${escape(query)}" placeholder="请输入已收集的梗名" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="terminal-search-feedback"><button type="button" id="terminal-search-submit">搜索</button></div><p id="terminal-search-feedback" class="terminal-search-feedback" role="status" aria-live="polite"></p></form>`,[{text:'关闭窗口',action:hooks.close}],'terminal-search');
+    const form=document.getElementById('terminal-search-form') as HTMLFormElement;
+    const input=document.getElementById('terminal-query') as HTMLInputElement;
+    const button=document.getElementById('terminal-search-submit') as HTMLButtonElement;
+    const feedback=document.getElementById('terminal-search-feedback')!;
+    let composing=false,ignoreEnterUntil=0;
+    const submit=()=>{
+      if(composing)return;
+      const result=searchMemeArchive(save,input.value);
+      if(result.status!=='success'){
+        const messages={empty:'请输入梗名',unknown:'没有找到匹配的资料，请检查梗名',uncollected:'请先在地图中找到这个梗'};
+        feedback.textContent=result.status==='unavailable'?`终端资料暂缺：${result.archive.name}。`:messages[result.status];
+        input.setAttribute('aria-invalid',String(result.status==='empty'||result.status==='unknown'));
+        return;
+      }
+      const archive=result.archive,submittedQuery=input.value;
+      // Build/open the actual matching document before recording its successful display.
+      const updateFeedback=result.alreadyQueried?'':`<p id="archive-update-feedback" class="archive-update-feedback" role="status">档案已更新：${escape(archive.name)}</p>`;
+      const body=updateFeedback+archiveBody(archive);
+      openArchive(`旧终端 / ${archive.name}`,body,[{text:'返回检索',id:'return-search',action:()=>showSearch(submittedQuery)},{text:'查看背包',id:'view-bag',action:showBag}],'terminal-detail');
+      if(unlockMemeArchive(save,archive.id)){
+        hooks.persist();hooks.refresh();
+      }
+    };
+    input.addEventListener('compositionstart',()=>{composing=true;});
+    input.addEventListener('compositionend',()=>{composing=false;ignoreEnterUntil=performance.now()+100;});
+    input.addEventListener('keydown',event=>{
+      // The text field owns all keystrokes; W/A/S/D/B/M/E must never reach game handlers.
+      event.stopPropagation();
+      if(event.isComposing||event.keyCode===229||composing){
+        ignoreEnterUntil=performance.now()+100;
+        return;
+      }
+      if(event.key==='Enter'){
+        event.preventDefault();
+        if(performance.now()>=ignoreEnterUntil)submit();
+      }
+    });
+    form.addEventListener('submit',event=>{
+      event.preventDefault();
+      if(!composing&&performance.now()>=ignoreEnterUntil)submit();
+    });
+    button.addEventListener('click',()=>{if(!composing)submit();});
+    input.addEventListener('input',()=>{input.removeAttribute('aria-invalid');feedback.textContent='';});
+    input.focus();
+    input.setSelectionRange(input.value.length,input.value.length);
+  }
+
+  function showStation(stationId:string) {
+    if(stationId==='old-terminal'){showSearch();return;}
+    if(stationId!=='mailbox')return;
+    save.investigated=true;hooks.persist();
+    const found=save.pickupInventory.includes('outpost-blue-mushroom-folder');
+    const actions:Action[]=[];
+    if(found)actions.push({text:'查看老梗收藏',action:()=>showPickup('outpost-blue-mushroom-folder',()=>showStation('mailbox'),'返回留言')});
+    actions.push({text:'收好留言',action:hooks.close});
+    hooks.open('旧邮箱 / 留言',`<span class="label">游戏留言 · 虚构叙述</span><h2>给路过这里的人：</h2><div class="letter">“邮箱前的黄色文件夹里，保存着一个叫‘蓝瘦香菇’的老梗。靠近文件夹，就能把它收好。<br><br>名字还在，可我已经忘了它想表达什么、又该在什么时候发。带着找到的梗名去回声档案馆，在旧终端输入名字查询，也许能找回遗失的资料。”</div><p class="collection-status">${found?'✓ 这份老梗已经在收藏里。旧信可随时回看。':'文件夹就在邮箱前方的石板路旁。关闭窗口后，靠近它即可自动拾取。'}</p>`,actions,'station');
+  }
+  return {showBag,showStation};
 }

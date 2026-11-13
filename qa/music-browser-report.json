@@ -1,0 +1,122 @@
+{
+  "url": "http://127.0.0.1:5173/",
+  "startedAt": "2026-11-12T17:13:15.935Z",
+  "checks": [
+    {
+      "name": "初次进入默认15%音量，未点击开始前不播放，焦点变化不自动起播",
+      "details": true
+    },
+    {
+      "name": "点击进入后上传MP3真实播放，站立时背景音乐继续",
+      "details": true
+    },
+    {
+      "name": "使用上传的11月13日.mp3，只有一个循环媒体实例",
+      "details": {
+        "src": "http://127.0.0.1:5173/audio/music/11%E6%9C%8813%E6%97%A5.mp3",
+        "duration": 160.182833,
+        "volume": 0.15,
+        "loop": true,
+        "paused": false,
+        "readyState": 4
+      }
+    },
+    {
+      "name": "行走脚步与背景音乐可同时播放",
+      "details": true
+    },
+    {
+      "name": "Esc暂停行走时音乐继续",
+      "details": true
+    },
+    {
+      "name": "查看收藏背包时音乐继续",
+      "details": true
+    },
+    {
+      "name": "查看全图时音乐继续",
+      "details": true
+    },
+    {
+      "name": "反复暂停恢复共用一个音乐实例，不叠加或从头重播",
+      "details": true
+    },
+    {
+      "name": "顶部滑杆可实时调节0–100%，键盘可操作",
+      "details": {
+        "chosenVolume": 0.23
+      }
+    },
+    {
+      "name": "音乐可独立静音，不关闭脚步和拾取音效",
+      "details": true
+    },
+    {
+      "name": "关闭音效不影响背景音乐",
+      "details": true
+    },
+    {
+      "name": "切出窗口暂停，回来从原位置继续",
+      "details": true
+    },
+    {
+      "name": "实际抵达曲尾后自动回到开头继续循环",
+      "details": true
+    },
+    {
+      "name": "刷新保留音乐音量与静音偏好，游戏收藏/进度/位置不变且不自动出声",
+      "details": true
+    },
+    {
+      "name": "刷新后取消静音可继续播放",
+      "details": true
+    },
+    {
+      "name": "1440/900/650宽度下顶部音乐控制保持可见、面板未溢出",
+      "details": true
+    },
+    {
+      "name": "音乐资源加载成功，播放过程中无页面/控制台错误",
+      "details": true
+    }
+  ],
+  "routes": [],
+  "resources": [
+    {
+      "url": "http://127.0.0.1:5173/audio/music/11%E6%9C%8813%E6%97%A5.mp3",
+      "status": 206
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/music/11%E6%9C%8813%E6%97%A5.mp3",
+      "status": 206
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/music/11%E6%9C%8813%E6%97%A5.mp3",
+      "status": 206
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/music/11%E6%9C%8813%E6%97%A5.mp3",
+      "status": 206
+    }
+  ],
+  "errors": [],
+  "method": "Isolated browser storage and real UI inputs. Observes native media playback and clock advancement. A media-only seek to the final 0.25 seconds validates native looping; blur/focus lifecycle events are dispatched in the isolated page. No user storage or game state mutation, no subjective speaker listening.",
+  "initialMedia": {
+    "src": "http://127.0.0.1:5173/audio/music/11%E6%9C%8813%E6%97%A5.mp3",
+    "duration": 160.182833,
+    "volume": 0.15,
+    "loop": true,
+    "paused": false,
+    "readyState": 4
+  },
+  "mediaEvents": [
+    {
+      "type": "playing",
+      "time": 0,
+      "paused": false,
+      "readyState": 4
+    }
+  ],
+  "passed": true,
+  "finishedAt": "2026-11-12T17:13:29.004Z"
+}

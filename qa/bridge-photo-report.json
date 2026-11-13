@@ -1,0 +1,34 @@
+{
+  "url": "http://127.0.0.1:5180/",
+  "startedAt": "2026-11-12T05:44:05.737Z",
+  "method": "Isolated legal saved photo poses, actual drag camera input; supplemental framing only",
+  "photos": [
+    {
+      "name": "bridge-head",
+      "pose": {
+        "x": 30.8,
+        "z": -8,
+        "yaw": -1.5707963745117186,
+        "pitch": 0.1273557495117187
+      },
+      "eyeY": 1.65,
+      "skyVisible": true
+    },
+    {
+      "name": "bridge-inside",
+      "pose": {
+        "x": 35.5,
+        "z": -8,
+        "yaw": -1.5707963745117186,
+        "pitch": 0.16000004882812505
+      },
+      "eyeY": 1.65,
+      "skyVisible": true
+    }
+  ],
+  "requests": [],
+  "console": [],
+  "errors": [],
+  "passed": true,
+  "finishedAt": "2026-11-12T05:44:12.139Z"
+}

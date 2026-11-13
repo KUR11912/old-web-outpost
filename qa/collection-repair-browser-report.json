@@ -1,0 +1,37 @@
+{
+  "url": "http://127.0.0.1:5173/",
+  "startedAt": "2026-11-12T19:32:02.425Z",
+  "checks": [
+    {
+      "name": "修正界面默认保留全部条目；未选择更改不会修改进度或生成备份"
+    },
+    {
+      "name": "选择四梗放回地图、蓝瘦仅重锁：背包只保留蓝瘦，四文件夹恢复，位置/历史任务/音量不变且备份完整"
+    },
+    {
+      "name": "撤销本次修正恢复原五项收藏和显式查询，地图文件夹重新隐藏"
+    },
+    {
+      "name": "修正结果跨刷新保留：蓝瘦仅占位，无提前资料；其他四梗仍须地图拾取"
+    },
+    {
+      "name": "刷新后仍能从修正界面恢复备份，真实旧进度可恢复"
+    },
+    {
+      "name": "修正后真实拾取新文件夹，再恢复旧备份时同时保留新收藏和旧收藏"
+    },
+    {
+      "name": "修复与恢复浏览器运行错误0，未操作用户存档"
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "collection-repair-selection.png",
+    "collection-repair-done.png",
+    "collection-repair-blue-locked.png",
+    "collection-repair-preserves-new-pickup.png"
+  ],
+  "method": "Independent headless Chrome context seeded with an explicit five-item save. Normal UI selection/application/undo/restore actions; no user browser state accessed.",
+  "passed": true,
+  "finishedAt": "2026-11-12T19:32:08.423Z"
+}

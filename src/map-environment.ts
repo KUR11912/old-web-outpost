@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { MAP, type MapPoint } from './map-config';
 import type { Collider, AssetEntry } from './world';
+import { applyMountainFaults } from './mountain-faults';
 
 const simple = (color:THREE.ColorRepresentation) => new THREE.MeshLambertMaterial({color,flatShading:true});
 function rng(seed:number) { return ()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;}; }
@@ -40,6 +41,7 @@ export function makeExpandedTerrain(scene:THREE.Scene) {
   for(let z=b.minZ+4;z<b.maxZ;z+=12)for(const x of [b.minX-10,b.maxX+10])mountainPositions.push({x,z,radius:9+random()*2,height:9+random()*6});
   const peaks=new THREE.InstancedMesh(new THREE.ConeGeometry(1,1,6),simple('#80a78a'),mountainPositions.length);const d=new THREE.Object3D();
   mountainPositions.forEach((p,i)=>{d.position.set(p.x,p.height/2-.4,p.z);d.scale.set(p.radius,p.height,p.radius);d.rotation.y=random()*Math.PI;d.updateMatrix();peaks.setMatrixAt(i,d.matrix);});peaks.computeBoundingSphere();peaks.name='Peripheral_mountains';scene.add(peaks);
+  applyMountainFaults(peaks);
   const fenceItems:{p:number[];s:number[]}[]=[];
   for(let x=b.minX;x<=b.maxX;x+=2)for(const z of [b.minZ,b.maxZ])if(x<r.minX||x>r.maxX)fenceItems.push({p:[x,.39,z],s:[.13,.78,.13]});
   for(let z=b.minZ;z<=b.maxZ;z+=2)for(const x of [b.minX,b.maxX])fenceItems.push({p:[x,.39,z],s:[.13,.78,.13]});
@@ -48,22 +50,24 @@ export function makeExpandedTerrain(scene:THREE.Scene) {
   boxes(scene,fenceItems,simple('#b8ae83'),'Expanded_boundary_fence');
 }
 
-export function addMapStructures(scene:THREE.Scene,colliders:Collider[],archiveModel:THREE.Group,lighthouseModel:THREE.Group) {
+export function addMapStructures(scene:THREE.Scene,colliders:Collider[],archiveModel:THREE.Group,lighthouseModel:THREE.Group,bridgeModel:THREE.Group) {
   const river=MAP.river,bridge=MAP.bridge,archive=MAP.locations.archive,tower=MAP.locations.lighthouse;
   const openingHalf=bridge.width/2-.20;
   for(const [minZ,maxZ] of [[river.minZ,bridge.z-openingHalf],[bridge.z+openingHalf,river.maxZ]])
     colliders.push({kind:'box',x:(river.minX+river.maxX)/2,z:(minZ+maxZ)/2,halfX:(river.maxX-river.minX)/2,halfZ:(maxZ-minZ)/2,label:'河流 · 只能从桥上通过'});
-  const deckMap=texture(c=>{c.fillStyle='#a4a18c';c.fillRect(0,0,128,128);for(let y=0;y<128;y+=16){c.fillStyle=y%32?'#929780':'#b2ae97';c.fillRect(0,y,128,14);c.fillStyle='#787b66';c.fillRect(0,y+14,128,2);} });
-  deckMap.wrapS=deckMap.wrapT=THREE.RepeatWrapping;deckMap.repeat.set(3,1);
-  const deck=cube(scene,[bridge.length,.2,bridge.width],[bridge.x,bridge.deckTop-.1,bridge.z],new THREE.MeshLambertMaterial({map:deckMap}));deck.name='Bridge_flush_walkable_deck';
-  const rail=simple('#a69a75');const railItems:{p:number[];s:number[]}[]=[];
+  // Authored bottom-centre origin; the flat top stays flush with both stone roads.
+  const arcade=bridge.arcade;
+  bridgeModel.name='ArcadeBridge_scene_loaded';
+  bridgeModel.position.set(bridge.x,bridge.deckTop-arcade.deckThickness,bridge.z);
+  scene.add(bridgeModel);
+  // Keep the uninterrupted flat walking corridor. Only low edges and individual
+  // column bases obstruct horizontal movement; overhead arches are not ground boxes.
   for(const side of [-1,1]) {
-    const z=bridge.z+side*(bridge.width/2-.06);
-    railItems.push({p:[bridge.x,.71,z],s:[bridge.length,.14,.13]});
-    for(let x=bridge.x-bridge.length/2;x<=bridge.x+bridge.length/2+.01;x+=2)railItems.push({p:[x,.45,z],s:[.16,.9,.16]});
-    colliders.push({kind:'box',x:bridge.x,z,halfX:bridge.length/2+.08,halfZ:.09,label:'桥栏'});
+    colliders.push({kind:'box',x:bridge.x,z:bridge.z+side*(bridge.width/2-arcade.curbWidth/2),halfX:bridge.length/2,halfZ:arcade.curbWidth/2,label:'拱廊桥石缘'});
+    for(const dx of arcade.columnOffsetsX) {
+      colliders.push({kind:'box',x:bridge.x+dx,z:bridge.z+side*arcade.columnZ,halfX:arcade.columnHalfWidth,halfZ:arcade.columnHalfWidth,label:'拱廊桥石柱'});
+    }
   }
-  boxes(scene,railItems,rail,'Bridge_railings');
   if(!bridge.crossingOpen)colliders.push({kind:'box',x:bridge.x,z:bridge.z,halfX:.2,halfZ:bridge.width/2,label:'断链桥 · 待解锁'});
   const {x:ax,z:az}=archive.position;
   // Blender source: bottom-centre origin, metre scale, glTF front +Z.
@@ -83,9 +87,6 @@ export function addMapStructures(scene:THREE.Scene,colliders:Collider[],archiveM
   // Ground-only obstacles: the open spiral, balcony and lantern remain overhead.
   colliders.push({kind:'circle',x:tx,z:tz,radius:lighthouse.baseRadius,label:'记忆灯塔基座'});
   colliders.push({kind:'box',x:tx,z:tz+lighthouse.hut.z,halfX:lighthouse.hut.width/2+.06,halfZ:lighthouse.hut.depth/2+.06,label:'记忆灯塔门房'});
-  // Signposts remain beside the route rather than in the walking corridor.
-  for(const [x,z,title,sub] of [[10.7,-5.3,'↑ 回声档案馆','向北沿石板路'],[16.3,-10.4,'断链桥 →','过桥前往记忆灯塔'],[47.4,-10.4,'↑ 记忆灯塔','桥梁走测开放']] as const){cube(scene,[.12,1.7,.12],[x,.85,z],simple('#75684c'));sign(scene,title,sub,x,1.65,z+.08,2.4,.64);colliders.push({kind:'circle',x,z,radius:.14,label:'路标柱'});}
-  sign(scene,'断链桥','走测开放 · 后续接入解锁',bridge.x,1.45,bridge.z-bridge.width/2+.02,2.6,.6);
 }
 
 type Placement={x:number;z:number;y?:number;sx?:number;sy?:number;sz?:number;rotation?:number};

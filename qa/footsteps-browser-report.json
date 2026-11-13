@@ -1,0 +1,637 @@
+{
+  "url": "http://127.0.0.1:5173/",
+  "startedAt": "2026-11-12T17:13:14.938Z",
+  "method": "Isolated save fixtures, actual keyboard/mouse movement, read-only debug snapshots and transparent observation of real Web Audio buffer playback. This verifies decoded nonzero audio and playback lifecycle, not subjective speaker listening.",
+  "checks": [
+    {
+      "name": "首次打开静音，不自动创建/播放音频",
+      "details": true
+    },
+    {
+      "name": "点击进入后站立不播放",
+      "details": true
+    },
+    {
+      "name": "草地实际行走触发草叶脚步",
+      "details": true
+    },
+    {
+      "name": "松开移动键后快速停止",
+      "details": true
+    },
+    {
+      "name": "原地转头不触发脚步",
+      "details": true
+    },
+    {
+      "name": "实际跨越草地到驿站石板路时自动切换石面",
+      "details": true
+    },
+    {
+      "name": "两类音频均解码出非零PCM，真实播放且相邻变体不重复",
+      "details": true
+    },
+    {
+      "name": "escape 暂停立即停止且无延迟排队脚步",
+      "details": true
+    },
+    {
+      "name": "escape 恢复后静止不补播",
+      "details": true
+    },
+    {
+      "name": "bag 暂停立即停止且无延迟排队脚步",
+      "details": true
+    },
+    {
+      "name": "bag 恢复后静止不补播",
+      "details": true
+    },
+    {
+      "name": "map 暂停立即停止且无延迟排队脚步",
+      "details": true
+    },
+    {
+      "name": "map 恢复后静止不补播",
+      "details": true
+    },
+    {
+      "name": "blur 暂停立即停止且无延迟排队脚步",
+      "details": true
+    },
+    {
+      "name": "blur 恢复后静止不补播",
+      "details": true
+    },
+    {
+      "name": "关闭脚步声后行走无声",
+      "details": true
+    },
+    {
+      "name": "静音偏好、游戏进度及位置刷新后保留",
+      "details": true
+    },
+    {
+      "name": "重新开启后实际行走恢复播放",
+      "details": true
+    },
+    {
+      "name": "两岸石路与石桥全程使用石面脚步，接缝无草地误判",
+      "details": true
+    },
+    {
+      "name": "过桥停止后无残留声音",
+      "details": true
+    },
+    {
+      "name": "持续按住前进撞墙时实际位移为零，不播放脚步",
+      "details": true
+    },
+    {
+      "name": "两种材质各5段本地WAV全部加载成功",
+      "details": true
+    },
+    {
+      "name": "浏览器无运行错误，原有收藏与任务进度保持",
+      "details": true
+    }
+  ],
+  "routes": [],
+  "playback": [
+    {
+      "name": "grass-to-stone",
+      "events": [
+        {
+          "bufferId": 1,
+          "surface": "grass",
+          "audioTime": 0.472,
+          "pose": {
+            "x": 3,
+            "z": 7.880000000000003,
+            "yaw": 0,
+            "pitch": 0
+          },
+          "duration": 0.1640625,
+          "peak": 0.5005431175231934,
+          "rms": 0.04744793400128409,
+          "rate": 0.9679597020149231
+        },
+        {
+          "bufferId": 2,
+          "surface": "grass",
+          "audioTime": 0.9413333333333334,
+          "pose": {
+            "x": 3,
+            "z": 6.759920000000023,
+            "yaw": 0,
+            "pitch": 0
+          },
+          "duration": 0.158875,
+          "peak": 0.49853259325027466,
+          "rms": 0.05978082072033855,
+          "rate": 1.0255558490753174
+        },
+        {
+          "bufferId": 1,
+          "surface": "grass",
+          "audioTime": 1.4,
+          "pose": {
+            "x": 3,
+            "z": 5.63984000000004,
+            "yaw": 0,
+            "pitch": 0
+          },
+          "duration": 0.1640625,
+          "peak": 0.5005431175231934,
+          "rms": 0.04744793400128409,
+          "rate": 0.9923365116119385
+        },
+        {
+          "bufferId": 2,
+          "surface": "grass",
+          "audioTime": 3.08,
+          "pose": {
+            "x": 2.8800000000000003,
+            "z": 4.809920000000054,
+            "yaw": 2.7755575615628914e-17,
+            "pitch": 0
+          },
+          "duration": 0.158875,
+          "peak": 0.49853259325027466,
+          "rms": 0.05978082072033855,
+          "rate": 1.0063976049423218
+        },
+        {
+          "bufferId": 3,
+          "surface": "grass",
+          "audioTime": 3.541333333333333,
+          "pose": {
+            "x": 1.7599200000000004,
+            "z": 4.809920000000054,
+            "yaw": 2.7755575615628914e-17,
+            "pitch": 0
+          },
+          "duration": 0.11370833333333333,
+          "peak": 0.5006877779960632,
+          "rms": 0.05073146684617728,
+          "rate": 0.9847411513328552
+        },
+        {
+          "bufferId": 4,
+          "surface": "stone",
+          "audioTime": 4.010666666666666,
+          "pose": {
+            "x": 0.6398399999999987,
+            "z": 4.809920000000054,
+            "yaw": 2.7755575615628914e-17,
+            "pitch": 0
+          },
+          "duration": 0.10472916666666666,
+          "peak": 0.5010570883750916,
+          "rms": 0.05097793210911075,
+          "rate": 1.008558750152588
+        },
+        {
+          "bufferId": 5,
+          "surface": "stone",
+          "audioTime": 4.461333333333333,
+          "pose": {
+            "x": -0.18048000000000183,
+            "z": 4.689920000000056,
+            "yaw": 2.7755575615628914e-17,
+            "pitch": 0
+          },
+          "duration": 0.10758333333333334,
+          "peak": 0.5005168914794922,
+          "rms": 0.05214207087063705,
+          "rate": 1.0109423398971558
+        },
+        {
+          "bufferId": 6,
+          "surface": "stone",
+          "audioTime": 4.92,
+          "pose": {
+            "x": -0.18048000000000183,
+            "z": 3.5696000000000696,
+            "yaw": 2.7755575615628914e-17,
+            "pitch": 0
+          },
+          "duration": 0.103,
+          "peak": 0.5012677907943726,
+          "rms": 0.055068036955155795,
+          "rate": 0.9925387501716614
+        },
+        {
+          "bufferId": 4,
+          "surface": "stone",
+          "audioTime": 5.392,
+          "pose": {
+            "x": -0.18048000000000183,
+            "z": 2.4497600000000728,
+            "yaw": 2.7755575615628914e-17,
+            "pitch": 0
+          },
+          "duration": 0.10472916666666666,
+          "peak": 0.5010570883750916,
+          "rms": 0.05097793210911075,
+          "rate": 1.009174108505249
+        },
+        {
+          "bufferId": 7,
+          "surface": "stone",
+          "audioTime": 5.8613333333333335,
+          "pose": {
+            "x": -0.18048000000000183,
+            "z": 1.3296800000000697,
+            "yaw": 2.7755575615628914e-17,
+            "pitch": 0
+          },
+          "duration": 0.109875,
+          "peak": 0.5009015798568726,
+          "rms": 0.044893102414128666,
+          "rate": 0.970271110534668
+        }
+      ]
+    },
+    {
+      "name": "lifecycle-after-reload",
+      "events": [
+        {
+          "bufferId": 1,
+          "surface": "stone",
+          "audioTime": 0.112,
+          "pose": {
+            "x": 13.5,
+            "z": -17.10047999999994,
+            "yaw": 0,
+            "pitch": 0
+          },
+          "duration": 0.1114375,
+          "peak": 0.5011793971061707,
+          "rms": 0.05310345539284701,
+          "rate": 0.9764999151229858
+        }
+      ]
+    },
+    {
+      "name": "bridge-crossing",
+      "events": [
+        {
+          "bufferId": 1,
+          "surface": "stone",
+          "audioTime": 0.38133333333333336,
+          "pose": {
+            "x": 34.129839999999994,
+            "z": -8.000000006195556,
+            "yaw": 4.7716821882648475e-8,
+            "pitch": 0
+          },
+          "duration": 0.1114375,
+          "peak": 0.5011793971061707,
+          "rms": 0.05310345539284701,
+          "rate": 0.991879940032959
+        },
+        {
+          "bufferId": 2,
+          "surface": "stone",
+          "audioTime": 0.84,
+          "pose": {
+            "x": 35.24991999999999,
+            "z": -8.000000059642248,
+            "yaw": 4.7716821882648475e-8,
+            "pitch": 0
+          },
+          "duration": 0.103,
+          "peak": 0.5012677907943726,
+          "rms": 0.055068036955155795,
+          "rate": 0.99632328748703
+        },
+        {
+          "bufferId": 3,
+          "surface": "stone",
+          "audioTime": 1.312,
+          "pose": {
+            "x": 36.37000000000001,
+            "z": -8.00000011308894,
+            "yaw": 4.7716821882648475e-8,
+            "pitch": 0
+          },
+          "duration": 0.10758333333333334,
+          "peak": 0.5005168914794922,
+          "rms": 0.05214207087063705,
+          "rate": 1.0093580484390259
+        },
+        {
+          "bufferId": 1,
+          "surface": "stone",
+          "audioTime": 1.7706666666666666,
+          "pose": {
+            "x": 37.480000000000004,
+            "z": -8.000000166054647,
+            "yaw": 4.7716821882648475e-8,
+            "pitch": 0
+          },
+          "duration": 0.1114375,
+          "peak": 0.5011793971061707,
+          "rms": 0.05310345539284701,
+          "rate": 0.9915729761123657
+        },
+        {
+          "bufferId": 3,
+          "surface": "stone",
+          "audioTime": 2.24,
+          "pose": {
+            "x": 38.609920000000024,
+            "z": -8.000000219970874,
+            "yaw": 4.7716821882648475e-8,
+            "pitch": 0
+          },
+          "duration": 0.10758333333333334,
+          "peak": 0.5005168914794922,
+          "rms": 0.05214207087063705,
+          "rate": 1.0266648530960083
+        },
+        {
+          "bufferId": 4,
+          "surface": "stone",
+          "audioTime": 2.712,
+          "pose": {
+            "x": 39.73024000000005,
+            "z": -8.000000273429018,
+            "yaw": 4.7716821882648475e-8,
+            "pitch": 0
+          },
+          "duration": 0.109875,
+          "peak": 0.5009015798568726,
+          "rms": 0.044893102414128666,
+          "rate": 1.0125460624694824
+        },
+        {
+          "bufferId": 2,
+          "surface": "stone",
+          "audioTime": 3.1706666666666665,
+          "pose": {
+            "x": 40.84000000000011,
+            "z": -8.000000326383272,
+            "yaw": 4.7716821882648475e-8,
+            "pitch": 0
+          },
+          "duration": 0.103,
+          "peak": 0.5012677907943726,
+          "rms": 0.055068036955155795,
+          "rate": 1.0239611864089966
+        },
+        {
+          "bufferId": 1,
+          "surface": "stone",
+          "audioTime": 3.64,
+          "pose": {
+            "x": 41.96008000000033,
+            "z": -8.000000379829965,
+            "yaw": 4.7716821882648475e-8,
+            "pitch": 0
+          },
+          "duration": 0.1114375,
+          "peak": 0.5011793971061707,
+          "rms": 0.05310345539284701,
+          "rate": 1.0281805992126465
+        },
+        {
+          "bufferId": 2,
+          "surface": "stone",
+          "audioTime": 4.112,
+          "pose": {
+            "x": 43.09000000000054,
+            "z": -8.000000433746191,
+            "yaw": 4.7716821882648475e-8,
+            "pitch": 0
+          },
+          "duration": 0.103,
+          "peak": 0.5012677907943726,
+          "rms": 0.055068036955155795,
+          "rate": 1.0246280431747437
+        },
+        {
+          "bufferId": 4,
+          "surface": "stone",
+          "audioTime": 4.570666666666667,
+          "pose": {
+            "x": 44.20024000000077,
+            "z": -8.000000486723348,
+            "yaw": 4.7716821882648475e-8,
+            "pitch": 0
+          },
+          "duration": 0.109875,
+          "peak": 0.5009015798568726,
+          "rms": 0.044893102414128666,
+          "rate": 0.9959402084350586
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/grass-01.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/grass-03.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/grass-02.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/grass-04.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/grass-05.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/stone-01.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/stone-02.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/stone-03.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/stone-04.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/stone-05.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/grass-01.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/grass-02.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/grass-03.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/grass-04.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/grass-05.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/stone-01.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/stone-03.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/stone-02.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/stone-04.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/stone-05.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/grass-01.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/grass-02.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/grass-03.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/grass-04.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/grass-05.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/stone-01.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/stone-02.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/stone-03.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/stone-04.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/stone-05.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/grass-01.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/grass-02.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/grass-03.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/grass-04.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/grass-05.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/stone-01.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/stone-02.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/stone-03.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/stone-04.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/stone-05.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/grass-02.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/grass-01.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/grass-03.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/grass-04.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/grass-05.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/stone-01.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/stone-02.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/stone-03.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/stone-04.wav",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5173/audio/footsteps/stone-05.wav",
+      "status": 200
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "finishedAt": "2026-11-12T17:13:41.092Z"
+}

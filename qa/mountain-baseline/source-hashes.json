@@ -1,0 +1,52 @@
+[
+  {
+    "Algorithm": "SHA256",
+    "Hash": "64ACA6E4BB8CA9C234E80149BE5B5AEB5750A6558CC7EE13CB16EDCEAA9686E3",
+    "Path": "E:\\6311 final\\old-web-outpost\\src\\map-environment.ts"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "0EFE927C6C693C2EF4E032E4B22C9D3E6DFC40A9BF5ED2F4B30F5FE8BF7D9E9A",
+    "Path": "E:\\6311 final\\old-web-outpost\\src\\player.ts"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "DC81CA0F64ADB432018BD7A854C5201D048D372C5A6EBF0418CC40349E56B7D3",
+    "Path": "E:\\6311 final\\old-web-outpost\\src\\main.ts"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "BD3637A1C5827A5998F68C95F587BC0017FAA8A19EDBD600FFF71FC6DD79C087",
+    "Path": "E:\\6311 final\\old-web-outpost\\src\\world.ts"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "7FA41D14D289AE4AA909882858B325A1306FC0EA835D3220AB2CE13C24B50F37",
+    "Path": "E:\\6311 final\\old-web-outpost\\src\\map-config.ts"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "8C013A6FEC4CD98184CBE4F56CC6F2F04871596FB0169C2E41C49083D7D907E8",
+    "Path": "E:\\6311 final\\old-web-outpost\\src\\sky-config.ts"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "85C9DED3B5B7AC8C35DC90B7A1FB824894FF7321F25FF13E560470312D3742B5",
+    "Path": "E:\\6311 final\\old-web-outpost\\src\\sky-enclosure.ts"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "D18F34D7AECEB36892296268572B039B53FA208DB24A24A91DB35C7F2609582B",
+    "Path": "E:\\6311 final\\old-web-outpost\\src\\pickups.ts"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "B8AFF9B4B02A22D9B969F6A8DBF4216146ECD286B0EA3AE2F02143B1EBAEFEB6",
+    "Path": "E:\\6311 final\\old-web-outpost\\src\\pickup-data.ts"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "FCF9D5ED78CABD7D338525732C55595C20F6D6D7027A8106DA5936C13E34BD3F",
+    "Path": "E:\\6311 final\\old-web-outpost\\src\\style.css"
+  }
+]

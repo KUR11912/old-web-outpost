@@ -3,6 +3,8 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { MAP, type MapBounds } from './map-config';
 import { makeExpandedTerrain, addMapStructures, addMapAssetInstances } from './map-environment';
 import { addArchiveObjects, type SceneInteractable } from './archive-scene';
+import { createPickupObjects, type PickupObjects } from './pickups';
+import { createSkyEnclosure } from './sky-enclosure';
 
 /** Ground-plane colliders, in metres. Foliage intentionally has no collider. */
 export interface Collider {
@@ -149,8 +151,8 @@ function describeAsset(name: string, url: string, group: THREE.Group): AssetEntr
     dimensions: { x: 0, y: 0, z: 0 }, instances: 0,
   };
   const materials = new Set<THREE.Material>();
-  if (name === 'OldTerminal_CRT_01' || name === 'Lighthouse_01') entry.materialDetails = [];
-  if (name === 'Lighthouse_01') entry.nodeNames = [];
+  if (name === 'OldTerminal_CRT_01' || name === 'Lighthouse_01' || name === 'ArcadeBridge_01') entry.materialDetails = [];
+  if (name === 'Lighthouse_01' || name === 'ArcadeBridge_01') entry.nodeNames = [];
   const textureSize = (texture: THREE.Texture | null) => {
     const image = texture?.image as { width: number; height: number } | undefined;
     return image ? { width: Number(image.width), height: Number(image.height) } : null;
@@ -230,6 +232,9 @@ export async function createWorld(
   bounds: MapBounds;
   assetReport: AssetEntry[];
   interactables: SceneInteractable[];
+  pickups: PickupObjects;
+  sky: Awaited<ReturnType<typeof createSkyEnclosure>>;
+  bridge: THREE.Group;
 }> {
   scene.background = new THREE.Color('#8fcbe4');
   scene.fog = new THREE.Fog('#b3d6dc', 35, 115);
@@ -251,7 +256,7 @@ export async function createWorld(
   makeExpandedTerrain(scene);
   const colliders: Collider[] = [];
 
-  const names = ['Tree_01', 'Rock_01', 'Grass_01', 'PathTile_01', 'Outpost_01', 'OldTerminal_CRT_01', 'Archive_01', 'Lighthouse_01'] as const;
+  const names = ['Tree_01', 'Rock_01', 'Grass_01', 'PathTile_01', 'Outpost_01', 'OldTerminal_CRT_01', 'Archive_01', 'Lighthouse_01', 'MemeFolder_01', 'ArcadeBridge_01'] as const;
   const loader = new GLTFLoader();
   const models = new Map<string, THREE.Group>();
   const assetReport: AssetEntry[] = [];
@@ -268,6 +273,7 @@ export async function createWorld(
       throw new Error(`资源加载失败：${name}.glb。请确认 public/assets 中的文件完整，并通过本地服务器打开。${error instanceof Error ? `（${error.message}）` : ''}`);
     }
   }));
+  const sky = await createSkyEnclosure(scene);
 
   addOutpost(scene, colliders, models.get('Outpost_01')!);
   assetReport.find((entry) => entry.name === 'Outpost_01')!.instances = 1;
@@ -306,7 +312,8 @@ export async function createWorld(
     tile.name = `Path_at_${z}`;
   }
   plant('PathTile_01', 2, -2, 1, Math.PI / 2, -0.10);
-  addMapStructures(scene, colliders, models.get('Archive_01')!, models.get('Lighthouse_01')!);
+  addMapStructures(scene, colliders, models.get('Archive_01')!, models.get('Lighthouse_01')!, models.get('ArcadeBridge_01')!);
+  assetReport.find((entry) => entry.name === 'ArcadeBridge_01')!.instances = 1;
   assetReport.find((entry) => entry.name === 'Archive_01')!.instances = 1;
   assetReport.find((entry) => entry.name === 'Lighthouse_01')!.instances = 1;
   addMapAssetInstances(scene, models, assetReport, colliders);
@@ -317,8 +324,10 @@ export async function createWorld(
     ...addArchiveObjects(scene, colliders, models.get('OldTerminal_CRT_01')!),
   ];
   assetReport.find((entry) => entry.name === 'OldTerminal_CRT_01')!.instances = 1;
+  const pickups = createPickupObjects(scene, models.get('MemeFolder_01')!);
+  assetReport.find((entry) => entry.name === 'MemeFolder_01')!.instances = pickups.length;
   return {
-    colliders, mailbox, interactables, mailboxTarget: new THREE.Vector3(MAP.mailbox.x, 1.25, MAP.mailbox.z+.26),
+    colliders, mailbox, interactables, pickups, sky, bridge:models.get('ArcadeBridge_01')!, mailboxTarget: new THREE.Vector3(MAP.mailbox.x, 1.25, MAP.mailbox.z+.26),
     spawn: new THREE.Vector3(MAP.spawn.x, 1.65, MAP.spawn.z), bounds: MAP.bounds,
     assetReport: names.map((name) => assetReport.find((entry) => entry.name === name)!),
   };

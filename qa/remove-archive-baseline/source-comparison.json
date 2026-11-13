@@ -1,0 +1,42 @@
+[
+  {
+    "file": "save.ts",
+    "unchanged": true
+  },
+  {
+    "file": "pickup-data.ts",
+    "unchanged": true
+  },
+  {
+    "file": "pickups.ts",
+    "unchanged": true
+  },
+  {
+    "file": "player.ts",
+    "unchanged": true
+  },
+  {
+    "file": "world.ts",
+    "unchanged": true
+  },
+  {
+    "file": "map-environment.ts",
+    "unchanged": true
+  },
+  {
+    "file": "mountain-faults.ts",
+    "unchanged": true
+  },
+  {
+    "file": "sky-config.ts",
+    "unchanged": true
+  },
+  {
+    "file": "sky-enclosure.ts",
+    "unchanged": true
+  },
+  {
+    "file": "style.css",
+    "unchanged": true
+  }
+]

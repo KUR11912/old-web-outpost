@@ -1,0 +1,2714 @@
+{
+  "url": "http://127.0.0.1:5181/",
+  "startedAt": "2026-11-12T10:56:38.928Z",
+  "checks": [
+    {
+      "name": "存档、收藏绑定/动画、玩家、世界/地形/天空和样式等10个源码不变",
+      "details": true
+    },
+    {
+      "name": "三个物件、牌子、碰撞和旧交互路由全部移除；旧终端/邮箱、五收藏和其他场景数据保持原样",
+      "details": {
+        "geometry": {
+          "removed": [
+            {
+              "id": "chat-viewer",
+              "object": false,
+              "label": false
+            },
+            {
+              "id": "image-cache",
+              "object": false,
+              "label": false
+            },
+            {
+              "id": "archive-desk",
+              "object": false,
+              "label": false
+            }
+          ],
+          "retained": [
+            {
+              "name": "old-terminal_interactable",
+              "present": true
+            },
+            {
+              "name": "old-terminal_label",
+              "present": true
+            },
+            {
+              "name": "OldTerminal_CRT_01_instance",
+              "present": true
+            }
+          ]
+        },
+        "staleRoutes": {
+          "opened": [],
+          "exposed": [
+            "showBag",
+            "showStation"
+          ]
+        },
+        "colliders": 129
+      }
+    },
+    {
+      "name": "聊天记录查看器原位置无E提示/旧窗口，真实WASD穿过原碰撞占地",
+      "details": {
+        "start": {
+          "x": 20,
+          "z": -34.300000000000004
+        },
+        "end": {
+          "x": 21.179839999999988,
+          "z": -34.23015999999993,
+          "yaw": 0,
+          "pitch": 6.713867183039124e-8
+        }
+      }
+    },
+    {
+      "name": "图片缓存终端原位置无E提示/旧窗口，真实WASD穿过原碰撞占地",
+      "details": {
+        "start": {
+          "x": 22.8,
+          "z": -34
+        },
+        "end": {
+          "x": 24.03983999999997,
+          "z": -33.90999999999994,
+          "yaw": 0,
+          "pitch": 6.713867188590239e-8
+        }
+      }
+    },
+    {
+      "name": "整理线索原位置无E提示/旧窗口，真实WASD穿过原碰撞占地",
+      "details": {
+        "start": {
+          "x": 25,
+          "z": -30.7
+        },
+        "end": {
+          "x": 26.12992000000001,
+          "z": -30.599679999999903,
+          "yaw": 0,
+          "pitch": 6.713867188590239e-8
+        }
+      }
+    },
+    {
+      "name": "保留旧终端可正常E调查并记录读音资料，没有整理入口，原三个位置清空",
+      "details": {
+        "clues": [
+          "echo-meaning-note"
+        ]
+      }
+    },
+    {
+      "name": "旧已完成调查存档及五项收藏完整恢复，刷新仍隐藏原文件夹；HUD仅显示5/5探索收藏",
+      "details": true
+    }
+  ],
+  "routes": [
+    {
+      "name": "实际走入并穿过原聊天记录查看器占地",
+      "seconds": 2.32,
+      "start": {
+        "x": 20,
+        "z": -34.300000000000004,
+        "yaw": 0,
+        "pitch": 6.713867183039124e-8
+      },
+      "end": {
+        "x": 21.179839999999988,
+        "z": -34.23015999999993,
+        "yaw": 0,
+        "pitch": 6.713867183039124e-8
+      }
+    },
+    {
+      "name": "实际走入并穿过原图片缓存终端占地",
+      "seconds": 2.2,
+      "start": {
+        "x": 22.8,
+        "z": -34,
+        "yaw": 0,
+        "pitch": 6.713867188590239e-8
+      },
+      "end": {
+        "x": 24.03983999999997,
+        "z": -33.90999999999994,
+        "yaw": 0,
+        "pitch": 6.713867188590239e-8
+      }
+    },
+    {
+      "name": "实际走入并穿过原整理线索占地",
+      "seconds": 2.33,
+      "start": {
+        "x": 25,
+        "z": -30.7,
+        "yaw": 0,
+        "pitch": 6.713867188590239e-8
+      },
+      "end": {
+        "x": 26.12992000000001,
+        "z": -30.599679999999903,
+        "yaw": 0,
+        "pitch": 6.713867188590239e-8
+      }
+    },
+    {
+      "name": "从保留旧终端走到档案馆前方检查清理后的空间",
+      "seconds": 2.51,
+      "start": {
+        "x": 16.6,
+        "z": -33.7,
+        "yaw": 0,
+        "pitch": 6.71386718720246e-8
+      },
+      "end": {
+        "x": 20.000080000000015,
+        "z": -31.550080000000044,
+        "yaw": 0,
+        "pitch": 6.71386718720246e-8
+      }
+    }
+  ],
+  "errors": [],
+  "protectedSources": [
+    {
+      "file": "save.ts",
+      "unchanged": true
+    },
+    {
+      "file": "pickup-data.ts",
+      "unchanged": true
+    },
+    {
+      "file": "pickups.ts",
+      "unchanged": true
+    },
+    {
+      "file": "player.ts",
+      "unchanged": true
+    },
+    {
+      "file": "world.ts",
+      "unchanged": true
+    },
+    {
+      "file": "map-environment.ts",
+      "unchanged": true
+    },
+    {
+      "file": "mountain-faults.ts",
+      "unchanged": true
+    },
+    {
+      "file": "sky-config.ts",
+      "unchanged": true
+    },
+    {
+      "file": "sky-enclosure.ts",
+      "unchanged": true
+    },
+    {
+      "file": "style.css",
+      "unchanged": true
+    }
+  ],
+  "initial": {
+    "ready": true,
+    "pose": {
+      "x": 0,
+      "z": 9,
+      "yaw": 0,
+      "pitch": 0
+    },
+    "eyeY": 1.65,
+    "camera": {
+      "near": 0.08,
+      "far": 260
+    },
+    "sky": {
+      "revision": 1,
+      "bounds": {
+        "minX": -44,
+        "maxX": 96,
+        "minZ": -86,
+        "maxZ": 44
+      },
+      "bottomY": -6,
+      "topY": 36,
+      "dimensions": {
+        "width": 140,
+        "depth": 130,
+        "height": 42
+      },
+      "cameraFar": 260,
+      "texture": {
+        "url": "/assets/cloud-sky.png",
+        "width": 1254,
+        "height": 1254,
+        "sourceSha256": "dd93b323de256ae2b40b0afc1e89fb9f91a957269505360b30d1bf4716472a85",
+        "tileMetres": 45,
+        "colourSpace": "srgb",
+        "wrapping": "MirroredRepeatWrapping",
+        "minFilter": "NearestFilter",
+        "magFilter": "NearestFilter",
+        "mipmaps": false
+      },
+      "faces": [
+        {
+          "name": "north",
+          "size": [
+            140,
+            42
+          ],
+          "position": [
+            26,
+            15,
+            -86
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ],
+          "inwardNormal": [
+            0,
+            0,
+            1
+          ],
+          "uv": {
+            "repeat": [
+              3.111111111111111,
+              0.9333333333333333
+            ],
+            "offset": [
+              0,
+              0
+            ],
+            "rotation": 0,
+            "tint": "#f4f2ff",
+            "intensity": 0.96
+          },
+          "material": {
+            "type": "MeshBasicMaterial",
+            "fog": false,
+            "toneMapped": false,
+            "side": "FrontSide",
+            "castShadow": false,
+            "receiveShadow": false
+          }
+        },
+        {
+          "name": "east",
+          "size": [
+            130,
+            42
+          ],
+          "position": [
+            96,
+            15,
+            -21
+          ],
+          "rotation": [
+            0,
+            -1.5707963267948966,
+            0
+          ],
+          "inwardNormal": [
+            -1,
+            0,
+            0
+          ],
+          "uv": {
+            "repeat": [
+              2.888888888888889,
+              0.9333333333333333
+            ],
+            "offset": [
+              3.111111111111111,
+              0
+            ],
+            "rotation": 0,
+            "tint": "#f7f5ff",
+            "intensity": 0.99
+          },
+          "material": {
+            "type": "MeshBasicMaterial",
+            "fog": false,
+            "toneMapped": false,
+            "side": "FrontSide",
+            "castShadow": false,
+            "receiveShadow": false
+          }
+        },
+        {
+          "name": "south",
+          "size": [
+            140,
+            42
+          ],
+          "position": [
+            26,
+            15,
+            44
+          ],
+          "rotation": [
+            0,
+            3.141592653589793,
+            0
+          ],
+          "inwardNormal": [
+            0,
+            0,
+            -1
+          ],
+          "uv": {
+            "repeat": [
+              3.111111111111111,
+              0.9333333333333333
+            ],
+            "offset": [
+              6,
+              0
+            ],
+            "rotation": 0,
+            "tint": "#f2efff",
+            "intensity": 0.94
+          },
+          "material": {
+            "type": "MeshBasicMaterial",
+            "fog": false,
+            "toneMapped": false,
+            "side": "FrontSide",
+            "castShadow": false,
+            "receiveShadow": false
+          }
+        },
+        {
+          "name": "west",
+          "size": [
+            130,
+            42
+          ],
+          "position": [
+            -44,
+            15,
+            -21
+          ],
+          "rotation": [
+            0,
+            1.5707963267948966,
+            0
+          ],
+          "inwardNormal": [
+            1,
+            0,
+            0
+          ],
+          "uv": {
+            "repeat": [
+              2.888888888888889,
+              0.9333333333333333
+            ],
+            "offset": [
+              9.11111111111111,
+              0
+            ],
+            "rotation": 0,
+            "tint": "#f1f3ff",
+            "intensity": 0.95
+          },
+          "material": {
+            "type": "MeshBasicMaterial",
+            "fog": false,
+            "toneMapped": false,
+            "side": "FrontSide",
+            "castShadow": false,
+            "receiveShadow": false
+          }
+        },
+        {
+          "name": "top",
+          "size": [
+            140,
+            130
+          ],
+          "position": [
+            26,
+            36,
+            -21
+          ],
+          "rotation": [
+            1.5707963267948966,
+            0,
+            0
+          ],
+          "inwardNormal": [
+            0,
+            -1,
+            0
+          ],
+          "uv": {
+            "repeat": [
+              3.111111111111111,
+              2.888888888888889
+            ],
+            "offset": [
+              0,
+              0
+            ],
+            "rotation": 0,
+            "tint": "#ffffff",
+            "intensity": 1.03
+          },
+          "material": {
+            "type": "MeshBasicMaterial",
+            "fog": false,
+            "toneMapped": false,
+            "side": "FrontSide",
+            "castShadow": false,
+            "receiveShadow": false
+          }
+        }
+      ],
+      "followsCamera": false,
+      "colliders": 0,
+      "visible": true,
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    "mapOpen": false,
+    "map": {
+      "revision": 2,
+      "seed": 63112027,
+      "bounds": {
+        "minX": -16,
+        "maxX": 68,
+        "minZ": -58,
+        "maxZ": 16
+      },
+      "spawn": {
+        "x": 0,
+        "z": 9,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "groundY": 0,
+      "roadTop": 0.02,
+      "source": {
+        "file": "../ember-courier/dist/world.js",
+        "size": [
+          104,
+          48
+        ],
+        "oldSites": {
+          "outpost": [
+            16,
+            33
+          ],
+          "archive": [
+            44,
+            15
+          ],
+          "lighthouse": [
+            87,
+            15
+          ]
+        },
+        "oldRiverX": 65,
+        "oldBridgeRow": 28
+      },
+      "locations": {
+        "outpost": {
+          "id": "outpost",
+          "name": "旧网驿站",
+          "tag": "01",
+          "position": {
+            "x": 0,
+            "z": -7.5
+          },
+          "approach": {
+            "x": 0,
+            "z": -2
+          },
+          "size": {
+            "width": 5.6,
+            "depth": 5,
+            "height": 5.18
+          },
+          "region": {
+            "minX": -14,
+            "maxX": 14,
+            "minZ": -15,
+            "maxZ": 16
+          },
+          "note": "文件夹拾取 · 邮箱留言"
+        },
+        "archive": {
+          "id": "archive",
+          "name": "回声档案馆",
+          "tag": "02",
+          "position": {
+            "x": 20,
+            "z": -40
+          },
+          "approach": {
+            "x": 20,
+            "z": -35
+          },
+          "size": {
+            "width": 5,
+            "depth": 6,
+            "height": 7.3
+          },
+          "region": {
+            "minX": 10,
+            "maxX": 31,
+            "minZ": -52,
+            "maxZ": -25
+          },
+          "note": "旧终端 · 读音便笺"
+        },
+        "bridge": {
+          "id": "bridge",
+          "name": "断链桥",
+          "tag": "03",
+          "position": {
+            "x": 39,
+            "z": -8
+          },
+          "approach": {
+            "x": 34,
+            "z": -8
+          },
+          "size": {
+            "width": 10,
+            "depth": 3.8,
+            "height": 4.62
+          },
+          "region": {
+            "minX": 30,
+            "maxX": 48,
+            "minZ": -15,
+            "maxZ": -1
+          },
+          "note": "石质拱廊 · 开放通行"
+        },
+        "lighthouse": {
+          "id": "lighthouse",
+          "name": "记忆灯塔",
+          "tag": "04",
+          "position": {
+            "x": 57,
+            "z": -41
+          },
+          "approach": {
+            "x": 57,
+            "z": -35
+          },
+          "size": {
+            "width": 3.84,
+            "depth": 5.41,
+            "height": 14.3
+          },
+          "region": {
+            "minX": 47,
+            "maxX": 67,
+            "minZ": -53,
+            "maxZ": -26
+          },
+          "note": "地标区域 · 后续任务"
+        }
+      },
+      "mailbox": {
+        "x": 1.5,
+        "z": -3.7
+      },
+      "lighthouse": {
+        "baseRadius": 1.9,
+        "hut": {
+          "width": 3.4,
+          "depth": 2.4,
+          "z": 2.2
+        },
+        "sign": {
+          "y": 2.4,
+          "z": 3.495,
+          "width": 1.55,
+          "height": 0.22
+        }
+      },
+      "river": {
+        "minX": 36,
+        "maxX": 42,
+        "minZ": -58,
+        "maxZ": 16,
+        "waterY": -0.28,
+        "bankWidth": 0.5
+      },
+      "bridge": {
+        "x": 39,
+        "z": -8,
+        "length": 10,
+        "width": 3.8,
+        "deckTop": 0.02,
+        "crossingOpen": true,
+        "arcade": {
+          "model": "ArcadeBridge_01",
+          "deckThickness": 0.2,
+          "columnOffsetsX": [
+            -4.2,
+            -1.4,
+            1.4,
+            4.2
+          ],
+          "columnZ": 1.55,
+          "columnHalfWidth": 0.28,
+          "curbWidth": 0.13,
+          "curbHeight": 0.16,
+          "springHeight": 2.35,
+          "archHeight": 4.6
+        }
+      },
+      "roads": [
+        {
+          "id": "outpost-archive",
+          "width": 2,
+          "points": [
+            {
+              "x": 2,
+              "z": -2
+            },
+            {
+              "x": 13.5,
+              "z": -2
+            },
+            {
+              "x": 13.5,
+              "z": -30
+            },
+            {
+              "x": 20,
+              "z": -30
+            },
+            {
+              "x": 20,
+              "z": -35
+            }
+          ]
+        },
+        {
+          "id": "west-bridge",
+          "width": 2,
+          "points": [
+            {
+              "x": 13.5,
+              "z": -8
+            },
+            {
+              "x": 34,
+              "z": -8
+            }
+          ]
+        },
+        {
+          "id": "east-lighthouse",
+          "width": 2,
+          "points": [
+            {
+              "x": 44,
+              "z": -8
+            },
+            {
+              "x": 50,
+              "z": -8
+            },
+            {
+              "x": 50,
+              "z": -35
+            },
+            {
+              "x": 57,
+              "z": -35
+            }
+          ]
+        }
+      ],
+      "timedRoutes": [
+        {
+          "id": "outpost-archive",
+          "name": "旧网驿站 → 回声档案馆",
+          "points": [
+            {
+              "x": 0,
+              "z": -2
+            },
+            {
+              "x": 13.5,
+              "z": -2
+            },
+            {
+              "x": 13.5,
+              "z": -30
+            },
+            {
+              "x": 20,
+              "z": -30
+            },
+            {
+              "x": 20,
+              "z": -35
+            }
+          ]
+        },
+        {
+          "id": "archive-bridge",
+          "name": "回声档案馆 → 桥中央",
+          "points": [
+            {
+              "x": 20,
+              "z": -35
+            },
+            {
+              "x": 20,
+              "z": -30
+            },
+            {
+              "x": 13.5,
+              "z": -30
+            },
+            {
+              "x": 13.5,
+              "z": -8
+            },
+            {
+              "x": 39,
+              "z": -8
+            }
+          ]
+        },
+        {
+          "id": "bridge-lighthouse",
+          "name": "桥中央 → 记忆灯塔",
+          "points": [
+            {
+              "x": 39,
+              "z": -8
+            },
+            {
+              "x": 50,
+              "z": -8
+            },
+            {
+              "x": 50,
+              "z": -35
+            },
+            {
+              "x": 57,
+              "z": -35
+            }
+          ]
+        }
+      ],
+      "futureHooks": [
+        {
+          "id": "archive_investigation",
+          "locationId": "archive",
+          "position": {
+            "x": 20,
+            "z": -35
+          },
+          "enabled": false
+        },
+        {
+          "id": "bridge_unlock",
+          "locationId": "bridge",
+          "position": {
+            "x": 34,
+            "z": -8
+          },
+          "enabled": false
+        },
+        {
+          "id": "lighthouse_task",
+          "locationId": "lighthouse",
+          "position": {
+            "x": 57,
+            "z": -35
+          },
+          "enabled": false
+        }
+      ],
+      "preserved": {
+        "seed": 63111999,
+        "bounds": {
+          "minX": -14,
+          "maxX": 14,
+          "minZ": -14,
+          "maxZ": 14
+        },
+        "trees": [
+          [
+            -5.5,
+            6.5,
+            0.95
+          ],
+          [
+            5.7,
+            7.5,
+            0.9
+          ],
+          [
+            -7,
+            1.4,
+            1.03
+          ],
+          [
+            6.1,
+            0.6,
+            1.08
+          ],
+          [
+            -5.6,
+            -4.4,
+            0.83
+          ],
+          [
+            7.8,
+            -5.4,
+            0.95
+          ],
+          [
+            -9.4,
+            -9.4,
+            1.1
+          ],
+          [
+            8.7,
+            -10.5,
+            1.07
+          ],
+          [
+            -11.4,
+            7.9,
+            1.03
+          ],
+          [
+            11.3,
+            6.2,
+            0.94
+          ],
+          [
+            -10.8,
+            -1.8,
+            0.9
+          ],
+          [
+            11.6,
+            -0.8,
+            1
+          ],
+          [
+            -5.8,
+            -11.9,
+            0.8
+          ],
+          [
+            4.6,
+            -11.8,
+            0.91
+          ]
+        ],
+        "rocks": [
+          [
+            -3.7,
+            3.4,
+            1.35
+          ],
+          [
+            4.1,
+            2.2,
+            1
+          ],
+          [
+            -8.1,
+            -5.4,
+            0.8
+          ],
+          [
+            8.6,
+            9.7,
+            1.5
+          ],
+          [
+            -10,
+            11,
+            1.2
+          ],
+          [
+            10.6,
+            -8.4,
+            1.2
+          ]
+        ]
+      }
+    },
+    "active": true,
+    "mode": "drag",
+    "canInvestigate": false,
+    "targetId": null,
+    "investigated": false,
+    "clues": [],
+    "memes": [],
+    "collectedPickups": [],
+    "pickupInventory": [],
+    "pickupStyle": {
+      "width": 0.8,
+      "hoverHeight": 0.6,
+      "bobAmplitude": 0.1,
+      "bobPeriod": 3.4,
+      "rotationPeriod": 5,
+      "pickupRadius": 0.85
+    },
+    "bridge": {
+      "model": "ArcadeBridge_01",
+      "position": [
+        39,
+        -0.18000000000000002,
+        -8
+      ],
+      "worldBounds": {
+        "min": [
+          34,
+          -0.18000000000000002,
+          -9.899999976158142
+        ],
+        "max": [
+          44,
+          4.621492214202881,
+          -6.100000023841858
+        ]
+      },
+      "nodeNames": [
+        "ArcadeBridge_scene_loaded",
+        "ArcadeBridge_01",
+        "Bridge_Column_1_1_Capital_Neck",
+        "Bridge_Column_1_1_Octagonal_Foot",
+        "Bridge_Column_1_1_Octagonal_Shaft",
+        "Bridge_Column_1_1_Square_Base",
+        "Bridge_Column_1_1_Square_Capital",
+        "Bridge_Column_1_2_Capital_Neck",
+        "Bridge_Column_1_2_Octagonal_Foot",
+        "Bridge_Column_1_2_Octagonal_Shaft",
+        "Bridge_Column_1_2_Square_Base",
+        "Bridge_Column_1_2_Square_Capital",
+        "Bridge_Column_2_1_Capital_Neck",
+        "Bridge_Column_2_1_Octagonal_Foot",
+        "Bridge_Column_2_1_Octagonal_Shaft",
+        "Bridge_Column_2_1_Square_Base",
+        "Bridge_Column_2_1_Square_Capital",
+        "Bridge_Column_2_2_Capital_Neck",
+        "Bridge_Column_2_2_Octagonal_Foot",
+        "Bridge_Column_2_2_Octagonal_Shaft",
+        "Bridge_Column_2_2_Square_Base",
+        "Bridge_Column_2_2_Square_Capital",
+        "Bridge_Column_3_1_Capital_Neck",
+        "Bridge_Column_3_1_Octagonal_Foot",
+        "Bridge_Column_3_1_Octagonal_Shaft",
+        "Bridge_Column_3_1_Square_Base",
+        "Bridge_Column_3_1_Square_Capital",
+        "Bridge_Column_3_2_Capital_Neck",
+        "Bridge_Column_3_2_Octagonal_Foot",
+        "Bridge_Column_3_2_Octagonal_Shaft",
+        "Bridge_Column_3_2_Square_Base",
+        "Bridge_Column_3_2_Square_Capital",
+        "Bridge_Column_4_1_Capital_Neck",
+        "Bridge_Column_4_1_Octagonal_Foot",
+        "Bridge_Column_4_1_Octagonal_Shaft",
+        "Bridge_Column_4_1_Square_Base",
+        "Bridge_Column_4_1_Square_Capital",
+        "Bridge_Column_4_2_Capital_Neck",
+        "Bridge_Column_4_2_Octagonal_Foot",
+        "Bridge_Column_4_2_Octagonal_Shaft",
+        "Bridge_Column_4_2_Square_Base",
+        "Bridge_Column_4_2_Square_Capital",
+        "Bridge_Deck_Watertight",
+        "Bridge_Deck_Watertight_Mesh",
+        "Bridge_Deck_Watertight_Mesh_1",
+        "Bridge_Low_Stone_Edge_+1835",
+        "Bridge_Low_Stone_Edge_-1835",
+        "Bridge_Side_Point_Arcade_1",
+        "Bridge_Side_Point_Arcade_2",
+        "Bridge_Transverse_Point_Arch_1",
+        "Bridge_Transverse_Point_Arch_2",
+        "Bridge_Transverse_Point_Arch_3",
+        "Bridge_Transverse_Point_Arch_4"
+      ],
+      "deckTop": 0.02,
+      "traversableGroundY": 0,
+      "waterY": -0.28,
+      "walkableSurface": {
+        "minX": 34,
+        "maxX": 44,
+        "minZ": -9.9,
+        "maxZ": -6.1
+      },
+      "clearWidth": 2.54,
+      "springHeight": 2.35,
+      "archHeight": 4.6,
+      "columnColliders": [
+        {
+          "kind": "box",
+          "x": 34.8,
+          "z": -9.55,
+          "halfX": 0.28,
+          "halfZ": 0.28,
+          "label": "拱廊桥石柱"
+        },
+        {
+          "kind": "box",
+          "x": 37.6,
+          "z": -9.55,
+          "halfX": 0.28,
+          "halfZ": 0.28,
+          "label": "拱廊桥石柱"
+        },
+        {
+          "kind": "box",
+          "x": 40.4,
+          "z": -9.55,
+          "halfX": 0.28,
+          "halfZ": 0.28,
+          "label": "拱廊桥石柱"
+        },
+        {
+          "kind": "box",
+          "x": 43.2,
+          "z": -9.55,
+          "halfX": 0.28,
+          "halfZ": 0.28,
+          "label": "拱廊桥石柱"
+        },
+        {
+          "kind": "box",
+          "x": 34.8,
+          "z": -6.45,
+          "halfX": 0.28,
+          "halfZ": 0.28,
+          "label": "拱廊桥石柱"
+        },
+        {
+          "kind": "box",
+          "x": 37.6,
+          "z": -6.45,
+          "halfX": 0.28,
+          "halfZ": 0.28,
+          "label": "拱廊桥石柱"
+        },
+        {
+          "kind": "box",
+          "x": 40.4,
+          "z": -6.45,
+          "halfX": 0.28,
+          "halfZ": 0.28,
+          "label": "拱廊桥石柱"
+        },
+        {
+          "kind": "box",
+          "x": 43.2,
+          "z": -6.45,
+          "halfX": 0.28,
+          "halfZ": 0.28,
+          "label": "拱廊桥石柱"
+        }
+      ],
+      "edgeColliders": [
+        {
+          "kind": "box",
+          "x": 39,
+          "z": -9.835,
+          "halfX": 5,
+          "halfZ": 0.065,
+          "label": "拱廊桥石缘"
+        },
+        {
+          "kind": "box",
+          "x": 39,
+          "z": -6.165,
+          "halfX": 5,
+          "halfZ": 0.065,
+          "label": "拱廊桥石缘"
+        }
+      ],
+      "oldObjectsPresent": []
+    },
+    "pickups": [
+      {
+        "id": "outpost-blue-mushroom-folder",
+        "memeId": "blue-mushroom",
+        "name": "蓝瘦香菇图片",
+        "location": "旧网驿站 · 邮箱前",
+        "visible": true,
+        "position": {
+          "x": 1.5,
+          "y": 0.6980477623372945,
+          "z": -1.8
+        },
+        "rotationY": 0.933555672940743,
+        "basePosition": {
+          "x": 1.5,
+          "z": -1.8,
+          "y": 0.6
+        }
+      },
+      {
+        "id": "field-folder-01",
+        "memeId": "friendship-boat",
+        "name": "友谊的小船",
+        "marker": 1,
+        "location": "回声档案馆北侧草地",
+        "visible": true,
+        "position": {
+          "x": 20.4,
+          "y": 0.6980477623372945,
+          "z": -46
+        },
+        "rotationY": 0.933555672940743,
+        "basePosition": {
+          "x": 20.4,
+          "z": -46,
+          "y": 0.6
+        }
+      },
+      {
+        "id": "field-folder-02",
+        "memeId": "gg-or-mm",
+        "name": "你是GG还是MM",
+        "marker": 2,
+        "location": "回声档案馆东南侧 · 河流西岸林隙",
+        "visible": true,
+        "position": {
+          "x": 24.5,
+          "y": 0.6980477623372945,
+          "z": -20
+        },
+        "rotationY": 0.933555672940743,
+        "basePosition": {
+          "x": 24.5,
+          "z": -20,
+          "y": 0.6
+        }
+      },
+      {
+        "id": "field-folder-03",
+        "memeId": "awesome-my-bro",
+        "name": "厉害了我的哥",
+        "marker": 3,
+        "location": "地图南部 · 河流西侧草地",
+        "visible": true,
+        "position": {
+          "x": 26.6,
+          "y": 0.6980477623372945,
+          "z": 9
+        },
+        "rotationY": 0.933555672940743,
+        "basePosition": {
+          "x": 26.6,
+          "z": 9,
+          "y": 0.6
+        }
+      },
+      {
+        "id": "field-folder-04",
+        "memeId": "devil-or-showoff",
+        "name": "你是魔鬼还是秀儿",
+        "marker": 4,
+        "location": "桥梁东南侧 · 河流东岸林隙",
+        "visible": true,
+        "position": {
+          "x": 60,
+          "y": 0.6980477623372945,
+          "z": 3
+        },
+        "rotationY": 0.933555672940743,
+        "basePosition": {
+          "x": 60,
+          "z": 3,
+          "y": 0.6
+        }
+      }
+    ],
+    "archive": {
+      "answers": {
+        "meaning": null,
+        "context": null
+      },
+      "completed": false
+    },
+    "interactables": [
+      {
+        "id": "mailbox",
+        "name": "旧邮箱",
+        "aim": {
+          "x": 1.5,
+          "y": 1.25,
+          "z": -3.455
+        },
+        "approach": {
+          "x": 1.5,
+          "z": -1.9000000000000001
+        },
+        "modelNames": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "Mailbox_foot"
+        ]
+      },
+      {
+        "id": "old-terminal",
+        "name": "旧终端",
+        "aim": {
+          "x": 16.6,
+          "y": 1.2850000000000001,
+          "z": -35.378
+        },
+        "approach": {
+          "x": 16.6,
+          "z": -33.7
+        },
+        "modelNames": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "OldTerminal_CRT_01_instance"
+        ]
+      }
+    ],
+    "assets": [
+      {
+        "name": "Tree_01",
+        "url": "/assets/Tree_01.glb",
+        "meshes": 2,
+        "triangles": 494,
+        "texturedMaterials": 2,
+        "alphaCutoutMaterials": 1,
+        "dimensions": {
+          "x": 3.752058982849121,
+          "y": 5.369998455047607,
+          "z": 3.6866196393966675
+        },
+        "instances": 86
+      },
+      {
+        "name": "Rock_01",
+        "url": "/assets/Rock_01.glb",
+        "meshes": 1,
+        "triangles": 80,
+        "texturedMaterials": 1,
+        "alphaCutoutMaterials": 0,
+        "dimensions": {
+          "x": 1.350000023841858,
+          "y": 0.7799999713897705,
+          "z": 1.0499999523162842
+        },
+        "instances": 20
+      },
+      {
+        "name": "Grass_01",
+        "url": "/assets/Grass_01.glb",
+        "meshes": 1,
+        "triangles": 6,
+        "texturedMaterials": 1,
+        "alphaCutoutMaterials": 1,
+        "dimensions": {
+          "x": 0.8600000143051147,
+          "y": 0.6399999856948853,
+          "z": 0.7447818517684937
+        },
+        "instances": 349
+      },
+      {
+        "name": "PathTile_01",
+        "url": "/assets/PathTile_01.glb",
+        "meshes": 2,
+        "triangles": 20,
+        "texturedMaterials": 2,
+        "alphaCutoutMaterials": 0,
+        "dimensions": {
+          "x": 2,
+          "y": 0.11999999731779099,
+          "z": 2
+        },
+        "instances": 67
+      },
+      {
+        "name": "Outpost_01",
+        "url": "/assets/Outpost_01.glb",
+        "meshes": 21,
+        "triangles": 526,
+        "texturedMaterials": 9,
+        "alphaCutoutMaterials": 0,
+        "dimensions": {
+          "x": 6.105000019073486,
+          "y": 5.179999828338623,
+          "z": 5.450000047683716
+        },
+        "instances": 1
+      },
+      {
+        "name": "OldTerminal_CRT_01",
+        "url": "/assets/OldTerminal_CRT_01.glb",
+        "meshes": 61,
+        "triangles": 3048,
+        "texturedMaterials": 4,
+        "alphaCutoutMaterials": 0,
+        "dimensions": {
+          "x": 0.800000011920929,
+          "y": 0.7599999904632568,
+          "z": 0.7008000090718269
+        },
+        "instances": 1,
+        "materialDetails": [
+          {
+            "name": "CRT_Ivory_Plastic",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.699999988079071,
+            "metalness": 0,
+            "map": {
+              "width": 128,
+              "height": 128
+            },
+            "emissiveMap": null
+          },
+          {
+            "name": "CRT_Rear_Vent_Texture",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.699999988079071,
+            "metalness": 0,
+            "map": {
+              "width": 128,
+              "height": 128
+            },
+            "emissiveMap": null
+          },
+          {
+            "name": "CRT_Recessed_Dark_Rim",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.8199999928474426,
+            "metalness": 0,
+            "map": null,
+            "emissiveMap": null
+          },
+          {
+            "name": "CRT_Screen_Glass",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.25,
+            "metalness": 0,
+            "map": {
+              "width": 256,
+              "height": 192
+            },
+            "emissiveMap": {
+              "width": 256,
+              "height": 192
+            }
+          },
+          {
+            "name": "CRT_Power_LED",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.4000000059604645,
+            "metalness": 0,
+            "map": null,
+            "emissiveMap": null
+          },
+          {
+            "name": "CRT_Keycaps_Atlas",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.7599999904632568,
+            "metalness": 0,
+            "map": {
+              "width": 128,
+              "height": 128
+            },
+            "emissiveMap": null
+          }
+        ]
+      },
+      {
+        "name": "Archive_01",
+        "url": "/assets/Archive_01.glb",
+        "meshes": 66,
+        "triangles": 700,
+        "texturedMaterials": 9,
+        "alphaCutoutMaterials": 0,
+        "dimensions": {
+          "x": 5.662499886937439,
+          "y": 7.279999999329448,
+          "z": 7.1280000396072865
+        },
+        "instances": 1
+      },
+      {
+        "name": "Lighthouse_01",
+        "url": "/assets/Lighthouse_01.glb",
+        "meshes": 74,
+        "triangles": 1616,
+        "texturedMaterials": 7,
+        "alphaCutoutMaterials": 0,
+        "dimensions": {
+          "x": 3.8399999141693115,
+          "y": 14.299999618902802,
+          "z": 5.409999966621399
+        },
+        "instances": 1,
+        "materialDetails": [
+          {
+            "name": "Lighthouse_Stone_Base",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.9200000166893005,
+            "metalness": 0,
+            "map": {
+              "width": 128,
+              "height": 128
+            },
+            "emissiveMap": null,
+            "transparent": false,
+            "opacity": 1,
+            "emissive": "000000",
+            "emissiveIntensity": 1
+          },
+          {
+            "name": "Lighthouse_Narrow_Window",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.699999988079071,
+            "metalness": 0,
+            "map": {
+              "width": 128,
+              "height": 128
+            },
+            "emissiveMap": null,
+            "transparent": false,
+            "opacity": 1,
+            "emissive": "000000",
+            "emissiveIntensity": 1
+          },
+          {
+            "name": "Lighthouse_Dark_Metal",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.7799999713897705,
+            "metalness": 0,
+            "map": {
+              "width": 128,
+              "height": 128
+            },
+            "emissiveMap": null,
+            "transparent": false,
+            "opacity": 1,
+            "emissive": "000000",
+            "emissiveIntensity": 1
+          },
+          {
+            "name": "Lighthouse_Pale_Plaster",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.9200000166893005,
+            "metalness": 0,
+            "map": {
+              "width": 128,
+              "height": 128
+            },
+            "emissiveMap": null,
+            "transparent": false,
+            "opacity": 1,
+            "emissive": "000000",
+            "emissiveIntensity": 1
+          },
+          {
+            "name": "Lighthouse_Hut_Door",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.9200000166893005,
+            "metalness": 0,
+            "map": {
+              "width": 128,
+              "height": 128
+            },
+            "emissiveMap": null,
+            "transparent": false,
+            "opacity": 1,
+            "emissive": "000000",
+            "emissiveIntensity": 1
+          },
+          {
+            "name": "Lighthouse_Hut_Roof",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.9200000166893005,
+            "metalness": 0,
+            "map": {
+              "width": 128,
+              "height": 128
+            },
+            "emissiveMap": null,
+            "transparent": false,
+            "opacity": 1,
+            "emissive": "000000",
+            "emissiveIntensity": 1
+          },
+          {
+            "name": "Lighthouse_Warm_Lamp",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.550000011920929,
+            "metalness": 0,
+            "map": null,
+            "emissiveMap": null,
+            "transparent": false,
+            "opacity": 1,
+            "emissive": "ffd381",
+            "emissiveIntensity": 1.7999999523162842
+          },
+          {
+            "name": "Lighthouse_Lantern_Glass",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 0.44999998807907104,
+            "metalness": 0,
+            "map": {
+              "width": 128,
+              "height": 128
+            },
+            "emissiveMap": null,
+            "transparent": true,
+            "opacity": 0.23999999463558197,
+            "emissive": "000000",
+            "emissiveIntensity": 1
+          }
+        ],
+        "nodeNames": [
+          "Scene",
+          "Lighthouse_01",
+          "Lighthouse_Band_Window_Frame_1",
+          "Lighthouse_Band_Window_Frame_2",
+          "Lighthouse_Band_Window_Glass_1",
+          "Lighthouse_Band_Window_Glass_2",
+          "Lighthouse_Central_Slim_Pole",
+          "Lighthouse_Ground_Base",
+          "Lighthouse_Helical_Thick_Wall",
+          "Lighthouse_Hut_Door",
+          "Lighthouse_Hut_Door_Frame",
+          "Lighthouse_Hut_Door_Handle",
+          "Lighthouse_Hut_Gabled_Roof",
+          "Lighthouse_Hut_Gables",
+          "Lighthouse_Hut_Platform",
+          "Lighthouse_Hut_Side_Window",
+          "Lighthouse_Hut_Side_Window001",
+          "Lighthouse_Hut_Side_Window_Frame",
+          "Lighthouse_Hut_Side_Window_Frame001",
+          "Lighthouse_Hut_Walls",
+          "Lighthouse_Hut_Window",
+          "Lighthouse_Hut_Window001",
+          "Lighthouse_Hut_Window_Frame",
+          "Lighthouse_Hut_Window_Frame001",
+          "Lighthouse_Lamp_Core",
+          "Lighthouse_Lamp_Core_Cap",
+          "Lighthouse_Lamp_Core_Pedestal",
+          "Lighthouse_Lantern_Glass_Pane_1",
+          "Lighthouse_Lantern_Glass_Pane_2",
+          "Lighthouse_Lantern_Glass_Pane_3",
+          "Lighthouse_Lantern_Glass_Pane_4",
+          "Lighthouse_Lantern_Glass_Pane_5",
+          "Lighthouse_Lantern_Glass_Pane_6",
+          "Lighthouse_Lantern_Glass_Pane_7",
+          "Lighthouse_Lantern_Glass_Pane_8",
+          "Lighthouse_Lantern_Lower_Rim",
+          "Lighthouse_Lantern_Platform",
+          "Lighthouse_Lantern_Post_1",
+          "Lighthouse_Lantern_Post_2",
+          "Lighthouse_Lantern_Post_3",
+          "Lighthouse_Lantern_Post_4",
+          "Lighthouse_Lantern_Post_5",
+          "Lighthouse_Lantern_Post_6",
+          "Lighthouse_Lantern_Post_7",
+          "Lighthouse_Lantern_Post_8",
+          "Lighthouse_Lantern_Upper_Rim",
+          "Lighthouse_Pointed_Roof",
+          "Lighthouse_Roof_Finial",
+          "Lighthouse_Roof_Tip",
+          "Lighthouse_Simple_Step_01",
+          "Lighthouse_Simple_Step_02",
+          "Lighthouse_Simple_Step_03",
+          "Lighthouse_Simple_Step_04",
+          "Lighthouse_Simple_Step_05",
+          "Lighthouse_Simple_Step_06",
+          "Lighthouse_Simple_Step_07",
+          "Lighthouse_Simple_Step_08",
+          "Lighthouse_Simple_Step_09",
+          "Lighthouse_Simple_Step_10",
+          "Lighthouse_Simple_Step_11",
+          "Lighthouse_Simple_Step_12",
+          "Lighthouse_Simple_Step_13",
+          "Lighthouse_Simple_Step_14",
+          "Lighthouse_Simple_Step_15",
+          "Lighthouse_Simple_Step_16",
+          "Lighthouse_Simple_Step_17",
+          "Lighthouse_Simple_Step_18",
+          "Lighthouse_Simple_Step_19",
+          "Lighthouse_Simple_Step_20",
+          "Lighthouse_Simple_Step_21",
+          "Lighthouse_Simple_Step_22",
+          "Lighthouse_Simple_Step_23",
+          "Lighthouse_Simple_Step_24",
+          "Lighthouse_Simple_Step_25",
+          "Lighthouse_Simple_Step_26",
+          "Lighthouse_Simple_Step_27"
+        ]
+      },
+      {
+        "name": "MemeFolder_01",
+        "url": "/assets/MemeFolder_01.glb",
+        "meshes": 1,
+        "triangles": 428,
+        "texturedMaterials": 1,
+        "alphaCutoutMaterials": 0,
+        "dimensions": {
+          "x": 1,
+          "y": 0.7799999713897705,
+          "z": 0.14000001549720764
+        },
+        "instances": 5
+      },
+      {
+        "name": "ArcadeBridge_01",
+        "url": "/assets/ArcadeBridge_01.glb",
+        "meshes": 50,
+        "triangles": 1868,
+        "texturedMaterials": 2,
+        "alphaCutoutMaterials": 0,
+        "dimensions": {
+          "x": 10,
+          "y": 4.801492214202881,
+          "z": 3.799999952316284
+        },
+        "instances": 1,
+        "materialDetails": [
+          {
+            "name": "Arcade_Warm_Stone",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 1,
+            "metalness": 0,
+            "map": {
+              "width": 256,
+              "height": 256
+            },
+            "emissiveMap": null
+          },
+          {
+            "name": "Arcade_Checker_Stone",
+            "type": "MeshPhysicalMaterial",
+            "roughness": 1,
+            "metalness": 0,
+            "map": {
+              "width": 256,
+              "height": 256
+            },
+            "emissiveMap": null
+          }
+        ],
+        "nodeNames": [
+          "Scene",
+          "ArcadeBridge_01",
+          "Bridge_Column_1_1_Capital_Neck",
+          "Bridge_Column_1_1_Octagonal_Foot",
+          "Bridge_Column_1_1_Octagonal_Shaft",
+          "Bridge_Column_1_1_Square_Base",
+          "Bridge_Column_1_1_Square_Capital",
+          "Bridge_Column_1_2_Capital_Neck",
+          "Bridge_Column_1_2_Octagonal_Foot",
+          "Bridge_Column_1_2_Octagonal_Shaft",
+          "Bridge_Column_1_2_Square_Base",
+          "Bridge_Column_1_2_Square_Capital",
+          "Bridge_Column_2_1_Capital_Neck",
+          "Bridge_Column_2_1_Octagonal_Foot",
+          "Bridge_Column_2_1_Octagonal_Shaft",
+          "Bridge_Column_2_1_Square_Base",
+          "Bridge_Column_2_1_Square_Capital",
+          "Bridge_Column_2_2_Capital_Neck",
+          "Bridge_Column_2_2_Octagonal_Foot",
+          "Bridge_Column_2_2_Octagonal_Shaft",
+          "Bridge_Column_2_2_Square_Base",
+          "Bridge_Column_2_2_Square_Capital",
+          "Bridge_Column_3_1_Capital_Neck",
+          "Bridge_Column_3_1_Octagonal_Foot",
+          "Bridge_Column_3_1_Octagonal_Shaft",
+          "Bridge_Column_3_1_Square_Base",
+          "Bridge_Column_3_1_Square_Capital",
+          "Bridge_Column_3_2_Capital_Neck",
+          "Bridge_Column_3_2_Octagonal_Foot",
+          "Bridge_Column_3_2_Octagonal_Shaft",
+          "Bridge_Column_3_2_Square_Base",
+          "Bridge_Column_3_2_Square_Capital",
+          "Bridge_Column_4_1_Capital_Neck",
+          "Bridge_Column_4_1_Octagonal_Foot",
+          "Bridge_Column_4_1_Octagonal_Shaft",
+          "Bridge_Column_4_1_Square_Base",
+          "Bridge_Column_4_1_Square_Capital",
+          "Bridge_Column_4_2_Capital_Neck",
+          "Bridge_Column_4_2_Octagonal_Foot",
+          "Bridge_Column_4_2_Octagonal_Shaft",
+          "Bridge_Column_4_2_Square_Base",
+          "Bridge_Column_4_2_Square_Capital",
+          "Bridge_Deck_Watertight",
+          "Bridge_Deck_Watertight_Mesh",
+          "Bridge_Deck_Watertight_Mesh_1",
+          "Bridge_Low_Stone_Edge_+1835",
+          "Bridge_Low_Stone_Edge_-1835",
+          "Bridge_Side_Point_Arcade_1",
+          "Bridge_Side_Point_Arcade_2",
+          "Bridge_Transverse_Point_Arch_1",
+          "Bridge_Transverse_Point_Arch_2",
+          "Bridge_Transverse_Point_Arch_3",
+          "Bridge_Transverse_Point_Arch_4"
+        ]
+      }
+    ],
+    "colliders": [
+      {
+        "kind": "box",
+        "x": 0,
+        "z": -7.5,
+        "halfX": 2.85,
+        "halfZ": 2.55,
+        "label": "驿站外墙"
+      },
+      {
+        "kind": "box",
+        "x": -2.97,
+        "z": -7.5,
+        "halfX": 0.22,
+        "halfZ": 1.1,
+        "label": "驿站侧梯"
+      },
+      {
+        "kind": "box",
+        "x": 4.1,
+        "z": -5.4,
+        "halfX": 0.98,
+        "halfZ": 0.35,
+        "label": "长椅"
+      },
+      {
+        "kind": "box",
+        "x": 1.5,
+        "z": -3.7,
+        "halfX": 0.4,
+        "halfZ": 0.31,
+        "label": "邮箱"
+      },
+      {
+        "kind": "circle",
+        "x": -5.5,
+        "z": 6.5,
+        "radius": 0.45599999999999996,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 5.7,
+        "z": 7.5,
+        "radius": 0.432,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": -7,
+        "z": 1.4,
+        "radius": 0.4944,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 6.1,
+        "z": 0.6,
+        "radius": 0.5184,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": -5.6,
+        "z": -4.4,
+        "radius": 0.3984,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 7.8,
+        "z": -5.4,
+        "radius": 0.45599999999999996,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": -9.4,
+        "z": -9.4,
+        "radius": 0.528,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 8.7,
+        "z": -10.5,
+        "radius": 0.5136000000000001,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": -11.4,
+        "z": 7.9,
+        "radius": 0.4944,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 11.3,
+        "z": 6.2,
+        "radius": 0.45119999999999993,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": -10.8,
+        "z": -1.8,
+        "radius": 0.432,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 11.6,
+        "z": -0.8,
+        "radius": 0.48,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": -5.8,
+        "z": -11.9,
+        "radius": 0.384,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 4.6,
+        "z": -11.8,
+        "radius": 0.4368,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": -3.7,
+        "z": 3.4,
+        "radius": 0.8640000000000001,
+        "label": "石头"
+      },
+      {
+        "kind": "circle",
+        "x": 4.1,
+        "z": 2.2,
+        "radius": 0.64,
+        "label": "石头"
+      },
+      {
+        "kind": "circle",
+        "x": -8.1,
+        "z": -5.4,
+        "radius": 0.512,
+        "label": "石头"
+      },
+      {
+        "kind": "circle",
+        "x": 8.6,
+        "z": 9.7,
+        "radius": 0.96,
+        "label": "石头"
+      },
+      {
+        "kind": "circle",
+        "x": -10,
+        "z": 11,
+        "radius": 0.768,
+        "label": "石头"
+      },
+      {
+        "kind": "circle",
+        "x": 10.6,
+        "z": -8.4,
+        "radius": 0.768,
+        "label": "石头"
+      },
+      {
+        "kind": "box",
+        "x": 39,
+        "z": -33.85,
+        "halfX": 3,
+        "halfZ": 24.15,
+        "label": "河流 · 只能从桥上通过"
+      },
+      {
+        "kind": "box",
+        "x": 39,
+        "z": 4.85,
+        "halfX": 3,
+        "halfZ": 11.15,
+        "label": "河流 · 只能从桥上通过"
+      },
+      {
+        "kind": "box",
+        "x": 39,
+        "z": -9.835,
+        "halfX": 5,
+        "halfZ": 0.065,
+        "label": "拱廊桥石缘"
+      },
+      {
+        "kind": "box",
+        "x": 34.8,
+        "z": -9.55,
+        "halfX": 0.28,
+        "halfZ": 0.28,
+        "label": "拱廊桥石柱"
+      },
+      {
+        "kind": "box",
+        "x": 37.6,
+        "z": -9.55,
+        "halfX": 0.28,
+        "halfZ": 0.28,
+        "label": "拱廊桥石柱"
+      },
+      {
+        "kind": "box",
+        "x": 40.4,
+        "z": -9.55,
+        "halfX": 0.28,
+        "halfZ": 0.28,
+        "label": "拱廊桥石柱"
+      },
+      {
+        "kind": "box",
+        "x": 43.2,
+        "z": -9.55,
+        "halfX": 0.28,
+        "halfZ": 0.28,
+        "label": "拱廊桥石柱"
+      },
+      {
+        "kind": "box",
+        "x": 39,
+        "z": -6.165,
+        "halfX": 5,
+        "halfZ": 0.065,
+        "label": "拱廊桥石缘"
+      },
+      {
+        "kind": "box",
+        "x": 34.8,
+        "z": -6.45,
+        "halfX": 0.28,
+        "halfZ": 0.28,
+        "label": "拱廊桥石柱"
+      },
+      {
+        "kind": "box",
+        "x": 37.6,
+        "z": -6.45,
+        "halfX": 0.28,
+        "halfZ": 0.28,
+        "label": "拱廊桥石柱"
+      },
+      {
+        "kind": "box",
+        "x": 40.4,
+        "z": -6.45,
+        "halfX": 0.28,
+        "halfZ": 0.28,
+        "label": "拱廊桥石柱"
+      },
+      {
+        "kind": "box",
+        "x": 43.2,
+        "z": -6.45,
+        "halfX": 0.28,
+        "halfZ": 0.28,
+        "label": "拱廊桥石柱"
+      },
+      {
+        "kind": "box",
+        "x": 20,
+        "z": -40,
+        "halfX": 2.6,
+        "halfZ": 3.13,
+        "label": "回声档案馆外墙"
+      },
+      {
+        "kind": "circle",
+        "x": 57,
+        "z": -41,
+        "radius": 1.9,
+        "label": "记忆灯塔基座"
+      },
+      {
+        "kind": "box",
+        "x": 57,
+        "z": -38.8,
+        "halfX": 1.76,
+        "halfZ": 1.26,
+        "label": "记忆灯塔门房"
+      },
+      {
+        "kind": "circle",
+        "x": 10.7,
+        "z": -5.3,
+        "radius": 0.14,
+        "label": "路标柱"
+      },
+      {
+        "kind": "circle",
+        "x": 16.3,
+        "z": -10.4,
+        "radius": 0.14,
+        "label": "路标柱"
+      },
+      {
+        "kind": "circle",
+        "x": 47.4,
+        "z": -10.4,
+        "radius": 0.14,
+        "label": "路标柱"
+      },
+      {
+        "kind": "circle",
+        "x": 22.425023041665554,
+        "z": -3.1816170890815556,
+        "radius": 0.5168149310946464,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 53.112374641001225,
+        "z": -52.25084340805188,
+        "radius": 0.4113623293116689,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 45.45663642138243,
+        "z": -23.95335301430896,
+        "radius": 0.4118366771489382,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 31.152035877108574,
+        "z": 6.478309229481965,
+        "radius": 0.4660679077617824,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 61.857800878584385,
+        "z": -34.2187444367446,
+        "radius": 0.4102588459029794,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": -1.2079171612858772,
+        "z": -20.499020103830844,
+        "radius": 0.46820742975175383,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 62.50298856198788,
+        "z": -24.56861688895151,
+        "radius": 0.5267944226078689,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 9.710505962371826,
+        "z": -30.780352057423443,
+        "radius": 0.45843930082395673,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": -0.09794281423091888,
+        "z": -37.95524240611121,
+        "radius": 0.42398094200715425,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 65.11829546093941,
+        "z": 13.68286324525252,
+        "radius": 0.3947233489193022,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 13.57327489554882,
+        "z": -34.754167675506324,
+        "radius": 0.44537924624606967,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 62.71701196581125,
+        "z": -18.175648922566324,
+        "radius": 0.5148046161308883,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": -8.984514005482197,
+        "z": -37.878345247823745,
+        "radius": 0.5133626982718706,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 26.30251257121563,
+        "z": 12.795160457957536,
+        "radius": 0.458366495680064,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 16.62383696436882,
+        "z": -55.0300153917633,
+        "radius": 0.4563714799024165,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 55.903358444571495,
+        "z": 2.275339670944959,
+        "radius": 0.4470972906164825,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 21.45382473617792,
+        "z": -24.058628665748984,
+        "radius": 0.5223477654531598,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": -8.892672970890999,
+        "z": -45.142505198251456,
+        "radius": 0.5233431326262652,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 53.51870661973953,
+        "z": -26.231047698762268,
+        "radius": 0.38844954200461507,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 31.433448404073715,
+        "z": -47.60854995017871,
+        "radius": 0.5398054485060274,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 57.03728722780943,
+        "z": 13.482268902938813,
+        "radius": 0.4084090135842562,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 51.79845279455185,
+        "z": 3.957878089044243,
+        "radius": 0.4405222187228501,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 28.193059399724007,
+        "z": -2.5525819989852607,
+        "radius": 0.4799349531792104,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 61.798303075134754,
+        "z": -30.352370558772236,
+        "radius": 0.44860900258272884,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": -4.810875333845615,
+        "z": -32.70717760222033,
+        "radius": 0.48414341354370116,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 19.67233846336603,
+        "z": 3.557900649961084,
+        "radius": 0.4346499229744077,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 5.814334399998188,
+        "z": -26.378979539964348,
+        "radius": 0.4454543974623084,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 24.63975014537573,
+        "z": -13.12835180805996,
+        "radius": 0.400155473023653,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 1.758727416396141,
+        "z": -43.191562212537974,
+        "radius": 0.4114390399865806,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 63.8681980445981,
+        "z": -2.418830326292664,
+        "radius": 0.39114212592691183,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 61.75142353773117,
+        "z": 11.505882328841835,
+        "radius": 0.5167396165318786,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 59.23211334645748,
+        "z": -1.4407312790863216,
+        "radius": 0.41590184865519403,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 52.11845228821039,
+        "z": 10.220412326510996,
+        "radius": 0.5000461051538587,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 53.61282812803984,
+        "z": -2.0778945800848305,
+        "radius": 0.40571722175180913,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 23.17671561986208,
+        "z": 6.521015161182731,
+        "radius": 0.550286221884191,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 58.46073368936777,
+        "z": -54.57398387277499,
+        "radius": 0.4464454255476594,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 59.078927621245384,
+        "z": -20.22633261187002,
+        "radius": 0.5045615643672645,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 27.758565306663513,
+        "z": -25.54780207714066,
+        "radius": 0.5310535333044827,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 48.58773364126682,
+        "z": 1.946584050077945,
+        "radius": 0.5384177138172089,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": -5.741058677434921,
+        "z": -26.958417092915624,
+        "radius": 0.5455516145266592,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 27.367659009993076,
+        "z": -54.688334266189486,
+        "radius": 0.42463278970867396,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 32.90544053912163,
+        "z": -40.863533151801676,
+        "radius": 0.4176126129962504,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 63.818649373948574,
+        "z": 1.9552833805792034,
+        "radius": 0.5150251600742339,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 11.943630710244179,
+        "z": -55.305768858175725,
+        "radius": 0.4358786475621164,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 5.7008998692035675,
+        "z": -39.16480409121141,
+        "radius": 0.41038760263100266,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 60.00770120322704,
+        "z": -49.23560309363529,
+        "radius": 0.44228477955982093,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 25.432070292532444,
+        "z": -51.02202403033152,
+        "radius": 0.41274160925298925,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 56.815023593604565,
+        "z": -24.47149034263566,
+        "radius": 0.4537492379397154,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 46.451891012489796,
+        "z": -36.07362289587036,
+        "radius": 0.40649762278050183,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 56.76220151036978,
+        "z": -27.68982467846945,
+        "radius": 0.5306443889737129,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 50.2828194051981,
+        "z": -4.501109208445996,
+        "radius": 0.4985269668661058,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 46.65373793244362,
+        "z": -54.23474127566442,
+        "radius": 0.4171269186772406,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 23.833740636706352,
+        "z": -33.233592465054244,
+        "radius": 0.3864644728414714,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 45.34846609830856,
+        "z": 0.36550927767530084,
+        "radius": 0.4940524333901703,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 20.828594401478767,
+        "z": -16.64113563625142,
+        "radius": 0.5285515840910375,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 32.87019869685173,
+        "z": 10.824900584761053,
+        "radius": 0.5140094579793513,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 65.53572176396847,
+        "z": -41.86471848888323,
+        "radius": 0.3983569193892181,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": -9.254422426223755,
+        "z": -28.528125734534115,
+        "radius": 0.5472875584848225,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 58.68804680556059,
+        "z": -12.254844379145652,
+        "radius": 0.412042945638299,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 48.29116324335337,
+        "z": -40.78980448329821,
+        "radius": 0.4493212707415223,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 52.44258338958025,
+        "z": -55.99826846877113,
+        "radius": 0.4528842644020915,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 7.549493335187435,
+        "z": -47.880708143580705,
+        "radius": 0.4339249546229839,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 54.97864434868097,
+        "z": -6.238814728800207,
+        "radius": 0.5362519246414303,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 20.697932861745358,
+        "z": 10.134367703925818,
+        "radius": 0.4918251245319843,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 48.05363754183054,
+        "z": -47.32459085667506,
+        "radius": 0.41262972251325847,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 16.72437923401594,
+        "z": 10.701195936184376,
+        "radius": 0.41925704495608807,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 29.486183509230614,
+        "z": -39.8202525745146,
+        "radius": 0.43345959405228496,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": -12.458462618291378,
+        "z": -32.903739424888045,
+        "radius": 0.47918051118403676,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 23.38744329661131,
+        "z": -27.17861145408824,
+        "radius": 0.5479059404879808,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 63.18477550894022,
+        "z": -49.57797552132979,
+        "radius": 0.4003682799115777,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 0.9095199629664421,
+        "z": -49.348429773468524,
+        "radius": 0.4594945809692144,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 27.939183697104454,
+        "z": -22.199746958445758,
+        "radius": 0.3905250028185547,
+        "label": "树干"
+      },
+      {
+        "kind": "circle",
+        "x": 11.01700296998024,
+        "z": -50.965211336966604,
+        "radius": 0.6787445625755936,
+        "label": "石头"
+      },
+      {
+        "kind": "circle",
+        "x": 65.98593084514141,
+        "z": -20.627734019886702,
+        "radius": 0.9753318371158093,
+        "label": "石头"
+      },
+      {
+        "kind": "circle",
+        "x": -12.22628766298294,
+        "z": -49.513440245296806,
+        "radius": 0.9144027325976639,
+        "label": "石头"
+      },
+      {
+        "kind": "circle",
+        "x": 65.2883712798357,
+        "z": -7.79624444572255,
+        "radius": 1.006432450627908,
+        "label": "石头"
+      },
+      {
+        "kind": "circle",
+        "x": 1.3408245742321014,
+        "z": -51.703871173318475,
+        "radius": 0.8721599409822374,
+        "label": "石头"
+      },
+      {
+        "kind": "circle",
+        "x": -11.603932060301304,
+        "z": -43.861330800224096,
+        "radius": 0.9592470905184746,
+        "label": "石头"
+      },
+      {
+        "kind": "circle",
+        "x": 3.087055556476116,
+        "z": -47.21886641951278,
+        "radius": 0.7073869115486742,
+        "label": "石头"
+      },
+      {
+        "kind": "circle",
+        "x": 45.402442276477814,
+        "z": 4.476230552885681,
+        "radius": 0.7151148008275776,
+        "label": "石头"
+      },
+      {
+        "kind": "circle",
+        "x": -3.183657541871071,
+        "z": -46.09888947708532,
+        "radius": 0.645107475919649,
+        "label": "石头"
+      },
+      {
+        "kind": "circle",
+        "x": 64.91626060009003,
+        "z": -31.88429765542969,
+        "radius": 0.9658191239554434,
+        "label": "石头"
+      },
+      {
+        "kind": "circle",
+        "x": 20.93163600564003,
+        "z": -20.73073992645368,
+        "radius": 0.819892066726461,
+        "label": "石头"
+      },
+      {
+        "kind": "circle",
+        "x": 53.47222751379013,
+        "z": -31.160649323370308,
+        "radius": 0.7902586508262901,
+        "label": "石头"
+      },
+      {
+        "kind": "circle",
+        "x": 55.41366534680128,
+        "z": -55.827780548948795,
+        "radius": 0.8106391146406531,
+        "label": "石头"
+      },
+      {
+        "kind": "circle",
+        "x": 56.08762929588556,
+        "z": 5.284275276120752,
+        "radius": 0.8989724579639733,
+        "label": "石头"
+      },
+      {
+        "kind": "box",
+        "x": 16.6,
+        "z": -35.5,
+        "halfX": 0.51,
+        "halfZ": 0.41,
+        "label": "旧终端"
+      }
+    ],
+    "modal": false
+  },
+  "passed": true,
+  "finishedAt": "2026-11-12T10:56:56.697Z"
+}

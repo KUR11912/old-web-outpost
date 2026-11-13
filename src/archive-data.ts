@@ -10,6 +10,13 @@ export interface ClueCard {
   sourceLabel: string;
   sourceNote: string;
   image?: string;
+  period?: string;
+  example?: { label: string; text: string };
+  contextNote?: string;
+  gallery?: {
+    src: string; caption: string; role?: string; creator?: string;
+    sourcePage?: string; originalUrl?: string; note?: string;
+  }[];
   variants?: { caption: string; context: string }[];
   sources?: { title: string; url: string; note: string }[];
 }
@@ -39,15 +46,193 @@ export const CLUE_ORDER: string[] = [
 ];
 
 export const CLUES: Record<string, ClueCard> = {
+  // Exploration collections have content cards, but are not in CLUE_ORDER.
+  'collection-friendship-boat': {
+    "id": "collection-friendship-boat",
+    "name": "友谊的小船",
+    "location": "回声档案馆北侧草地",
+    "summary": "把朋友间的小分歧，夸张成一场说翻就翻的“绝交事故”。",
+    "period": "2016年春走红",
+    "content": [
+      "两只企鹅坐在小船上，其中一只突然变瘦，船就失去平衡翻了。这组荒诞的漫画，把看不见的“友谊”画成了一条经不起折腾的小船。",
+      "2016年春，喃东尼的企鹅漫画广泛传播，网友不断更换对白，把抢零食、意见不合、说好一起偷懒却偷偷努力等日常吐槽装进同一条船。说“友谊的小船说翻就翻”，通常是在熟人之间假装生气，不一定真的要绝交。"
+    ],
+    "example": {
+      "label": "使用示例（新写的情境）",
+      "text": "说好一起迷路，你却偷偷开了地图？友谊的小船说翻就翻！"
+    },
+    "contextNote": "适合熟人之间的轻松互损；如果对方正在认真表达难过，就别只用一个“翻船”表情敷衍。",
+    "sourceLabel": "资料包档案 · 含来源说明",
+    "sourceNote": "广泛传播的企鹅漫画作者为喃东尼。这句话在漫画走红之前已经流传，不能把漫画作者直接等同于句子的最早发明者。",
+    "image": "assets/memes/friendship-boat.jpg",
+    "gallery": [
+      {
+        "src": "assets/memes/friendship-boat.jpg",
+        "caption": "喃东尼的企鹅漫画；新华网2016年报道所附版本。",
+        "role": "当年报道配图",
+        "creator": "喃东尼",
+        "sourcePage": "https://www.xinhuanet.com/politics/2016-04/15/c_128896932.htm",
+        "originalUrl": "https://www.xinhuanet.com/politics/2016-04/15/128896932_14606747597881n.jpg",
+        "note": "当年报道的转载配图，不标为首次上传文件。"
+      }
+    ],
+    "sources": [
+      {
+        "title": "揭秘“友谊的小船”漫画原作者：宅男 大学退学",
+        "url": "https://www.xinhuanet.com/politics/2016-04/15/c_128896932.htm",
+        "note": "成都商报／新华网 · 2016-04-15"
+      }
+    ]
+  },
+  'collection-gg-or-mm': {
+    "id": "collection-gg-or-mm",
+    "name": "你是GG还是MM",
+    "location": "回声档案馆东南侧 · 河流西岸林隙",
+    "summary": "早期聊天室里的搭话暗号：GG指“哥哥”，MM指“妹妹”或“美眉”。",
+    "period": "世纪之交至2000年代初常见",
+    "content": [
+      "在早期聊天室、论坛和QQ里，网友常把“哥哥”“妹妹”写成拼音首字母GG、MM。“你是GG还是MM？”大致是在问对方是男生还是女生，也是陌生网友打开话题的一种方式。这里的称呼并不表示亲属关系，也不一定对应真实年龄。",
+      "至少在2000年的网络用语报道里，GG、MM这些缩写已经出现。今天重新敲出这句话，往往是在模仿早期上网聊天的口吻，唤起“刚认识一个网友”的感觉。"
+    ],
+    "example": {
+      "label": "使用示例（新写的情境）",
+      "text": "你好，你是GG还是MM？你也喜欢玩游戏吗？"
+    },
+    "contextNote": "这是特定年代的聊天用语。在这个问句里，GG按“哥哥”理解；它与游戏对局中的英文缩写GG属于不同语境。",
+    "sourceLabel": "资料包档案 · 含来源说明",
+    "sourceNote": "属于早期网友共同形成的网络用语，尚未确认单一创作者或精确首发日期。配图只展示旧版QQ界面，未包含这句对话。",
+    "image": "assets/memes/gg-mm-qq-context.jpg",
+    "gallery": [
+      {
+        "src": "assets/memes/gg-mm-qq-context.jpg",
+        "caption": "旧版QQ界面，作为早期网络聊天的背景配图；不是该问句的原始聊天记录。",
+        "role": "时代背景配图",
+        "creator": "旧版QQ界面；截图制作者未标明",
+        "sourcePage": "https://sdxw.iqilu.com/share/YS0yMS02MTYyMDU=.html",
+        "originalUrl": "https://img9.iqilu.com/wx/2017/11/22/191447nyouaueu0hl0.jpg",
+        "note": "时代背景配图。图中没有GG/MM对话；页面标注年代与图中文字有差异，不为截图指定确切年份。"
+      }
+    ],
+    "sources": [
+      {
+        "title": "网络“黑话”你懂吗？",
+        "url": "https://news.zol.com.cn/2000/0605/5062.shtml",
+        "note": "中关村在线 · 2000-06-05"
+      },
+      {
+        "title": "上海语言专家提出：网络语言是汉语发展",
+        "url": "https://news.sina.com.cn/c/2001-08-09/324406.html",
+        "note": "新闻晨报／新浪 · 2001-08-09"
+      }
+    ]
+  },
+  'collection-awesome-my-bro': {
+    "id": "collection-awesome-my-bro",
+    "name": "厉害了我的哥",
+    "location": "地图南部 · 河流西侧草地",
+    "summary": "把一句“你好厉害”，说成夸张、亲近又带点喜剧感的赞叹。",
+    "period": "2016年广泛流行",
+    "content": [
+      "看到别人完成高难度操作、展示意想不到的本事，网友会回复“厉害了我的哥”。“哥”在这里常是一种拉近距离的称呼，并不要求对方真是自己的哥哥。配上夸张的表情，普通的称赞就变得像在给对方现场鼓掌。",
+      "2016年的报道已经记录了它的刷屏传播，以及“厉害了，word哥”等变体。“word”在这里是对“我的”的谐音写法。它既可以是真心佩服，也可以在离谱的场面里带一点反讽，具体要看双方的语气。"
+    ],
+    "example": {
+      "label": "使用示例（新写的情境）",
+      "text": "你用记事本画出了整座地图？厉害了我的哥！"
+    },
+    "contextNote": "看见真正精彩的表现时可以用来称赞；用在别人出丑或失误之后，就可能被理解为嘲讽。",
+    "sourceLabel": "资料包档案 · 含来源说明",
+    "sourceNote": "同期报道存在多个起源版本。关于军训教官接过手机打游戏的故事，目前不足以确认其为唯一源头；本档案记录可核实的流行时期和用法。",
+    "image": "assets/memes/lihai-le-wode-ge.jpg",
+    "gallery": [
+      {
+        "src": "assets/memes/lihai-le-wode-ge.jpg",
+        "caption": "带有“厉害了我的哥”文字的网络表情图；图片作者未标明。",
+        "role": "代表性表情图",
+        "creator": "未标明",
+        "sourcePage": "https://www.chinlingo.com/articles/601702/",
+        "originalUrl": "https://www.chinlingo.com/daily/upload/ueditor/image/20161116/13781479278344956.jpg",
+        "note": "图片已下载查看；本次来源页抓取失败，图片路径日期不作为首发日期。"
+      }
+    ],
+    "sources": [
+      {
+        "title": "最近刷屏的“厉害了我的哥”到底是什么梗？",
+        "url": "https://www.ithome.com/0/258/417.htm",
+        "note": "IT之家 · 2016-09-18"
+      },
+      {
+        "title": "厉害了，我的网络流行语",
+        "url": "https://paper.people.com.cn/rmrbhwb/html/2016-10/24/content_1720841.htm",
+        "note": "人民日报海外版 · 2016-10-24"
+      }
+    ]
+  },
+  'collection-devil-or-showoff': {
+    "id": "collection-devil-or-showoff",
+    "name": "你是魔鬼还是秀儿",
+    "location": "桥梁东南侧 · 河流东岸林隙",
+    "summary": "把“你太狠了”和“你也太会秀了”放在一起，在惊讶、佩服和吐槽之间摇摆。",
+    "period": "相关表达在2018年流行；整句改编歌于2019年初已有报道",
+    "content": [
+      "“你是魔鬼吗”常用来回应扎心的话或出乎意料的操作；“秀儿，是你吗”则把“你真优秀、真会玩”说成一个带调侃意味的称呼。它们的共同点，是用夸张的反应表达“你这一下让我没想到”。",
+      "2019年1月的报道已经把“你是魔鬼还是秀儿”记作一首热门改编歌：它借用《魔鬼中的天使》的旋律，串联了当时的多个短视频热梗。放到聊天里，这个问句可以表达一种又佩服又想吐槽的心情。"
+    ],
+    "example": {
+      "label": "使用示例（新写的情境）",
+      "text": "你把电脑报错截图设成了桌面壁纸？你是魔鬼还是秀儿！"
+    },
+    "contextNote": "适合彼此理解语气的玩笑；其中的“魔鬼”是夸张说法，“秀儿”也不是在认真询问某个人的姓名。",
+    "sourceLabel": "资料包档案 · 含来源说明",
+    "sourceNote": "可确认2019年初已有整句改编歌的报道，最早上传者尚未核实。“你是魔鬼吗”的节目截图只解释相关表达，不能据此把整句话写成节目原台词。",
+    "image": "assets/memes/mogui-related.jpg",
+    "gallery": [
+      {
+        "src": "assets/memes/mogui-related.jpg",
+        "caption": "相关表达“你是魔鬼吗”的节目截图；用于解释前半句，不是该改编歌的封面。",
+        "role": "相关表达配图 · 节目截图",
+        "creator": "《爸爸去哪儿》节目画面，来源页转载",
+        "sourcePage": "https://www.mnw.cn/keji/internet/2090147.html",
+        "originalUrl": "https://upload.mnw.cn/2018/1126/1543224577315.jpg",
+        "note": "相关表达截图，保留原水印。不作为“你是魔鬼还是秀儿”改编歌的原始图片。"
+      },
+      {
+        "src": "assets/memes/xiuer-related.png",
+        "caption": "2018年报道中的“秀儿，是你吗”评论区截图。",
+        "role": "评论区传播示例",
+        "creator": "评论区截图，原始截取者未标明",
+        "sourcePage": "https://shouyou.3dmgame.com/gl/103617.html",
+        "originalUrl": "https://syimg.3dmgame.com/uploadimg/upload/image/20181204/20181204102602_42919.png",
+        "note": "相关表达传播示例，保留原水印。"
+      }
+    ],
+    "sources": [
+      {
+        "title": "你是魔鬼还是秀儿是什么歌改编的",
+        "url": "https://www.mnw.cn/yinyue/huayu/2108545.html",
+        "note": "闽南网，页面注明来源QQ音乐 · 2019-01-03"
+      },
+      {
+        "title": "抖音上的秀儿是什么意思 秀儿梗怎么来的出处",
+        "url": "https://www.mnw.cn/keji/internet/2093904.html",
+        "note": "闽南网 · 2018-12-04"
+      },
+      {
+        "title": "抖音评论你是魔鬼吗是什么梗和意思",
+        "url": "https://www.mnw.cn/keji/internet/2090147.html",
+        "note": "闽南网 · 2018-11-26"
+      }
+    ]
+  },
   'missing-caption-image': {
     id: 'missing-caption-image',
     name: '蓝瘦香菇图片',
-    location: '旧网驿站 · 邮箱',
+    location: '旧网驿站 · 邮箱前的漂浮文件夹',
     summary: '一张带有人物表情、蓝色蘑菇与“蓝瘦香菇”文字的图片。它表达的心情，需要结合文字和语境理解。',
     content: [
       '图中能看到人物表情、蓝色蘑菇、自然背景，以及底部“蓝瘦香菇”四个字。',
       '仅凭图片，可以识别这些视觉元素；要理解它为什么用于聊天，还需要寻找文字含义与使用语境。',
-      '把它和回声档案馆中的文字、聊天片段并排查看，可以分别寻找“表达什么”和“什么时候使用”的线索。',
+      '在回声档案馆的旧终端里，可以查看与这张图片相关的读音便笺。',
     ],
     sourceLabel: '用户提供图片 · 来源待核验',
     sourceNote: '本游戏使用用户上传的原始图片。原作者、制作时间与最初传播出处尚未核验，不将其标为首发原件。',
@@ -80,6 +265,7 @@ export const CLUES: Record<string, ClueCard> = {
       },
     ],
   },
+  // Retired station cards remain recognized only for v1 save compatibility.
   'echo-chat-context': {
     id: 'echo-chat-context',
     name: '聊天片段',
@@ -118,6 +304,7 @@ export const CLUES: Record<string, ClueCard> = {
   },
 };
 
+/** Legacy answer validation for v1 saves; there is no active association UI. */
 export const ARCHIVE_QUESTIONS: ArchiveQuestion[] = [
   {
     id: 'meaning',

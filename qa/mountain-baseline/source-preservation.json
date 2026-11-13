@@ -1,0 +1,47 @@
+[
+  {
+    "file": "player.ts",
+    "unchanged": true,
+    "sha256": "0EFE927C6C693C2EF4E032E4B22C9D3E6DFC40A9BF5ED2F4B30F5FE8BF7D9E9A"
+  },
+  {
+    "file": "main.ts",
+    "unchanged": true,
+    "sha256": "DC81CA0F64ADB432018BD7A854C5201D048D372C5A6EBF0418CC40349E56B7D3"
+  },
+  {
+    "file": "world.ts",
+    "unchanged": true,
+    "sha256": "BD3637A1C5827A5998F68C95F587BC0017FAA8A19EDBD600FFF71FC6DD79C087"
+  },
+  {
+    "file": "map-config.ts",
+    "unchanged": true,
+    "sha256": "7FA41D14D289AE4AA909882858B325A1306FC0EA835D3220AB2CE13C24B50F37"
+  },
+  {
+    "file": "sky-config.ts",
+    "unchanged": true,
+    "sha256": "8C013A6FEC4CD98184CBE4F56CC6F2F04871596FB0169C2E41C49083D7D907E8"
+  },
+  {
+    "file": "sky-enclosure.ts",
+    "unchanged": true,
+    "sha256": "85C9DED3B5B7AC8C35DC90B7A1FB824894FF7321F25FF13E560470312D3742B5"
+  },
+  {
+    "file": "pickups.ts",
+    "unchanged": true,
+    "sha256": "D18F34D7AECEB36892296268572B039B53FA208DB24A24A91DB35C7F2609582B"
+  },
+  {
+    "file": "pickup-data.ts",
+    "unchanged": true,
+    "sha256": "B8AFF9B4B02A22D9B969F6A8DBF4216146ECD286B0EA3AE2F02143B1EBAEFEB6"
+  },
+  {
+    "file": "style.css",
+    "unchanged": true,
+    "sha256": "FCF9D5ED78CABD7D338525732C55595C20F6D6D7027A8106DA5936C13E34BD3F"
+  }
+]

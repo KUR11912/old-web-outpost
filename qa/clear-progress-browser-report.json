@@ -1,0 +1,29 @@
+{
+  "url": "http://127.0.0.1:5173/",
+  "startedAt": "2026-11-13T04:06:34.128Z",
+  "checks": [
+    {
+      "name": "顶部清空游玩进度按钮可见；确认窗口说明范围，取消不清空收藏/查询/调查/备份"
+    },
+    {
+      "name": "确认后全部收藏/查询/调查和修正备份清空，五文件夹恢复，玩家回出生点并保持暂停"
+    },
+    {
+      "name": "清空仍保留23%音乐音量、静音状态、音效关闭偏好及无关存储"
+    },
+    {
+      "name": "刷新后空背包/出生点/未查询状态保持；旧存档与旧备份均不反弹"
+    },
+    {
+      "name": "浏览器运行错误为0，测试仅使用隔离存档"
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "clear-progress-confirm.png",
+    "clear-progress-empty-bag.png"
+  ],
+  "method": "Isolated headless Chrome, one-time sessionStorage-guarded save seed. Real cancel/confirm UI actions; no access to the user IAB or its save.",
+  "passed": true,
+  "finishedAt": "2026-11-13T04:06:36.853Z"
+}

@@ -1,0 +1,359 @@
+{
+  "url": "http://127.0.0.1:5173/",
+  "startedAt": "2026-11-12T17:13:41.724Z",
+  "checks": [
+    {
+      "name": "暂停在文件夹附近时不收集、不自动播放",
+      "details": true
+    },
+    {
+      "name": "原地成功收集时提示音完整播放，不被静止脚步逻辑截断",
+      "details": true
+    },
+    {
+      "name": "outpost-blue-mushroom-folder：实际靠近只收集一次、只播放一次，松键后尾声正常完成",
+      "details": true
+    },
+    {
+      "name": "离开后再次靠近已收藏文件夹不重复播放",
+      "details": true
+    },
+    {
+      "name": "刷新恢复收藏进度时不补播已获得物品的提示音",
+      "details": true
+    },
+    {
+      "name": "field-folder-01：实际靠近只收集一次、只播放一次，松键后尾声正常完成",
+      "details": true
+    },
+    {
+      "name": "field-folder-02：实际靠近只收集一次、只播放一次，松键后尾声正常完成",
+      "details": true
+    },
+    {
+      "name": "field-folder-03：实际靠近只收集一次、只播放一次，松键后尾声正常完成",
+      "details": true
+    },
+    {
+      "name": "field-folder-04：实际靠近只收集一次、只播放一次，松键后尾声正常完成",
+      "details": true
+    },
+    {
+      "name": "关闭统一音效开关后仍能收集，但没有提示音",
+      "details": true
+    },
+    {
+      "name": "重新开启音效时不补播静音期间的收藏",
+      "details": true
+    },
+    {
+      "name": "escape：及时淡出收集提示音，不排队补播",
+      "details": true
+    },
+    {
+      "name": "bag：及时淡出收集提示音，不排队补播",
+      "details": true
+    },
+    {
+      "name": "map：及时淡出收集提示音，不排队补播",
+      "details": true
+    },
+    {
+      "name": "blur：及时淡出收集提示音，不排队补播",
+      "details": true
+    },
+    {
+      "name": "mute：及时淡出收集提示音，不排队补播",
+      "details": true
+    },
+    {
+      "name": "浏览器无运行错误",
+      "details": true
+    }
+  ],
+  "routes": [],
+  "playback": [
+    {
+      "name": "stationary-pickup",
+      "events": [
+        {
+          "duration": 0.32,
+          "peak": 0.6000000238418579,
+          "rms": 0.19437193103710804,
+          "rate": 1,
+          "startedAt": 0,
+          "endedAt": 0.32,
+          "stops": [],
+          "inventory": [
+            "outpost-blue-mushroom-folder"
+          ],
+          "pose": {
+            "x": 1.5,
+            "z": -1.8,
+            "yaw": 0,
+            "pitch": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "outpost-blue-mushroom-folder",
+      "events": [
+        {
+          "duration": 0.32,
+          "peak": 0.6000000238418579,
+          "rms": 0.19437193103710804,
+          "rate": 1,
+          "startedAt": 0.25066666666666665,
+          "endedAt": 0.5706666666666667,
+          "stops": [],
+          "inventory": [
+            "outpost-blue-mushroom-folder"
+          ],
+          "pose": {
+            "x": 1.5,
+            "z": -0.9501599999999996,
+            "yaw": 0,
+            "pitch": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "field-folder-01",
+      "events": [
+        {
+          "duration": 0.32,
+          "peak": 0.6000000238418579,
+          "rms": 0.19437193103710804,
+          "rate": 1,
+          "startedAt": 0.232,
+          "endedAt": 0.56,
+          "stops": [],
+          "inventory": [
+            "field-folder-01"
+          ],
+          "pose": {
+            "x": 20.4,
+            "z": -45.15999999999998,
+            "yaw": 0,
+            "pitch": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "field-folder-02",
+      "events": [
+        {
+          "duration": 0.32,
+          "peak": 0.6000000238418579,
+          "rms": 0.19437193103710804,
+          "rate": 1,
+          "startedAt": 0.24,
+          "endedAt": 0.56,
+          "stops": [],
+          "inventory": [
+            "field-folder-02"
+          ],
+          "pose": {
+            "x": 24.5,
+            "z": -19.150159999999975,
+            "yaw": 0,
+            "pitch": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "field-folder-03",
+      "events": [
+        {
+          "duration": 0.32,
+          "peak": 0.6000000238418579,
+          "rms": 0.19437193103710804,
+          "rate": 1,
+          "startedAt": 0.25066666666666665,
+          "endedAt": 0.5706666666666667,
+          "stops": [],
+          "inventory": [
+            "field-folder-03"
+          ],
+          "pose": {
+            "x": 26.6,
+            "z": 9.83999999999998,
+            "yaw": 0,
+            "pitch": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "field-folder-04",
+      "events": [
+        {
+          "duration": 0.32,
+          "peak": 0.6000000238418579,
+          "rms": 0.19437193103710804,
+          "rate": 1,
+          "startedAt": 0.24,
+          "endedAt": 0.56,
+          "stops": [],
+          "inventory": [
+            "field-folder-04"
+          ],
+          "pose": {
+            "x": 60,
+            "z": 3.8400000000000003,
+            "yaw": 0,
+            "pitch": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "stop-escape",
+      "events": [
+        {
+          "duration": 0.32,
+          "peak": 0.6000000238418579,
+          "rms": 0.19437193103710804,
+          "rate": 1,
+          "startedAt": 0.22133333333333333,
+          "endedAt": 0.25066666666666665,
+          "stops": [
+            {
+              "at": 0.232,
+              "scheduled": 0.247
+            }
+          ],
+          "inventory": [
+            "outpost-blue-mushroom-folder"
+          ],
+          "pose": {
+            "x": 1.5,
+            "z": -0.9599999999999993,
+            "yaw": 0,
+            "pitch": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "stop-bag",
+      "events": [
+        {
+          "duration": 0.32,
+          "peak": 0.6000000238418579,
+          "rms": 0.19437193103710804,
+          "rate": 1,
+          "startedAt": 0.21066666666666667,
+          "endedAt": 0.24,
+          "stops": [
+            {
+              "at": 0.22133333333333333,
+              "scheduled": 0.23633333333333334
+            }
+          ],
+          "inventory": [
+            "outpost-blue-mushroom-folder"
+          ],
+          "pose": {
+            "x": 1.5,
+            "z": -0.95016,
+            "yaw": 0,
+            "pitch": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "stop-map",
+      "events": [
+        {
+          "duration": 0.32,
+          "peak": 0.6000000238418579,
+          "rms": 0.19437193103710804,
+          "rate": 1,
+          "startedAt": 0.22133333333333333,
+          "endedAt": 0.8906666666666667,
+          "stops": [
+            {
+              "at": 0.22133333333333333,
+              "scheduled": 0.23633333333333334
+            }
+          ],
+          "inventory": [
+            "outpost-blue-mushroom-folder"
+          ],
+          "pose": {
+            "x": 1.5,
+            "z": -0.95016,
+            "yaw": 0,
+            "pitch": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "stop-blur",
+      "events": [
+        {
+          "duration": 0.32,
+          "peak": 0.6000000238418579,
+          "rms": 0.19437193103710804,
+          "rate": 1,
+          "startedAt": 0.22133333333333333,
+          "endedAt": 0.25066666666666665,
+          "stops": [
+            {
+              "at": 0.232,
+              "scheduled": 0.247
+            }
+          ],
+          "inventory": [
+            "outpost-blue-mushroom-folder"
+          ],
+          "pose": {
+            "x": 1.5,
+            "z": -0.9501599999999998,
+            "yaw": 0,
+            "pitch": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "stop-mute",
+      "events": [
+        {
+          "duration": 0.32,
+          "peak": 0.6000000238418579,
+          "rms": 0.19437193103710804,
+          "rate": 1,
+          "startedAt": 0.22133333333333333,
+          "endedAt": 0.272,
+          "stops": [
+            {
+              "at": 0.25066666666666665,
+              "scheduled": 0.26566666666666666
+            }
+          ],
+          "inventory": [
+            "outpost-blue-mushroom-folder"
+          ],
+          "pose": {
+            "x": 1.5,
+            "z": -0.9506399999999999,
+            "yaw": 0,
+            "pitch": 0
+          }
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "method": "Isolated save fixtures and actual mouse/keyboard input. Transparent Web Audio start/stop/ended observation verifies nonzero PCM and playback lifecycle, not subjective speaker listening. No writes to user saves or test teleport hooks.",
+  "passed": true,
+  "finishedAt": "2026-11-12T17:14:06.603Z"
+}

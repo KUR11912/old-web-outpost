@@ -1,0 +1,98 @@
+{
+  "url": "http://127.0.0.1:5173/",
+  "startedAt": "2026-11-12T18:09:03.091Z",
+  "checks": [
+    {
+      "name": "新存档未拾取时背包为空；实际走近悬浮文件夹后只增加收藏，不解锁资料",
+      "details": true
+    },
+    {
+      "name": "未查询背包列表和详情只显示名字/IMG ARCHIVE占位/查询引导，无真实图片、正文、折叠资料或检索捷径",
+      "details": true
+    },
+    {
+      "name": "真实步行到旧终端并E交互，首先打开空检索页，不默认列出名字或自动解锁",
+      "details": true
+    },
+    {
+      "name": "空输入、错误名称与未拾取条目分别反馈，严格匹配且不发放物品",
+      "details": true
+    },
+    {
+      "name": "搜索框输入WASDBME只输入文字，不移动、转头、打开背包/地图或触发调查",
+      "details": true
+    },
+    {
+      "name": "中文输入法合成期间Enter和229候选确认均不误提交",
+      "details": true
+    },
+    {
+      "name": "全角首尾空格和显式别名+回车查询成功，显示正确真实图/含义/语境/来源，立即单条保存且收藏数量与拾取奖励不变",
+      "details": true
+    },
+    {
+      "name": "搜索按钮与回车均可提交；重复查询直接打开详情，不增加计数、奖励或重复更新反馈",
+      "details": true
+    },
+    {
+      "name": "查询后背包同步更新图片和完整资料，离开检索也能查看，但背包无远程检索入口",
+      "details": true
+    },
+    {
+      "name": "关闭详情后无持续移动，恢复控制可正常行走；刷新保留收藏/单条查询/位置并可直接查看完整资料",
+      "details": true
+    },
+    {
+      "name": "四条资料不足的梗均明确暂缺且独立保持未查询，GG/MM大小写与全半角匹配到正确条目",
+      "details": true
+    },
+    {
+      "name": "查询蓝瘦后其余四梗仍锁定，五项收藏计数不变，不把占位资料冒充已解锁档案",
+      "details": true
+    },
+    {
+      "name": "旧v1自动发图卡和collection卡仅作为收集证据迁移；所有旧收藏/邮箱进度保留且资料仍锁定",
+      "details": true
+    },
+    {
+      "name": "旧存档明确手动记录的读音便笺保留为蓝瘦已查询，旧资料进度未被清空",
+      "details": true
+    },
+    {
+      "name": "新式显式空查询记录为准，旧clues不会在每次读档时再次隐式解锁",
+      "details": true
+    },
+    {
+      "name": "浏览器无运行错误，所有验收使用隔离存档，未更改用户进度",
+      "details": true
+    }
+  ],
+  "routes": [
+    {
+      "name": "拾取文件夹后从驿站步行至回声档案馆旧终端",
+      "seconds": 20.43,
+      "start": {
+        "x": 1.5,
+        "z": -0.9599999999999987,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "end": {
+        "x": 16.611600000000145,
+        "z": -33.80159999999999,
+        "yaw": 0,
+        "pitch": 0
+      }
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "meme-unqueried-bag.png",
+    "meme-terminal-search.png",
+    "meme-query-detail.png",
+    "meme-queried-bag.png"
+  ],
+  "method": "Isolated browser storage. Main flow physically collects a folder, walks from the outpost to the archive terminal, and presses E. Other cases use explicitly labeled old-save fixtures near the terminal. Real keyboard/mouse input except IME composition event simulation. No writes to user browser state or production debug controls.",
+  "passed": true,
+  "finishedAt": "2026-11-12T18:09:34.158Z"
+}

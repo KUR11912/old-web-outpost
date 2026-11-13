@@ -15,6 +15,9 @@ test('a pre-archive v1 save retains its original card, investigation and east-ba
   const migrated = loadSave(store);
   assert.deepEqual(migrated.pose, previous.pose);
   assert.deepEqual(migrated.clues, [CLUE_ID]);
+  assert.deepEqual(migrated.memes, []);
+  assert.deepEqual(migrated.collectedPickups, []);
+  assert.deepEqual(migrated.queriedMemes, []);
   assert.equal(migrated.investigated, true);
   assert.equal(migrated.updatedAt, 1234);
   assert.deepEqual(migrated.archive, { answers: { meaning: null, context: null }, completed: false });
@@ -28,7 +31,7 @@ test('normalization allows only the four cards and legal per-question answers', 
   assert.deepEqual(state.clues, [CLUE_ID, 'echo-chat-context']);
   assert.deepEqual(state.archive.answers, { meaning: null, context: 'serious-help' });
   assert.equal(state.archive.completed, false);
-  assert.equal(state.investigated, true);
+  assert.equal(state.investigated, false, 'New world pickups do not imply that the mailbox letter was read');
 });
 
 test('wrong attempts survive refresh and can be replaced by a successful retry', () => {

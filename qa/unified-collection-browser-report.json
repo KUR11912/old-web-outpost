@@ -1,0 +1,167 @@
+{
+  "url": "http://127.0.0.1:5181/",
+  "startedAt": "2026-11-12T09:53:44.672Z",
+  "checks": [
+    {
+      "name": "存档、拾取绑定/动画、任务资料、地图/山体/世界与样式源码保持原样",
+      "details": [
+        {
+          "file": "save.ts",
+          "unchanged": true,
+          "sha256": "7905792E5F835F1D5FCE24DD46366169FD6347857CD08EE7B69F9A33E04D54ED"
+        },
+        {
+          "file": "pickups.ts",
+          "unchanged": true,
+          "sha256": "D18F34D7AECEB36892296268572B039B53FA208DB24A24A91DB35C7F2609582B"
+        },
+        {
+          "file": "archive-data.ts",
+          "unchanged": true,
+          "sha256": "16E2580877912A1A1C4074A860C2CC1EE9BEFF128AA4F0310633699BECA44169"
+        },
+        {
+          "file": "player.ts",
+          "unchanged": true,
+          "sha256": "0EFE927C6C693C2EF4E032E4B22C9D3E6DFC40A9BF5ED2F4B30F5FE8BF7D9E9A"
+        },
+        {
+          "file": "map-config.ts",
+          "unchanged": true,
+          "sha256": "7FA41D14D289AE4AA909882858B325A1306FC0EA835D3220AB2CE13C24B50F37"
+        },
+        {
+          "file": "world.ts",
+          "unchanged": true,
+          "sha256": "BD3637A1C5827A5998F68C95F587BC0017FAA8A19EDBD600FFF71FC6DD79C087"
+        },
+        {
+          "file": "map-environment.ts",
+          "unchanged": true,
+          "sha256": "9D1E2B950DDCBEFA6B04F9C653B0AB59EDE4B26FAEEA95AFE528B5950CC4F398"
+        },
+        {
+          "file": "mountain-faults.ts",
+          "unchanged": true,
+          "sha256": "2EBE11A160E13A10179F682F2C398AD83A2B2F155FB1D8CF42A830B1C439EDD8"
+        },
+        {
+          "file": "style.css",
+          "unchanged": true,
+          "sha256": "FCF9D5ED78CABD7D338525732C55595C20F6D6D7027A8106DA5936C13E34BD3F"
+        }
+      ]
+    },
+    {
+      "name": "空背包仅展示探索收藏空态，计数0，无旧线索占位列表",
+      "details": true
+    },
+    {
+      "name": "用户示例的蓝瘦/你是GG还是MM/厉害了我的哥统一三条探索收藏；蓝瘦仅一条，详情与返回正常",
+      "details": [
+        {
+          "id": "outpost-blue-mushroom-folder",
+          "title": "蓝瘦香菇图片",
+          "image": "/assets/blue-mushroom-meme.png",
+          "complete": true,
+          "width": 594
+        },
+        {
+          "id": "field-folder-02",
+          "title": "你是GG还是MM",
+          "image": "/assets/folder-icon.svg",
+          "complete": true,
+          "width": 64
+        },
+        {
+          "id": "field-folder-03",
+          "title": "厉害了我的哥",
+          "image": "/assets/folder-icon.svg",
+          "complete": true,
+          "width": 64
+        }
+      ]
+    },
+    {
+      "name": "五个收藏统一显示且只计5件，已收集的调查资料不重复进入背包；原已完成任务刷新不变",
+      "details": true
+    },
+    {
+      "name": "仅持有旧蓝瘦线索卡的存档自动显示一个探索收藏，刷新仍保有且原文件夹不重生",
+      "details": true
+    },
+    {
+      "name": "真实靠近蓝瘦文件夹自动拾取、原提示/唯一记录/消失正常，立即进入统一探索收藏",
+      "details": true
+    }
+  ],
+  "routes": [
+    {
+      "name": "从合法近处存档点真实WASD靠近原蓝瘦文件夹",
+      "seconds": 0.58,
+      "start": {
+        "x": 1.5,
+        "z": 0,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "end": {
+        "x": 1.5,
+        "z": -1.2811199999999987,
+        "yaw": 0,
+        "pitch": 0
+      }
+    }
+  ],
+  "errors": [],
+  "protectedSources": [
+    {
+      "file": "save.ts",
+      "unchanged": true,
+      "sha256": "7905792E5F835F1D5FCE24DD46366169FD6347857CD08EE7B69F9A33E04D54ED"
+    },
+    {
+      "file": "pickups.ts",
+      "unchanged": true,
+      "sha256": "D18F34D7AECEB36892296268572B039B53FA208DB24A24A91DB35C7F2609582B"
+    },
+    {
+      "file": "archive-data.ts",
+      "unchanged": true,
+      "sha256": "16E2580877912A1A1C4074A860C2CC1EE9BEFF128AA4F0310633699BECA44169"
+    },
+    {
+      "file": "player.ts",
+      "unchanged": true,
+      "sha256": "0EFE927C6C693C2EF4E032E4B22C9D3E6DFC40A9BF5ED2F4B30F5FE8BF7D9E9A"
+    },
+    {
+      "file": "map-config.ts",
+      "unchanged": true,
+      "sha256": "7FA41D14D289AE4AA909882858B325A1306FC0EA835D3220AB2CE13C24B50F37"
+    },
+    {
+      "file": "world.ts",
+      "unchanged": true,
+      "sha256": "BD3637A1C5827A5998F68C95F587BC0017FAA8A19EDBD600FFF71FC6DD79C087"
+    },
+    {
+      "file": "map-environment.ts",
+      "unchanged": true,
+      "sha256": "9D1E2B950DDCBEFA6B04F9C653B0AB59EDE4B26FAEEA95AFE528B5950CC4F398"
+    },
+    {
+      "file": "mountain-faults.ts",
+      "unchanged": true,
+      "sha256": "2EBE11A160E13A10179F682F2C398AD83A2B2F155FB1D8CF42A830B1C439EDD8"
+    },
+    {
+      "file": "style.css",
+      "unchanged": true,
+      "sha256": "FCF9D5ED78CABD7D338525732C55595C20F6D6D7027A8106DA5936C13E34BD3F"
+    }
+  ],
+  "registryUnchanged": true,
+  "passed": true,
+  "finishedAt": "2026-11-12T09:53:54.149Z"
+}

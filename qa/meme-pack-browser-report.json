@@ -1,0 +1,311 @@
+{
+  "url": "http://127.0.0.1:5173/",
+  "startedAt": "2026-11-12T19:12:59.425Z",
+  "checks": [
+    {
+      "name": "实际拾取 友谊的小船 后，背包仅名称与统一占位图，正文/时期/来源/图片全锁定",
+      "details": true
+    },
+    {
+      "name": "实际拾取 你是GG还是MM 后，背包仅名称与统一占位图，正文/时期/来源/图片全锁定",
+      "details": true
+    },
+    {
+      "name": "实际拾取 厉害了我的哥 后，背包仅名称与统一占位图，正文/时期/来源/图片全锁定",
+      "details": true
+    },
+    {
+      "name": "实际拾取 你是魔鬼还是秀儿 后，背包仅名称与统一占位图，正文/时期/来源/图片全锁定",
+      "details": true
+    },
+    {
+      "name": "步行到旧终端才打开检索；快捷键输入不影响角色、IME候选确认不误提交；空/错误/未拾取搜索均无奖励",
+      "details": true
+    },
+    {
+      "name": "友谊的小船 独立查询正确完整档案、本地原比例图片和署名，放大可返回；背包同步且重复搜索不重复奖励",
+      "details": [
+        {
+          "path": "assets/memes/friendship-boat.jpg",
+          "width": 226.546875,
+          "height": 320,
+          "naturalWidth": 400,
+          "naturalHeight": 565,
+          "objectFit": "contain"
+        }
+      ]
+    },
+    {
+      "name": "你是GG还是MM 独立查询正确完整档案、本地原比例图片和署名，放大可返回；背包同步且重复搜索不重复奖励",
+      "details": [
+        {
+          "path": "assets/memes/gg-mm-qq-context.jpg",
+          "width": 391.78125,
+          "height": 320,
+          "naturalWidth": 584,
+          "naturalHeight": 477,
+          "objectFit": "contain"
+        }
+      ]
+    },
+    {
+      "name": "厉害了我的哥 独立查询正确完整档案、本地原比例图片和署名，放大可返回；背包同步且重复搜索不重复奖励",
+      "details": [
+        {
+          "path": "assets/memes/lihai-le-wode-ge.jpg",
+          "width": 435.984375,
+          "height": 245.125,
+          "naturalWidth": 900,
+          "naturalHeight": 506,
+          "objectFit": "contain"
+        }
+      ]
+    },
+    {
+      "name": "你是魔鬼还是秀儿 独立查询正确完整档案、本地原比例图片和署名，放大可返回；背包同步且重复搜索不重复奖励",
+      "details": [
+        {
+          "path": "assets/memes/mogui-related.jpg",
+          "width": 435.984375,
+          "height": 239.796875,
+          "naturalWidth": 500,
+          "naturalHeight": 275,
+          "objectFit": "contain"
+        },
+        {
+          "path": "assets/memes/xiuer-related.png",
+          "width": 288,
+          "height": 320,
+          "naturalWidth": 387,
+          "naturalHeight": 430,
+          "objectFit": "contain"
+        }
+      ]
+    },
+    {
+      "name": "刷新和新浏览器上下文重新读档，四条查询进度与收藏保持一致，背包直接可读",
+      "details": true
+    },
+    {
+      "name": "旧版本只拾取的五条收藏原样迁移；新补资料不自动解锁，已有厉害了我的哥可直接查询补全",
+      "details": true
+    },
+    {
+      "name": "蓝瘦香菇已有图与四段档案正常，旧手动查询进度保留，其余四梗仍独立锁定",
+      "details": true
+    },
+    {
+      "name": "浏览器运行错误为0，资源加载有效；全部使用隔离存档",
+      "details": true
+    }
+  ],
+  "routes": [
+    {
+      "name": "实际靠近拾取 友谊的小船",
+      "seconds": 0.59,
+      "start": {
+        "x": 20.4,
+        "z": -44.3,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "end": {
+        "x": 20.4,
+        "z": -45.59984000000001,
+        "yaw": 0,
+        "pitch": 0
+      }
+    },
+    {
+      "name": "友谊的小船 原路返回石板路",
+      "seconds": 10.44,
+      "start": {
+        "x": 20.4,
+        "z": -45.59984000000001,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "end": {
+        "x": 13.35984000000009,
+        "z": -29.94895999999862,
+        "yaw": 0,
+        "pitch": 0
+      }
+    },
+    {
+      "name": "沿道路前往 你是GG还是MM",
+      "seconds": 9.89,
+      "start": {
+        "x": 13.35984000000009,
+        "z": -29.94895999999862,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "end": {
+        "x": 24.620399999999854,
+        "z": -18.367999999998574,
+        "yaw": 0,
+        "pitch": 0
+      }
+    },
+    {
+      "name": "实际靠近拾取 你是GG还是MM",
+      "seconds": 0.61,
+      "start": {
+        "x": 24.620399999999854,
+        "z": -18.367999999998574,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "end": {
+        "x": 24.460799999999857,
+        "z": -19.57831999999856,
+        "yaw": 0,
+        "pitch": 0
+      }
+    },
+    {
+      "name": "你是GG还是MM 原路返回石板路",
+      "seconds": 6.18,
+      "start": {
+        "x": 24.460799999999857,
+        "z": -19.57831999999856,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "end": {
+        "x": 13.470239999999906,
+        "z": -20.07823999999842,
+        "yaw": 0,
+        "pitch": 0
+      }
+    },
+    {
+      "name": "沿道路前往 厉害了我的哥",
+      "seconds": 17.29,
+      "start": {
+        "x": 13.470239999999906,
+        "z": -20.07823999999842,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "end": {
+        "x": 26.64023999999934,
+        "z": 7.412800000001822,
+        "yaw": 0,
+        "pitch": 0
+      }
+    },
+    {
+      "name": "实际靠近拾取 厉害了我的哥",
+      "seconds": 0.48,
+      "start": {
+        "x": 26.64023999999934,
+        "z": 7.412800000001822,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "end": {
+        "x": 26.64023999999934,
+        "z": 8.472880000001842,
+        "yaw": 0,
+        "pitch": 0
+      }
+    },
+    {
+      "name": "厉害了我的哥 原路返回石板路",
+      "seconds": 6.99,
+      "start": {
+        "x": 26.64023999999934,
+        "z": 8.472880000001842,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "end": {
+        "x": 26.64023999999934,
+        "z": -8.107279999998065,
+        "yaw": 0,
+        "pitch": 0
+      }
+    },
+    {
+      "name": "沿道路前往 你是魔鬼还是秀儿",
+      "seconds": 18.39,
+      "start": {
+        "x": 26.64023999999934,
+        "z": -8.107279999998065,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "end": {
+        "x": 59.96063999999977,
+        "z": 1.3729600000019655,
+        "yaw": 0,
+        "pitch": 0
+      }
+    },
+    {
+      "name": "实际靠近拾取 你是魔鬼还是秀儿",
+      "seconds": 0.53,
+      "start": {
+        "x": 59.96063999999977,
+        "z": 1.3729600000019655,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "end": {
+        "x": 59.96063999999977,
+        "z": 2.5631200000019536,
+        "yaw": 0,
+        "pitch": 0
+      }
+    },
+    {
+      "name": "你是魔鬼还是秀儿 原路返回石板路",
+      "seconds": 8.87,
+      "start": {
+        "x": 59.96063999999977,
+        "z": 2.5631200000019536,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "end": {
+        "x": 49.8904799999998,
+        "z": -7.996399999998059,
+        "yaw": 0,
+        "pitch": 0
+      }
+    },
+    {
+      "name": "从东岸经石桥返回旧终端",
+      "seconds": 27.49,
+      "start": {
+        "x": 49.8904799999998,
+        "z": -7.996399999998059,
+        "yaw": 0,
+        "pitch": 0
+      },
+      "end": {
+        "x": 16.669200000000828,
+        "z": -33.746959999997436,
+        "yaw": 0,
+        "pitch": 0
+      }
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "meme-pack-unqueried-bag.png",
+    "meme-pack-terminal-search.png",
+    "meme-pack-detail-friendship-boat.png",
+    "meme-pack-comic-zoom.png",
+    "meme-pack-queried-bag.png",
+    "meme-pack-detail-gg-or-mm.png",
+    "meme-pack-detail-awesome-my-bro.png",
+    "meme-pack-detail-devil-or-showoff.png",
+    "meme-pack-related-gallery.png"
+  ],
+  "method": "Isolated browser contexts; main run starts from an empty saved pose near the first folder, physically collects all four with WASD, walks to the terminal and presses E. Other cases are labeled legacy-save fixtures. No user browser storage or production debug state is written.",
+  "passed": true,
+  "finishedAt": "2026-11-12T19:14:59.432Z"
+}

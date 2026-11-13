@@ -1,0 +1,536 @@
+{
+  "url": "http://127.0.0.1:5180/",
+  "photos": [
+    {
+      "name": "sky-exploration",
+      "pose": {
+        "x": 0,
+        "z": 9,
+        "yaw": 0,
+        "pitch": 0.08000002441406251
+      },
+      "method": "actual mouse drag from clean spawn",
+      "sky": {
+        "revision": 1,
+        "bounds": {
+          "minX": -44,
+          "maxX": 96,
+          "minZ": -86,
+          "maxZ": 44
+        },
+        "bottomY": -6,
+        "topY": 36,
+        "dimensions": {
+          "width": 140,
+          "depth": 130,
+          "height": 42
+        },
+        "cameraFar": 260,
+        "texture": {
+          "url": "/assets/cloud-sky.png",
+          "width": 1254,
+          "height": 1254,
+          "sourceSha256": "dd93b323de256ae2b40b0afc1e89fb9f91a957269505360b30d1bf4716472a85",
+          "tileMetres": 45,
+          "colourSpace": "srgb",
+          "wrapping": "MirroredRepeatWrapping",
+          "minFilter": "NearestFilter",
+          "magFilter": "NearestFilter",
+          "mipmaps": false
+        },
+        "faces": [
+          {
+            "name": "north",
+            "size": [
+              140,
+              42
+            ],
+            "position": [
+              26,
+              15,
+              -86
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "inwardNormal": [
+              0,
+              0,
+              1
+            ],
+            "uv": {
+              "repeat": [
+                3.111111111111111,
+                0.9333333333333333
+              ],
+              "offset": [
+                0,
+                0
+              ],
+              "rotation": 0,
+              "tint": "#f4f2ff",
+              "intensity": 0.96
+            },
+            "material": {
+              "type": "MeshBasicMaterial",
+              "fog": false,
+              "toneMapped": false,
+              "side": "FrontSide",
+              "castShadow": false,
+              "receiveShadow": false
+            }
+          },
+          {
+            "name": "east",
+            "size": [
+              130,
+              42
+            ],
+            "position": [
+              96,
+              15,
+              -21
+            ],
+            "rotation": [
+              0,
+              -1.5707963267948966,
+              0
+            ],
+            "inwardNormal": [
+              -1,
+              0,
+              0
+            ],
+            "uv": {
+              "repeat": [
+                2.888888888888889,
+                0.9333333333333333
+              ],
+              "offset": [
+                3.111111111111111,
+                0
+              ],
+              "rotation": 0,
+              "tint": "#f7f5ff",
+              "intensity": 0.99
+            },
+            "material": {
+              "type": "MeshBasicMaterial",
+              "fog": false,
+              "toneMapped": false,
+              "side": "FrontSide",
+              "castShadow": false,
+              "receiveShadow": false
+            }
+          },
+          {
+            "name": "south",
+            "size": [
+              140,
+              42
+            ],
+            "position": [
+              26,
+              15,
+              44
+            ],
+            "rotation": [
+              0,
+              3.141592653589793,
+              0
+            ],
+            "inwardNormal": [
+              0,
+              0,
+              -1
+            ],
+            "uv": {
+              "repeat": [
+                3.111111111111111,
+                0.9333333333333333
+              ],
+              "offset": [
+                6,
+                0
+              ],
+              "rotation": 0,
+              "tint": "#f2efff",
+              "intensity": 0.94
+            },
+            "material": {
+              "type": "MeshBasicMaterial",
+              "fog": false,
+              "toneMapped": false,
+              "side": "FrontSide",
+              "castShadow": false,
+              "receiveShadow": false
+            }
+          },
+          {
+            "name": "west",
+            "size": [
+              130,
+              42
+            ],
+            "position": [
+              -44,
+              15,
+              -21
+            ],
+            "rotation": [
+              0,
+              1.5707963267948966,
+              0
+            ],
+            "inwardNormal": [
+              1,
+              0,
+              0
+            ],
+            "uv": {
+              "repeat": [
+                2.888888888888889,
+                0.9333333333333333
+              ],
+              "offset": [
+                9.11111111111111,
+                0
+              ],
+              "rotation": 0,
+              "tint": "#f1f3ff",
+              "intensity": 0.95
+            },
+            "material": {
+              "type": "MeshBasicMaterial",
+              "fog": false,
+              "toneMapped": false,
+              "side": "FrontSide",
+              "castShadow": false,
+              "receiveShadow": false
+            }
+          },
+          {
+            "name": "top",
+            "size": [
+              140,
+              130
+            ],
+            "position": [
+              26,
+              36,
+              -21
+            ],
+            "rotation": [
+              1.5707963267948966,
+              0,
+              0
+            ],
+            "inwardNormal": [
+              0,
+              -1,
+              0
+            ],
+            "uv": {
+              "repeat": [
+                3.111111111111111,
+                2.888888888888889
+              ],
+              "offset": [
+                0,
+                0
+              ],
+              "rotation": 0,
+              "tint": "#ffffff",
+              "intensity": 1.03
+            },
+            "material": {
+              "type": "MeshBasicMaterial",
+              "fog": false,
+              "toneMapped": false,
+              "side": "FrontSide",
+              "castShadow": false,
+              "receiveShadow": false
+            }
+          }
+        ],
+        "followsCamera": false,
+        "colliders": 0,
+        "visible": true,
+        "position": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "sky-looking-up",
+      "pose": {
+        "x": 0,
+        "z": 9,
+        "yaw": 0.4337420043945313,
+        "pitch": 0.5500000671386719
+      },
+      "method": "actual mouse drag from clean spawn",
+      "sky": {
+        "revision": 1,
+        "bounds": {
+          "minX": -44,
+          "maxX": 96,
+          "minZ": -86,
+          "maxZ": 44
+        },
+        "bottomY": -6,
+        "topY": 36,
+        "dimensions": {
+          "width": 140,
+          "depth": 130,
+          "height": 42
+        },
+        "cameraFar": 260,
+        "texture": {
+          "url": "/assets/cloud-sky.png",
+          "width": 1254,
+          "height": 1254,
+          "sourceSha256": "dd93b323de256ae2b40b0afc1e89fb9f91a957269505360b30d1bf4716472a85",
+          "tileMetres": 45,
+          "colourSpace": "srgb",
+          "wrapping": "MirroredRepeatWrapping",
+          "minFilter": "NearestFilter",
+          "magFilter": "NearestFilter",
+          "mipmaps": false
+        },
+        "faces": [
+          {
+            "name": "north",
+            "size": [
+              140,
+              42
+            ],
+            "position": [
+              26,
+              15,
+              -86
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "inwardNormal": [
+              0,
+              0,
+              1
+            ],
+            "uv": {
+              "repeat": [
+                3.111111111111111,
+                0.9333333333333333
+              ],
+              "offset": [
+                0,
+                0
+              ],
+              "rotation": 0,
+              "tint": "#f4f2ff",
+              "intensity": 0.96
+            },
+            "material": {
+              "type": "MeshBasicMaterial",
+              "fog": false,
+              "toneMapped": false,
+              "side": "FrontSide",
+              "castShadow": false,
+              "receiveShadow": false
+            }
+          },
+          {
+            "name": "east",
+            "size": [
+              130,
+              42
+            ],
+            "position": [
+              96,
+              15,
+              -21
+            ],
+            "rotation": [
+              0,
+              -1.5707963267948966,
+              0
+            ],
+            "inwardNormal": [
+              -1,
+              0,
+              0
+            ],
+            "uv": {
+              "repeat": [
+                2.888888888888889,
+                0.9333333333333333
+              ],
+              "offset": [
+                3.111111111111111,
+                0
+              ],
+              "rotation": 0,
+              "tint": "#f7f5ff",
+              "intensity": 0.99
+            },
+            "material": {
+              "type": "MeshBasicMaterial",
+              "fog": false,
+              "toneMapped": false,
+              "side": "FrontSide",
+              "castShadow": false,
+              "receiveShadow": false
+            }
+          },
+          {
+            "name": "south",
+            "size": [
+              140,
+              42
+            ],
+            "position": [
+              26,
+              15,
+              44
+            ],
+            "rotation": [
+              0,
+              3.141592653589793,
+              0
+            ],
+            "inwardNormal": [
+              0,
+              0,
+              -1
+            ],
+            "uv": {
+              "repeat": [
+                3.111111111111111,
+                0.9333333333333333
+              ],
+              "offset": [
+                6,
+                0
+              ],
+              "rotation": 0,
+              "tint": "#f2efff",
+              "intensity": 0.94
+            },
+            "material": {
+              "type": "MeshBasicMaterial",
+              "fog": false,
+              "toneMapped": false,
+              "side": "FrontSide",
+              "castShadow": false,
+              "receiveShadow": false
+            }
+          },
+          {
+            "name": "west",
+            "size": [
+              130,
+              42
+            ],
+            "position": [
+              -44,
+              15,
+              -21
+            ],
+            "rotation": [
+              0,
+              1.5707963267948966,
+              0
+            ],
+            "inwardNormal": [
+              1,
+              0,
+              0
+            ],
+            "uv": {
+              "repeat": [
+                2.888888888888889,
+                0.9333333333333333
+              ],
+              "offset": [
+                9.11111111111111,
+                0
+              ],
+              "rotation": 0,
+              "tint": "#f1f3ff",
+              "intensity": 0.95
+            },
+            "material": {
+              "type": "MeshBasicMaterial",
+              "fog": false,
+              "toneMapped": false,
+              "side": "FrontSide",
+              "castShadow": false,
+              "receiveShadow": false
+            }
+          },
+          {
+            "name": "top",
+            "size": [
+              140,
+              130
+            ],
+            "position": [
+              26,
+              36,
+              -21
+            ],
+            "rotation": [
+              1.5707963267948966,
+              0,
+              0
+            ],
+            "inwardNormal": [
+              0,
+              -1,
+              0
+            ],
+            "uv": {
+              "repeat": [
+                3.111111111111111,
+                2.888888888888889
+              ],
+              "offset": [
+                0,
+                0
+              ],
+              "rotation": 0,
+              "tint": "#ffffff",
+              "intensity": 1.03
+            },
+            "material": {
+              "type": "MeshBasicMaterial",
+              "fog": false,
+              "toneMapped": false,
+              "side": "FrontSide",
+              "castShadow": false,
+              "receiveShadow": false
+            }
+          }
+        ],
+        "followsCamera": false,
+        "colliders": 0,
+        "visible": true,
+        "position": [
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "routes": [],
+  "passed": true
+}

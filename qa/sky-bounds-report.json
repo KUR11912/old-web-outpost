@@ -1,0 +1,182 @@
+{
+  "checkedAt": "2026-11-12T05:18:21.204Z",
+  "enclosure": {
+    "minX": -44,
+    "maxX": 96,
+    "minZ": -86,
+    "maxZ": 44,
+    "bottom": -6,
+    "top": 36
+  },
+  "mapBounds": {
+    "minX": -16,
+    "maxX": 68,
+    "minZ": -58,
+    "maxZ": 16
+  },
+  "method": "Original makeExpandedTerrain with Canvas drawing stub, all actual ConeGeometry instance vertices; all GLB POSITION vertices with node/world transforms",
+  "mountains": {
+    "instances": 32,
+    "bounds": {
+      "min": [
+        -36.445085,
+        -0.4,
+        -77.238832
+      ],
+      "max": [
+        87.6156,
+        13.888204,
+        36.531735
+      ]
+    },
+    "clearance": {
+      "west": 7.554915,
+      "east": 8.3844,
+      "north": 8.761168,
+      "south": 7.468265,
+      "bottom": 5.6,
+      "top": 22.111796
+    }
+  },
+  "buildings": {
+    "outpost": {
+      "bounds": {
+        "min": [
+          -3.075,
+          0,
+          -10.18
+        ],
+        "max": [
+          3.03,
+          5.18,
+          -4.73
+        ]
+      },
+      "vertices": 1040,
+      "clearance": {
+        "west": 40.925,
+        "east": 92.97,
+        "north": 75.82,
+        "south": 48.73,
+        "bottom": 6,
+        "top": 30.82
+      }
+    },
+    "archive": {
+      "bounds": {
+        "min": [
+          16.93,
+          0,
+          -43.128
+        ],
+        "max": [
+          22.5925,
+          7.28,
+          -36
+        ]
+      },
+      "vertices": 1368,
+      "clearance": {
+        "west": 60.93,
+        "east": 73.4075,
+        "north": 42.872,
+        "south": 80,
+        "bottom": 6,
+        "top": 28.72
+      }
+    },
+    "lighthouse": {
+      "bounds": {
+        "min": [
+          55.08,
+          0,
+          -42.92
+        ],
+        "max": [
+          58.92,
+          14.3,
+          -37.51
+        ]
+      },
+      "vertices": 3094,
+      "clearance": {
+        "west": 99.08,
+        "east": 37.08,
+        "north": 43.08,
+        "south": 81.51,
+        "bottom": 6,
+        "top": 21.7
+      }
+    }
+  },
+  "perspectiveCamera": {
+    "eyeY": 1.65,
+    "far": 260,
+    "farthest": {
+      "distance": 155.331653,
+      "player": [
+        -16,
+        1.65,
+        -58
+      ],
+      "skyCorner": [
+        96,
+        36,
+        44
+      ]
+    },
+    "farMargin": 104.668347,
+    "conservative": "Uses full playable rectangle including inaccessible exact boundary corners"
+  },
+  "actualModuleRayChecks": {
+    "coveredRays": 34560,
+    "origins": 6,
+    "hitFaces": [
+      "CloudSky_east",
+      "CloudSky_north",
+      "CloudSky_south",
+      "CloudSky_top",
+      "CloudSky_west"
+    ],
+    "degenerateEdgeRays": [
+      {
+        "origin": [
+          -16,
+          1.65,
+          -58
+        ],
+        "yaw": 5.497787143782138,
+        "elevation": 0.5,
+        "adjacentAngularOffset": 1e-8
+      },
+      {
+        "origin": [
+          68,
+          1.65,
+          16
+        ],
+        "yaw": 2.356194490192345,
+        "elevation": 0.001,
+        "adjacentAngularOffset": 1e-8
+      },
+      {
+        "origin": [
+          68,
+          1.65,
+          16
+        ],
+        "yaw": 2.356194490192345,
+        "elevation": 0.5,
+        "adjacentAngularOffset": 1e-8
+      }
+    ],
+    "overviewDownwardRayUnobstructed": true,
+    "imageLoaderOnlyStubbed": true
+  },
+  "notes": [
+    "Existing below-grade horizon plane is intentionally wider than enclosure; it is excluded from mountain/building containment.",
+    "Overview camera at Y=110 is above the top; inward-facing surfaces must use front-face culling, or the top must be hidden in overview.",
+    "Sky material should be unlit, fog=false; preserve existing scene fog and lights."
+  ],
+  "passed": true
+}

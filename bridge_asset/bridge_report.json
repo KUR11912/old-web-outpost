@@ -1,0 +1,1137 @@
+{
+  "asset": "ArcadeBridge_01",
+  "blender_version": "5.2.3 LTS",
+  "blender_executable": "E:\\BLEND\\blender.exe",
+  "parameters": {
+    "seed": 63112042,
+    "units": "metres",
+    "origin": "bottom centre",
+    "length": 10.0,
+    "width": 3.8,
+    "deck_thickness": 0.2,
+    "transverse_arch_x": [
+      -4.2,
+      -1.4,
+      1.4,
+      4.2
+    ],
+    "column_row_z": [
+      -1.55,
+      1.55
+    ],
+    "base_width": 0.56,
+    "shaft_radius": 0.19,
+    "shaft_sides": 8,
+    "spring_height_above_deck": 2.35,
+    "arch_centre_rise": 2.13,
+    "transverse_arch_radial_thickness": 0.22,
+    "transverse_arch_depth": 0.25,
+    "longitudinal_arch_radial_thickness": 0.18,
+    "longitudinal_arch_depth": 0.2,
+    "segments_per_arch_half": 5,
+    "curb_z": [
+      -1.835,
+      1.835
+    ],
+    "curb_width": 0.13,
+    "curb_height_above_deck": 0.16,
+    "texture_size": 256,
+    "checker_tile_metres": 0.5,
+    "roughness": 0.9,
+    "world_placement_gltf": [
+      39,
+      -0.18,
+      -8
+    ],
+    "world_deck_top": 0.02,
+    "render_samples": 24
+  },
+  "export": {
+    "triangles": 1868,
+    "meshes": 49,
+    "mesh_names": [
+      "Bridge_Deck_Watertight",
+      "Bridge_Low_Stone_Edge_-1.835",
+      "Bridge_Low_Stone_Edge_+1.835",
+      "Bridge_Column_1_1_Square_Base",
+      "Bridge_Column_1_1_Octagonal_Foot",
+      "Bridge_Column_1_1_Octagonal_Shaft",
+      "Bridge_Column_1_1_Capital_Neck",
+      "Bridge_Column_1_1_Square_Capital",
+      "Bridge_Column_1_2_Square_Base",
+      "Bridge_Column_1_2_Octagonal_Foot",
+      "Bridge_Column_1_2_Octagonal_Shaft",
+      "Bridge_Column_1_2_Capital_Neck",
+      "Bridge_Column_1_2_Square_Capital",
+      "Bridge_Column_2_1_Square_Base",
+      "Bridge_Column_2_1_Octagonal_Foot",
+      "Bridge_Column_2_1_Octagonal_Shaft",
+      "Bridge_Column_2_1_Capital_Neck",
+      "Bridge_Column_2_1_Square_Capital",
+      "Bridge_Column_2_2_Square_Base",
+      "Bridge_Column_2_2_Octagonal_Foot",
+      "Bridge_Column_2_2_Octagonal_Shaft",
+      "Bridge_Column_2_2_Capital_Neck",
+      "Bridge_Column_2_2_Square_Capital",
+      "Bridge_Column_3_1_Square_Base",
+      "Bridge_Column_3_1_Octagonal_Foot",
+      "Bridge_Column_3_1_Octagonal_Shaft",
+      "Bridge_Column_3_1_Capital_Neck",
+      "Bridge_Column_3_1_Square_Capital",
+      "Bridge_Column_3_2_Square_Base",
+      "Bridge_Column_3_2_Octagonal_Foot",
+      "Bridge_Column_3_2_Octagonal_Shaft",
+      "Bridge_Column_3_2_Capital_Neck",
+      "Bridge_Column_3_2_Square_Capital",
+      "Bridge_Column_4_1_Square_Base",
+      "Bridge_Column_4_1_Octagonal_Foot",
+      "Bridge_Column_4_1_Octagonal_Shaft",
+      "Bridge_Column_4_1_Capital_Neck",
+      "Bridge_Column_4_1_Square_Capital",
+      "Bridge_Column_4_2_Square_Base",
+      "Bridge_Column_4_2_Octagonal_Foot",
+      "Bridge_Column_4_2_Octagonal_Shaft",
+      "Bridge_Column_4_2_Capital_Neck",
+      "Bridge_Column_4_2_Square_Capital",
+      "Bridge_Transverse_Point_Arch_1",
+      "Bridge_Transverse_Point_Arch_2",
+      "Bridge_Transverse_Point_Arch_3",
+      "Bridge_Transverse_Point_Arch_4",
+      "Bridge_Side_Point_Arcade_1",
+      "Bridge_Side_Point_Arcade_2"
+    ],
+    "bounds_gltf": {
+      "min": [
+        -5.0,
+        0.0,
+        -1.899999976158142
+      ],
+      "max": [
+        5.0,
+        4.801492214202881,
+        1.899999976158142
+      ]
+    },
+    "dimensions_gltf": [
+      10.0,
+      4.801492214202881,
+      3.799999952316284
+    ]
+  },
+  "reimport": {
+    "triangles": 1868,
+    "meshes": 49,
+    "mesh_names": [
+      "Bridge_Column_1_1_Capital_Neck",
+      "Bridge_Column_1_1_Octagonal_Foot",
+      "Bridge_Column_1_1_Octagonal_Shaft",
+      "Bridge_Column_1_1_Square_Base",
+      "Bridge_Column_1_1_Square_Capital",
+      "Bridge_Column_1_2_Capital_Neck",
+      "Bridge_Column_1_2_Octagonal_Foot",
+      "Bridge_Column_1_2_Octagonal_Shaft",
+      "Bridge_Column_1_2_Square_Base",
+      "Bridge_Column_1_2_Square_Capital",
+      "Bridge_Column_2_1_Capital_Neck",
+      "Bridge_Column_2_1_Octagonal_Foot",
+      "Bridge_Column_2_1_Octagonal_Shaft",
+      "Bridge_Column_2_1_Square_Base",
+      "Bridge_Column_2_1_Square_Capital",
+      "Bridge_Column_2_2_Capital_Neck",
+      "Bridge_Column_2_2_Octagonal_Foot",
+      "Bridge_Column_2_2_Octagonal_Shaft",
+      "Bridge_Column_2_2_Square_Base",
+      "Bridge_Column_2_2_Square_Capital",
+      "Bridge_Column_3_1_Capital_Neck",
+      "Bridge_Column_3_1_Octagonal_Foot",
+      "Bridge_Column_3_1_Octagonal_Shaft",
+      "Bridge_Column_3_1_Square_Base",
+      "Bridge_Column_3_1_Square_Capital",
+      "Bridge_Column_3_2_Capital_Neck",
+      "Bridge_Column_3_2_Octagonal_Foot",
+      "Bridge_Column_3_2_Octagonal_Shaft",
+      "Bridge_Column_3_2_Square_Base",
+      "Bridge_Column_3_2_Square_Capital",
+      "Bridge_Column_4_1_Capital_Neck",
+      "Bridge_Column_4_1_Octagonal_Foot",
+      "Bridge_Column_4_1_Octagonal_Shaft",
+      "Bridge_Column_4_1_Square_Base",
+      "Bridge_Column_4_1_Square_Capital",
+      "Bridge_Column_4_2_Capital_Neck",
+      "Bridge_Column_4_2_Octagonal_Foot",
+      "Bridge_Column_4_2_Octagonal_Shaft",
+      "Bridge_Column_4_2_Square_Base",
+      "Bridge_Column_4_2_Square_Capital",
+      "Bridge_Deck_Watertight",
+      "Bridge_Low_Stone_Edge_+1.835",
+      "Bridge_Low_Stone_Edge_-1.835",
+      "Bridge_Side_Point_Arcade_1",
+      "Bridge_Side_Point_Arcade_2",
+      "Bridge_Transverse_Point_Arch_1",
+      "Bridge_Transverse_Point_Arch_2",
+      "Bridge_Transverse_Point_Arch_3",
+      "Bridge_Transverse_Point_Arch_4"
+    ],
+    "bounds_gltf": {
+      "min": [
+        -5.0,
+        0.0,
+        -1.899999976158142
+      ],
+      "max": [
+        5.0,
+        4.801492214202881,
+        1.899999976158142
+      ]
+    },
+    "dimensions_gltf": [
+      10.0,
+      4.801492214202881,
+      3.799999952316284
+    ]
+  },
+  "source_topology": [
+    {
+      "name": "Bridge_Deck_Watertight",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 7.600000017881392,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Low_Stone_Edge_-1.835",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.20800000709295222,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Low_Stone_Edge_+1.835",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.20800000709295222,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_1_1_Square_Base",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.04390400056076002,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_1_1_Octagonal_Foot",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.014667755184140277,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_1_1_Octagonal_Shaft",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.17908896314984601,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_1_1_Capital_Neck",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.013451547933531701,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_1_1_Square_Capital",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.027499960660946718,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_1_2_Square_Base",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.04390400056076002,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_1_2_Octagonal_Foot",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.014667755184140291,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_1_2_Octagonal_Shaft",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.1790889631498639,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_1_2_Capital_Neck",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.013451547933531687,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_1_2_Square_Capital",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.027499960660946725,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_2_1_Square_Base",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.043904000560759986,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_2_1_Octagonal_Foot",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.014667750667130369,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_2_1_Octagonal_Shaft",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.17908892122045741,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_2_1_Capital_Neck",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.013451547571528458,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_2_1_Square_Capital",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.0274999737739563,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_2_2_Square_Base",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.043904000560759986,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_2_2_Octagonal_Foot",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.014667750667130379,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_2_2_Octagonal_Shaft",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.1790889212204619,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_2_2_Capital_Neck",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.013451547571528492,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_2_2_Square_Capital",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.0274999737739563,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_3_1_Square_Base",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.043904000560759986,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_3_1_Octagonal_Foot",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.014667750667130382,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_3_1_Octagonal_Shaft",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.17908892122046194,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_3_1_Capital_Neck",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.013451547571528484,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_3_1_Square_Capital",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.0274999737739563,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_3_2_Square_Base",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.043904000560759986,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_3_2_Octagonal_Foot",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.014667750667130369,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_3_2_Octagonal_Shaft",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.1790889212204574,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_3_2_Capital_Neck",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.013451547571528449,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_3_2_Square_Capital",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.0274999737739563,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_4_1_Square_Base",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.04390400056076002,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_4_1_Octagonal_Foot",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.014667755184140287,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_4_1_Octagonal_Shaft",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.179088963149864,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_4_1_Capital_Neck",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.01345154793353168,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_4_1_Square_Capital",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.027499960660946718,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_4_2_Square_Base",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.04390400056076002,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_4_2_Octagonal_Foot",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.014667755184140277,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_4_2_Octagonal_Shaft",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.179088963149846,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_4_2_Capital_Neck",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.013451547933531708,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_4_2_Square_Capital",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.027499960660946732,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Transverse_Point_Arch_1",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.30898631363749013,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Transverse_Point_Arch_2",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.3089863136374902,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Transverse_Point_Arch_3",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.3089863136374902,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Transverse_Point_Arch_4",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.30898631363749024,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Side_Point_Arcade_1",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.5553435795151409,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Side_Point_Arcade_2",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.5553435795151406,
+      "uv_layers": 1,
+      "flat_faces": true
+    }
+  ],
+  "reimport_topology": [
+    {
+      "name": "Bridge_Column_1_1_Capital_Neck",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.013451547933531767,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_1_1_Octagonal_Foot",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.014667755184140294,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_1_1_Octagonal_Shaft",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.17908896314986397,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_1_1_Square_Base",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.043904000560760034,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_1_1_Square_Capital",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.027499960660946808,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_1_2_Capital_Neck",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.013451547933531725,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_1_2_Octagonal_Foot",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.014667755184140284,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_1_2_Octagonal_Shaft",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.17908896314984576,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_1_2_Square_Base",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.043904000560760034,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_1_2_Square_Capital",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.0274999606609468,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_2_1_Capital_Neck",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.013451547571528473,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_2_1_Octagonal_Foot",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.014667750667130365,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_2_1_Octagonal_Shaft",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.17908892122046213,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_2_1_Square_Base",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.043904000560760006,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_2_1_Square_Capital",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.027499973773956285,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_2_2_Capital_Neck",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.013451547571528473,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_2_2_Octagonal_Foot",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.014667750667130365,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_2_2_Octagonal_Shaft",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.17908892122045722,
+      "uv_layers": 1,
+      "flat_faces": false
+    },
+    {
+      "name": "Bridge_Column_2_2_Square_Base",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.043904000560760006,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_2_2_Square_Capital",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.027499973773956285,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_3_1_Capital_Neck",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.013451547571528468,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_3_1_Octagonal_Foot",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.014667750667130374,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_3_1_Octagonal_Shaft",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.17908892122045728,
+      "uv_layers": 1,
+      "flat_faces": false
+    },
+    {
+      "name": "Bridge_Column_3_1_Square_Base",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.04390400056076002,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_3_1_Square_Capital",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.027499973773956285,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_3_2_Capital_Neck",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.013451547571528472,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_3_2_Octagonal_Foot",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.01466775066713036,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_3_2_Octagonal_Shaft",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.17908892122046213,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_3_2_Square_Base",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.043904000560760006,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_3_2_Square_Capital",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.027499973773956285,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_4_1_Capital_Neck",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.013451547933531701,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_4_1_Octagonal_Foot",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.014667755184140294,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_4_1_Octagonal_Shaft",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.17908896314984565,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_4_1_Square_Base",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.04390400056076006,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_4_1_Square_Capital",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.0274999606609468,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_4_2_Capital_Neck",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.013451547933531777,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_4_2_Octagonal_Foot",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.014667755184140286,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_4_2_Octagonal_Shaft",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.17908896314986397,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_4_2_Square_Base",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.043904000560760034,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Column_4_2_Square_Capital",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.0274999606609468,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Deck_Watertight",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 7.600000017881392,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Low_Stone_Edge_+1.835",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.20800000709295235,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Low_Stone_Edge_-1.835",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.2080000070929523,
+      "uv_layers": 1,
+      "flat_faces": true
+    },
+    {
+      "name": "Bridge_Side_Point_Arcade_1",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.5553435795151418,
+      "uv_layers": 1,
+      "flat_faces": false
+    },
+    {
+      "name": "Bridge_Side_Point_Arcade_2",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.5553435795151411,
+      "uv_layers": 1,
+      "flat_faces": false
+    },
+    {
+      "name": "Bridge_Transverse_Point_Arch_1",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.3089863136374904,
+      "uv_layers": 1,
+      "flat_faces": false
+    },
+    {
+      "name": "Bridge_Transverse_Point_Arch_2",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.3089863136374901,
+      "uv_layers": 1,
+      "flat_faces": false
+    },
+    {
+      "name": "Bridge_Transverse_Point_Arch_3",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.3089863136374903,
+      "uv_layers": 1,
+      "flat_faces": false
+    },
+    {
+      "name": "Bridge_Transverse_Point_Arch_4",
+      "non_manifold_edges": 0,
+      "signed_volume_m3": 0.3089863136374886,
+      "uv_layers": 1,
+      "flat_faces": false
+    }
+  ],
+  "source_clearance": {
+    "rays": [
+      {
+        "test": "straight_walkway",
+        "lateral": -1.2,
+        "height_above_deck": 0.05,
+        "clear": true
+      },
+      {
+        "test": "straight_walkway",
+        "lateral": -1.2,
+        "height_above_deck": 1,
+        "clear": true
+      },
+      {
+        "test": "straight_walkway",
+        "lateral": -1.2,
+        "height_above_deck": 1.8,
+        "clear": true
+      },
+      {
+        "test": "straight_walkway",
+        "lateral": -1.2,
+        "height_above_deck": 2.25,
+        "clear": true
+      },
+      {
+        "test": "straight_walkway",
+        "lateral": 0,
+        "height_above_deck": 0.05,
+        "clear": true
+      },
+      {
+        "test": "straight_walkway",
+        "lateral": 0,
+        "height_above_deck": 1,
+        "clear": true
+      },
+      {
+        "test": "straight_walkway",
+        "lateral": 0,
+        "height_above_deck": 1.8,
+        "clear": true
+      },
+      {
+        "test": "straight_walkway",
+        "lateral": 0,
+        "height_above_deck": 2.25,
+        "clear": true
+      },
+      {
+        "test": "straight_walkway",
+        "lateral": 1.2,
+        "height_above_deck": 0.05,
+        "clear": true
+      },
+      {
+        "test": "straight_walkway",
+        "lateral": 1.2,
+        "height_above_deck": 1,
+        "clear": true
+      },
+      {
+        "test": "straight_walkway",
+        "lateral": 1.2,
+        "height_above_deck": 1.8,
+        "clear": true
+      },
+      {
+        "test": "straight_walkway",
+        "lateral": 1.2,
+        "height_above_deck": 2.25,
+        "clear": true
+      },
+      {
+        "test": "open_sky_bay",
+        "x": -2.8,
+        "clear": true
+      },
+      {
+        "test": "open_sky_bay",
+        "x": 0,
+        "clear": true
+      },
+      {
+        "test": "open_sky_bay",
+        "x": 2.8,
+        "clear": true
+      }
+    ],
+    "all_passed": true,
+    "deck_bottom": 0.0,
+    "deck_top": 0.19999998807907104,
+    "narrowest_base_gap": 2.54,
+    "tested_open_walkway_width": 2.4
+  },
+  "reimport_clearance": {
+    "rays": [
+      {
+        "test": "straight_walkway",
+        "lateral": -1.2,
+        "height_above_deck": 0.05,
+        "clear": true
+      },
+      {
+        "test": "straight_walkway",
+        "lateral": -1.2,
+        "height_above_deck": 1,
+        "clear": true
+      },
+      {
+        "test": "straight_walkway",
+        "lateral": -1.2,
+        "height_above_deck": 1.8,
+        "clear": true
+      },
+      {
+        "test": "straight_walkway",
+        "lateral": -1.2,
+        "height_above_deck": 2.25,
+        "clear": true
+      },
+      {
+        "test": "straight_walkway",
+        "lateral": 0,
+        "height_above_deck": 0.05,
+        "clear": true
+      },
+      {
+        "test": "straight_walkway",
+        "lateral": 0,
+        "height_above_deck": 1,
+        "clear": true
+      },
+      {
+        "test": "straight_walkway",
+        "lateral": 0,
+        "height_above_deck": 1.8,
+        "clear": true
+      },
+      {
+        "test": "straight_walkway",
+        "lateral": 0,
+        "height_above_deck": 2.25,
+        "clear": true
+      },
+      {
+        "test": "straight_walkway",
+        "lateral": 1.2,
+        "height_above_deck": 0.05,
+        "clear": true
+      },
+      {
+        "test": "straight_walkway",
+        "lateral": 1.2,
+        "height_above_deck": 1,
+        "clear": true
+      },
+      {
+        "test": "straight_walkway",
+        "lateral": 1.2,
+        "height_above_deck": 1.8,
+        "clear": true
+      },
+      {
+        "test": "straight_walkway",
+        "lateral": 1.2,
+        "height_above_deck": 2.25,
+        "clear": true
+      },
+      {
+        "test": "open_sky_bay",
+        "x": -2.8,
+        "clear": true
+      },
+      {
+        "test": "open_sky_bay",
+        "x": 0,
+        "clear": true
+      },
+      {
+        "test": "open_sky_bay",
+        "x": 2.8,
+        "clear": true
+      }
+    ],
+    "all_passed": true,
+    "deck_bottom": 0.0,
+    "deck_top": 0.19999998807907104,
+    "narrowest_base_gap": 2.54,
+    "tested_open_walkway_width": 2.4
+  },
+  "embedded_images": [
+    {
+      "material": "Arcade_Warm_Stone.001",
+      "image": "arcade_warm_mottled_stone_256.001",
+      "size": [
+        256,
+        256
+      ],
+      "has_pixels": true
+    },
+    {
+      "material": "Arcade_Checker_Stone.001",
+      "image": "arcade_checker_stone_256.001",
+      "size": [
+        256,
+        256
+      ],
+      "has_pixels": true
+    }
+  ],
+  "glb_bytes": 353280,
+  "collision": {
+    "world_centre_xz": [
+      39,
+      -8
+    ],
+    "placement_y": -0.18,
+    "world_deck_top": 0.02,
+    "deck_half_extents_xz": [
+      5,
+      1.9
+    ],
+    "column_x": [
+      -4.2,
+      -1.4,
+      1.4,
+      4.2
+    ],
+    "column_z": [
+      -1.55,
+      1.55
+    ],
+    "column_base_half_width": 0.28,
+    "curb_z": [
+      -1.835,
+      1.835
+    ],
+    "curb_half_width": 0.065,
+    "curb_height_above_deck": 0.16,
+    "use_full_height_bounding_box": false
+  },
+  "checks": {
+    "glb_reimport_passed": true,
+    "watertight_components": true,
+    "origin_at_zero": true,
+    "real_uvs_and_embedded_images": true,
+    "opaque_matte_materials": true,
+    "flat_shading_source": true,
+    "no_solid_roof": true,
+    "walkway_rays_clear": true,
+    "deck_has_complete_bottom_and_sides": true
+  }
+}

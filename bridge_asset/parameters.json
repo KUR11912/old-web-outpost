@@ -1,0 +1,44 @@
+{
+  "seed": 63112042,
+  "units": "metres",
+  "origin": "bottom centre",
+  "length": 10.0,
+  "width": 3.8,
+  "deck_thickness": 0.2,
+  "transverse_arch_x": [
+    -4.2,
+    -1.4,
+    1.4,
+    4.2
+  ],
+  "column_row_z": [
+    -1.55,
+    1.55
+  ],
+  "base_width": 0.56,
+  "shaft_radius": 0.19,
+  "shaft_sides": 8,
+  "spring_height_above_deck": 2.35,
+  "arch_centre_rise": 2.13,
+  "transverse_arch_radial_thickness": 0.22,
+  "transverse_arch_depth": 0.25,
+  "longitudinal_arch_radial_thickness": 0.18,
+  "longitudinal_arch_depth": 0.2,
+  "segments_per_arch_half": 5,
+  "curb_z": [
+    -1.835,
+    1.835
+  ],
+  "curb_width": 0.13,
+  "curb_height_above_deck": 0.16,
+  "texture_size": 256,
+  "checker_tile_metres": 0.5,
+  "roughness": 0.9,
+  "world_placement_gltf": [
+    39,
+    -0.18,
+    -8
+  ],
+  "world_deck_top": 0.02,
+  "render_samples": 24
+}

@@ -1,0 +1,21 @@
+Footstep sounds: Kenney, Impact Sounds (2019, version 1.0).
+Original pack: https://kenney.nl/assets/impact-sounds
+License: Creative Commons Zero 1.0 Universal (CC0-1.0).
+https://creativecommons.org/publicdomain/zero/1.0/
+
+Kenney dedicates these assets to the public domain under CC0. Commercial use,
+modification, and redistribution are permitted; attribution is not required.
+This voluntary credit is retained with the redistributed sounds.
+
+grass-01.wav through grass-05.wav derive from footstep_grass_000.ogg through
+footstep_grass_004.ogg; stone-01.wav through stone-05.wav derive from
+footstep_concrete_000.ogg through footstep_concrete_004.ogg.
+
+Edits: converted to mono 44.1 kHz / 16-bit PCM WAV; removed DC offset and excess
+silence; applied 2 ms attack / 12 ms release fades; normalized peaks to -6 dBFS.
+The concrete hard-surface steps are used for the game's stone paths and bridge.
+
+Retrieved 2026-11-12 via the Kenney CC0 redistribution collection:
+https://instrictlogic.com/AssetLibrary/sounds/banks/material-impacts-footsteps-kenney-2362a2f7/
+Download: https://instrictlogic.com/soundbank/pack.php?bank=2362a2f7a55426bf0677c3ff
+The publisher's original pack page and the redistribution page both identify CC0.

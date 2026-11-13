@@ -1,0 +1,84 @@
+{
+  "blender_version": "5.2.3 LTS",
+  "asset": "MemeFolder_01",
+  "dimensions_blender_xyz_m": [
+    1.0,
+    0.14000001549720764,
+    0.7799999713897705
+  ],
+  "dimensions_gltf_xyz_m": [
+    1.0,
+    0.7799999713897705,
+    0.14000001549720764
+  ],
+  "gltf_bounds_min": [
+    -0.5,
+    0,
+    -0.07000000774860382
+  ],
+  "gltf_bounds_max": [
+    0.5,
+    0.7799999713897705,
+    0.07000000774860382
+  ],
+  "origin": "Bottom centre; front +Z in glTF",
+  "triangles": 428,
+  "source_vertices": 224,
+  "mesh_count": 1,
+  "material_count": 1,
+  "texture_size": [
+    128,
+    128
+  ],
+  "texture_filter": "Nearest",
+  "alpha_mode": "OPAQUE",
+  "glb_bytes": 24588,
+  "reimport_verified": true,
+  "reimport_dimensions_blender_xyz_m": [
+    1.0,
+    0.14000001549720764,
+    0.7799999713897705
+  ],
+  "samplers": [
+    {
+      "magFilter": 9728,
+      "minFilter": 9984,
+      "wrapS": 33071,
+      "wrapT": 33071
+    }
+  ],
+  "parts": [
+    {
+      "name": "Rear_Pixel_Shadow",
+      "face_start": 0,
+      "face_count": 22
+    },
+    {
+      "name": "Back_Cover_With_Tab",
+      "face_start": 22,
+      "face_count": 62
+    },
+    {
+      "name": "Front_Pixel_Shadow",
+      "face_start": 84,
+      "face_count": 18
+    },
+    {
+      "name": "Front_Cover",
+      "face_start": 102,
+      "face_count": 50
+    },
+    {
+      "name": "Bottom_Fold",
+      "face_start": 152,
+      "face_count": 6
+    }
+  ],
+  "previews": "Rendered from the reimported exported GLB using Cycles",
+  "paths": {
+    "blend": "E:\\6311 final\\old-web-outpost\\folder_asset\\MemeFolder_01.blend",
+    "glb": "E:\\6311 final\\old-web-outpost\\folder_asset\\MemeFolder_01.glb",
+    "public_glb": "E:\\6311 final\\old-web-outpost\\public\\assets\\MemeFolder_01.glb",
+    "texture": "E:\\6311 final\\old-web-outpost\\folder_asset\\textures\\MemeFolder_128.png"
+  }
+}
